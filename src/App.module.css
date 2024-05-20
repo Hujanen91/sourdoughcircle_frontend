@@ -5,9 +5,9 @@
   }
   
   .Main {
-    padding-top: 110px;
+    padding-top: 81px;
   }
-
+  
   .Content {
     background-color: #ffffff;
     padding: 10px;
@@ -26,7 +26,7 @@
     max-width: 100%;
     object-fit: contain;
   }
-
+  
   * {
     box-sizing: border-box;
   }
@@ -41,14 +41,14 @@
   }
   
   a:hover i {
-    color: #e7770e;
+    color: #2142b2;
     transition: color ease-in-out 0.3s;
   }
   
   input[type="file"] {
     display: none;
   }
-
+  
   i {
     color: #cfced3;
     font-size: 1.6rem;
@@ -59,9 +59,9 @@
   i:hover {
     cursor: pointer;
     transition: color ease-in-out 0.3s;
-    color: #e7770e;
+    color: #2142b2;
   }
-
+  
   figure {
     text-align: center;
     display: inline-block;
