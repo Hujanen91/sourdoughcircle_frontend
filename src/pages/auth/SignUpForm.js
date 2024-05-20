@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import loginimg from '../../assets/images/bakery (1).png'
+import signupimg from '../../assets/images/bakery (1).png'
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
@@ -92,7 +92,7 @@ const SignUpForm = () => {
           >
             <Image
               className={`${appStyles.FillerImage}`}
-              src={"https://codeinstitute.s3.amazonaws.com/AdvancedReact/hero2.jpg"}
+              src={signupimg}
             />
           </Col>
         </Row>
