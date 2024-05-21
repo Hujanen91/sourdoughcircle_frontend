@@ -16,9 +16,10 @@
   }
   
   .FillerImage {
-    object-fit: cover;
+    object-fit: contain;
     height: 100%;
     width: 100%;
+    padding-bottom: 15px;
   }
   
   .Image {
