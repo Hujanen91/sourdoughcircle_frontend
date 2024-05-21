@@ -18,7 +18,7 @@ function App() {
               <Route exact path="/posts/create" render={() => <h1>Add posts</h1>} />
               <Route exact path="/feed" render={() => <h1>Feed</h1>} />
               <Route exact path="/liked" render={() => <h1>Liked</h1>} />
-              <Route exact path="/contact" render={() => <h1>Contact us</h1>} />
+              <Route exact path="/contact" render={() => <h1>Contact</h1>} />
               
               <Route exact path="/signin" render={() => <SignInForm />} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
