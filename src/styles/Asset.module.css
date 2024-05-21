@@ -5,3 +5,9 @@
     align-items: center;
     min-height: 120px;
   }
+
+@media only screen and (max-width: 300px) {
+    .Asset img {
+        width: 100%;
+    }
+  }
