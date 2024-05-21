@@ -20,7 +20,7 @@ function App() {
               <Route exact path="/feed" render={() => <h1>Feed</h1>} />
               <Route exact path="/liked" render={() => <h1>Liked</h1>} />
               <Route exact path="/contact" render={() => <h1>Contact</h1>} />
-              
+              <Route exact path="/posts/:id" render={() => <PostPage />} />
               <Route exact path="/signin" render={() => <SignInForm />} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route render={() => <p>Page not found!</p>} />
