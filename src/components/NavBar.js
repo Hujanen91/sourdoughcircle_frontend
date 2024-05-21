@@ -13,7 +13,7 @@ const NavBar = () => {
 
   const handleSignOut = async () => {
     try {
-      await axios.post("dj-rest-auth/logout");
+      await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
     } catch (err) {
       console.log(err);
@@ -21,7 +21,11 @@ const NavBar = () => {
   };
 
   const addPostIcon = (
-    <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/posts/create">
+    <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/posts/create"
+    >
       <i className="far fa-plus-square"></i>Add post
     </NavLink>
   );
@@ -41,18 +45,7 @@ const NavBar = () => {
       >
         <i className="fas fa-heart"></i>Liked
       </NavLink>
-      <NavLink
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-        to="/contact"
-      >
-        <i className="fas fa-heart"></i>Contact
-      </NavLink>
-      <NavLink 
-        className={styles.NavLink} 
-        to="/" 
-        onClick={handleSignOut}
-        >
+      <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
         <i className="fas fa-sign-out-alt"></i>Sign out
       </NavLink>
       <NavLink
