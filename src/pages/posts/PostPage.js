@@ -40,7 +40,19 @@ function PostPage() {
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Popular profiles for mobile</p>
         <Post {...post.results[0]} setPosts={setPost} postPage />
-        <Container className={appStyles.Content}>Comments</Container>
+        <Container className={appStyles.Content}>
+        {currentUser ? (
+          <CommentCreateForm
+          profile_id={currentUser.profile_id}
+          profileImage={profile_image}
+          post={id}
+          setPost={setPost}
+          setComments={setComments}
+        />
+        ) : comments.results.length ? (
+          "Comments"
+        ) : null}
+        </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
         Popular profiles for desktop
