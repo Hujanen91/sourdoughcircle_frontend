@@ -55,7 +55,14 @@ const Comment = (props) => {
           <span className={styles.Owner}>{owner}</span>
           <span className={styles.Date}>{updated_at}</span>
           {showEditForm ? (
-            <CommentEditForm />
+            <CommentEditForm
+              id={id}
+              profile_id={profile_id}
+              content={content}
+              profileImage={profile_image}
+              setComments={setComments}
+              setShowEditForm={setShowEditForm}
+            />
           ) : (
             <p>{content}</p>
           )}
@@ -69,5 +76,6 @@ const Comment = (props) => {
       </Media>
     </>
   );
+};
 
 export default Comment;
