@@ -22,7 +22,7 @@ import { Button, Image } from "react-bootstrap";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
-import NoResults from "../../assets/no-results.png";
+import NoResults from "../../assets/images/search.png";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
