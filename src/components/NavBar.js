@@ -91,6 +91,13 @@ const NavBar = () => {
       >
         <i className="fas fa-user-plus"></i>Sign up
       </NavLink>
+      <NavLink 
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/contact"
+      >
+        <i className="fa-solid fa-envelope-open-text"></i>Contact
+      </NavLink>
     </>
   );
 

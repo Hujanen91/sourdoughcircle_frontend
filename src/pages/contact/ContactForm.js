@@ -11,11 +11,9 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 import { axiosReq } from "../../api/axiosDefaults";
-import { useRedirect } from "../../hooks/useRedirect";
 import { useHistory } from "react-router-dom";
 
 const ContactForm = () => {
-  useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
 
   const [contactData, setContactData] = useState({
@@ -43,13 +41,10 @@ const ContactForm = () => {
     formData.append("subject", subject);
     formData.append("email", email);
     formData.append("content", content);
-    if (postData.category) {
-      formData.append("category", postData.category);
-    }
 
     try {
-      const { data } = await axiosReq.post("/contact/", formData);
-      history.push(`/contact/${data.id}`);
+      await axiosReq.post("/contact/", formData);
+      history.goBack();
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -140,11 +135,6 @@ const ContactForm = () => {
           <Container
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
-            <Form.Group className="text-center">
-              <Form.File
-                
-              />
-            </Form.Group>
 
             <div className="d-md-none">{textFields}</div>
           </Container>
