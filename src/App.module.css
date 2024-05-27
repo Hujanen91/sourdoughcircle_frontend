@@ -5,7 +5,7 @@
   }
   
   .Main {
-    padding-top: 110px;
+    padding-top: 90px;
   }
   
   .Content {
@@ -81,3 +81,11 @@
   *::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+
+  @media (max-width: 300px) {
+  .App{
+    width: fit-content;
+  }
+}
+
+  

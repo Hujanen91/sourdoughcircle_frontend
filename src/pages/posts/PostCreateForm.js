@@ -28,9 +28,9 @@ function PostCreateForm() {
     title: "",
     content: "",
     image: "",
-    tags: "", // Add tags to state
+    category: "", // Add category to state
   });
-  const { title, content, image, tags } = postData;
+  const { title, content, image, category } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -59,8 +59,8 @@ function PostCreateForm() {
     formData.append("title", title);
     formData.append("content", content);
     formData.append("image", imageInput.current.files[0]);
-    if (postData.tags) {
-      formData.append("tags", postData.tags);
+    if (postData.category) {
+      formData.append("category", postData.category);
     }
 
     try {
@@ -108,15 +108,15 @@ function PostCreateForm() {
       ))}
 
       <Form.Group>
-        <Form.Label>Tags</Form.Label>
+        <Form.Label>Category</Form.Label>
         <Form.Control
           type="text"
-          name="tags"
-          value={tags}
+          name="category"
+          value={category}
           onChange={handleChange}
         />
       </Form.Group>
-      {errors?.tags?.map((message, idx) => (
+      {errors?.category?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>

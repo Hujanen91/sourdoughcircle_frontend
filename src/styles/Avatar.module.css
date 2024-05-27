@@ -1,5 +1,6 @@
 .Avatar {
     border-radius: 50%;
+    background-color: #9ed6915d;
     margin: 0px 8px 0px 8px;
     object-fit: cover;
   }
