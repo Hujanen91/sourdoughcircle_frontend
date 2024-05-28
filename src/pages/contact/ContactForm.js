@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
 
+import contactImage from "../../assets/images/bakery (1).png"
 import styles from "../../styles/ContactForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
@@ -130,17 +131,17 @@ const ContactForm = () => {
   );
 
   return (
+    
     <Form onSubmit={handleSubmit}>
-      <Row>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-          <Container
-            className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
-          >
-
-            <div className="d-md-none">{textFields}</div>
-          </Container>
-        </Col>
-        <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+      <Col className={`d-none d-md-block col-6 ${styles.ContactImage}`}>
+        <img
+          alt="Baked bread"
+          src={contactImage}
+        />
+      </Col>
+      <h1 className={styles.ContactUsText}>Contact us!</h1>
+      <Row className={styles.Row}>
+        <Col className="col-md-7 col-lg-5 col-md-5">
           <Container className={appStyles.Content}>{textFields}</Container>
         </Col>
       </Row>
