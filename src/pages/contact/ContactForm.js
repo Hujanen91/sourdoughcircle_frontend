@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import Alert from "react-bootstrap/Alert";
 
 import styles from "../../styles/ContactForm.module.css";
 import appStyles from "../../App.module.css";
@@ -110,7 +111,7 @@ const ContactForm = () => {
           onChange={handleChange}
         />
       </Form.Group>
-      {errors?.message?.map((message, idx) => (
+      {errors?.content?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
