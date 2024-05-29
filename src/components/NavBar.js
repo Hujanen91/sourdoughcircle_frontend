@@ -116,7 +116,7 @@ const NavBar = () => {
             <img 
               src={logo} 
               alt="logo" 
-              height="45" 
+              height="75" 
             />
           </Navbar.Brand>
         </NavLink>
