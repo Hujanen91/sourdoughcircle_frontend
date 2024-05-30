@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import CategoryFilter from "../../components/CategoryFilter";
 
 import Post from "./Post";
 import Asset from "../../components/Asset";
@@ -19,6 +20,7 @@ import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 
 function PostsPage({ message, filter = "" }) {
+  const [ setFilter ] = useState("");
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
@@ -51,6 +53,7 @@ function PostsPage({ message, filter = "" }) {
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
         <i className={`fas fa-search ${styles.SearchIcon}`} />
+        <CategoryFilter mobile setFilter={setFilter} />
         <Form
           className={styles.SearchBar}
           onSubmit={(event) => event.preventDefault()}
@@ -63,6 +66,7 @@ function PostsPage({ message, filter = "" }) {
             placeholder="Search posts"
           />
         </Form>
+        
 
         {hasLoaded ? (
           <>
