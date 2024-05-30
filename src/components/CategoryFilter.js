@@ -6,7 +6,6 @@ import Categories from "../constants/Categories";
 
 const CategoryFilter = ({ setFilter, mobile }) => {
     const currentUser = useCurrentUser();
-
     const [selectedCategory, setSelectedCategory] = useState('');
 
     const handleCategoryChange = useCallback((e) => {
@@ -27,6 +26,7 @@ const CategoryFilter = ({ setFilter, mobile }) => {
                         id="categorySelect"
                         value={selectedCategory}
                         onChange={handleCategoryChange}
+                        setFilter={handleCategoryChange}
                     >
                         <option value="">Select a Category</option>
                         {Categories.map((category) => (
