@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
 import Image from "react-bootstrap/Image";
+import Categories from "../../constants/Categories"
 
 import Asset from "../../components/Asset";
 
@@ -110,11 +111,17 @@ function PostCreateForm() {
       <Form.Group>
         <Form.Label>Category</Form.Label>
         <Form.Control
-          type="text"
+          as="select"
           name="category"
           value={category}
           onChange={handleChange}
-        />
+        >
+          {Categories.map((category) => (
+            <option key={category.id} value={category.name}>
+              {category.name}
+            </option>
+          ))}
+        </Form.Control>
       </Form.Group>
       {errors?.category?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
