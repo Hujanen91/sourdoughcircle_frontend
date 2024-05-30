@@ -17,7 +17,7 @@ const CategoryFilter = ({ setFilter, mobile }) => {
     }, [setFilter, currentUser]);
 
     return (
-        <Container className={`${appStyles.Content} mb-2 ${mobile ? "d-lg-none text-center my-3" : ""}`}>
+        <Container className={`${appStyles.Content} mb-3 ${mobile ? "p-3 text-center container" : ""}`}>
             <p className="h4">Filter feed</p>
             <Row>
                 <Col>
