@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -7,7 +6,8 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
 import Image from "react-bootstrap/Image";
-import Categories from "../../constants/Categories"
+// Remove static import of Categories
+// import Categories from "../../constants/Categories"
 
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
@@ -27,6 +27,8 @@ function PostEditForm() {
   });
   const { title, content, image, category } = postData;
 
+  const [categories, setCategories] = useState([]);
+
   const imageInput = useRef(null);
   const history = useHistory();
   const { id } = useParams();
@@ -35,9 +37,9 @@ function PostEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/posts/${id}/`);
-        const { title, content, image, is_owner } = data;
+        const { title, content, image, category, is_owner } = data;
 
-        is_owner ? setPostData({ title, content, image }) : history.push("/");
+        is_owner ? setPostData({ title, content, image, category }) : history.push("/");
       } catch (err) {
         console.log(err);
       }
@@ -45,6 +47,25 @@ function PostEditForm() {
 
     handleMount();
   }, [history, id]);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch('https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/category/');
+        const data = await response.json();
+        console.log('API response:', data); // Log the entire response
+        if (Array.isArray(data.results)) {
+          setCategories(data.results); // Adjust based on the actual structure
+        } else {
+          console.error('Fetched data.results is not an array:', data.results);
+        }
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
 
   const handleChange = (event) => {
     setPostData({
@@ -73,6 +94,7 @@ function PostEditForm() {
     if (imageInput?.current?.files[0]) {
       formData.append("image", imageInput.current.files[0]);
     }
+    formData.append("category", category);
 
     try {
       await axiosReq.put(`/posts/${id}/`, formData);
@@ -126,7 +148,8 @@ function PostEditForm() {
           value={category}
           onChange={handleChange}
         >
-          {Categories.map((category) => (
+          <option value="">Select a Category</option>
+          {categories.map((category) => (
             <option key={category.id} value={category.name}>
               {category.name}
             </option>

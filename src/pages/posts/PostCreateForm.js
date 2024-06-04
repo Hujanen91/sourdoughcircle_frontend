@@ -1,5 +1,4 @@
-import React, { useRef, useState } from "react";
-
+import React, { useRef, useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -7,16 +6,14 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
 import Image from "react-bootstrap/Image";
-import Categories from "../../constants/Categories"
+// Remove this import since you'll be fetching categories from the API
+// import Categories from "../../constants/Categories"
 
 import Asset from "../../components/Asset";
-
 import Upload from "../../assets/images/upload (6).png";
-
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
@@ -33,8 +30,30 @@ function PostCreateForm() {
   });
   const { title, content, image, category } = postData;
 
+  const [categories, setCategories] = useState([]);
+
   const imageInput = useRef(null);
   const history = useHistory();
+
+  // Fetch categories from the API when the component mounts
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch('https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/category/');
+        const data = await response.json();
+        console.log('API response:', data); // Log the entire response
+        if (Array.isArray(data.results)) {
+          setCategories(data.results); // Adjust based on the actual structure
+        } else {
+          console.error('Fetched data.results is not an array:', data.results);
+        }
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
 
   const handleChange = (event) => {
     setPostData({
@@ -116,7 +135,8 @@ function PostCreateForm() {
           value={category}
           onChange={handleChange}
         >
-          {Categories.map((category) => (
+          <option value="">Select a Category</option>
+          {categories.map((category) => (
             <option key={category.id} value={category.name}>
               {category.name}
             </option>
