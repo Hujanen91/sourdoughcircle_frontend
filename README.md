@@ -50,7 +50,7 @@ The repository for the backend of the application can be found here:<br>[Sourdou
 
 ### User Goals
 
-The primary goals of the target audience for Caption of the Day are centered around creative expression, social interaction, and content discovery in a user-friendly digital environment. The platform is tailored to meet the following user aspirations:
+<!--The primary goals of the target audience for Caption of the Day are centered around creative expression, social interaction, and content discovery in a user-friendly digital environment. The platform is tailored to meet the following user aspirations:
 
 1. **Creative Sharing**: Users seek a platform where they can express themselves creatively through unique captions and imagery. The ability to craft and share content that resonates with personal experiences or interests is paramount.
 
@@ -64,12 +64,12 @@ The primary goals of the target audience for Caption of the Day are centered aro
 
 6. **Safe and Supportive Environment**: A safe space for sharing and interaction, where users feel supported and encouraged to express themselves without judgment or negativity.
 
-By focusing on these goals, Caption of the Day aims to establish itself as a premier platform for creative sharing and community building, setting itself apart in the realm of social media.
+By focusing on these goals, Caption of the Day aims to establish itself as a premier platform for creative sharing and community building, setting itself apart in the realm of social media.-->
 
 ### User Stories
 
 #### Epic: User Authentication and Session Management
-- **User Story**: New User Sign-Up [#12](https://github.com/Haniibani/pp5_frontend/issues/12)
+<!--- **User Story**: New User Sign-Up [#12](https://github.com/Haniibani/pp5_frontend/issues/12)
 - **User Story**: Persistent User Sessions [#5](https://github.com/Haniibani/pp5_frontend/issues/5)
 - **User Story**: Update Login Credentials [#13](https://github.com/Haniibani/pp5_frontend/issues/13)
 - **User Story**: Sign-In and Sign-Up Options for Logged-Out Users [#4](https://github.com/Haniibani/pp5_frontend/issues/4)
@@ -96,11 +96,11 @@ By focusing on these goals, Caption of the Day aims to establish itself as a pre
 - **User Story**: Creating and Editing User Posts [#7](https://github.com/Haniibani/pp5_frontend/issues/7)
 - **User Story**: Follow and Unfollow Users [#14](https://github.com/Haniibani/pp5_frontend/issues/14)
 - **User Story**: Discover Recent and Popular Posts [#15](https://github.com/Haniibani/pp5_frontend/issues/15)
-- **User Story**: Personalized Content Feed [#16](https://github.com/Haniibani/pp5_frontend/issues/16)
+- **User Story**: Personalized Content Feed [#16](https://github.com/Haniibani/pp5_frontend/issues/16)-->
 
 ### Design Choices
 
-Our design philosophy at "Caption of the Day" is deeply rooted in providing a serene and approachable environment for our users to share and explore. The design choices are reflective of our commitment to a clean, modern, and user-centric interface.
+<!--Our design philosophy at "Caption of the Day" is deeply rooted in providing a serene and approachable environment for our users to share and explore. The design choices are reflective of our commitment to a clean, modern, and user-centric interface.
 
 #### Colors
 
@@ -114,11 +114,11 @@ We've selected a sans-serif font that balances form and function, offering excel
 
 The use of cloud imagery in our upload icon is symbolic of the seamless and boundless experience we offer, akin to uploading your thoughts to the vastness of the sky. User avatars are presented in greyscale to maintain uniformity and visual harmony, while also allowing the vibrant user-generated content to take center stage. Our logo, which combines a caption bubble and a camera shutter, encapsulates our core offering — a platform to visually share and caption life's moments.
 
-These design elements come together to create an atmosphere that is both inspiring and tranquil, inviting users to stay, explore, and express themselves freely on Caption of the Day.
+These design elements come together to create an atmosphere that is both inspiring and tranquil, inviting users to stay, explore, and express themselves freely on Caption of the Day.-->
 
 ## Features
 
-Caption of the Day enriches the user experience with a suite of interactive features designed to foster engagement and creativity within the community:
+<!--Caption of the Day enriches the user experience with a suite of interactive features designed to foster engagement and creativity within the community:
 
 - **User Authentication**: A robust and secure login and registration system that protects user data and ensures a trustworthy environment for sharing personal moments.
 - **Profile Management**: Comprehensive profile customization options allow users to express their identity through bios, profile images, and a catalogue of their posts.
@@ -138,15 +138,15 @@ Looking ahead, Caption of the Day is excited to explore and develop additional f
 - **Multi-Language Support**: Broaden the platform's reach by offering a multilingual interface that welcomes users from different linguistic backgrounds.
 - **Eco-Friendly Initiatives**: Introduce features that promote environmental awareness, including eco-challenges and sustainability-focused content sharing.
 
-These prospective features aim to keep Caption of the Day at the forefront of innovation, providing users with an ever-evolving platform that not only entertains but also connects and inspires.
+These prospective features aim to keep Caption of the Day at the forefront of innovation, providing users with an ever-evolving platform that not only entertains but also connects and inspires.-->
 
 ## Reusability
 
-In this section, we explore the current reusability of our components and envision future scenarios where our components' flexibility can be further utilized.
+<!--In this section, we explore the current reusability of our components and envision future scenarios where our components' flexibility can be further utilized.-->
 
 ### Component Reusability
 
-Our application's architecture emphasizes reusability and modularity. Here is an overview of the reusable components:
+<!--Our application's architecture emphasizes reusability and modularity. Here is an overview of the reusable components:
 
 #### `Avatar.jsx`
 
@@ -227,12 +227,12 @@ Our application's architecture emphasizes reusability and modularity. Here is an
   - `profile`: Object containing URLs to social media profiles.
 - **Usage**: Included in the `ProfileInformation` component to link to user's social media.
 
-By designing our application with these reusable components, we've created a scalable and maintainable codebase. Each component is crafted to be independent and versatile, promoting consistency and efficiency throughout our development process.
+By designing our application with these reusable components, we've created a scalable and maintainable codebase. Each component is crafted to be independent and versatile, promoting consistency and efficiency throughout our development process.-->
 
 
 ### Possible Reusable Scenarios
 
-As we continue to evolve the Caption of the Day platform, we anticipate new features that will further leverage our existing components. Below are some scenarios where our components could be reused or extended:
+<!--As we continue to evolve the Caption of the Day platform, we anticipate new features that will further leverage our existing components. Below are some scenarios where our components could be reused or extended:
 
 #### `Avatar.jsx`
 
@@ -334,7 +334,7 @@ In this project, we've utilized a variety of libraries and tools to enhance func
 - **Node.js and npm Versions**
   - The project specifies Node.js and npm versions to ensure a consistent environment setup.
 
-Additionally, specific scripts were defined for building, testing, and starting the application, particularly with Heroku deployment in mind. The project also specifies Node.js and npm versions for consistent environment setup.
+Additionally, specific scripts were defined for building, testing, and starting the application, particularly with Heroku deployment in mind. The project also specifies Node.js and npm versions for consistent environment setup.-->
 
 ## Testing
 
@@ -345,15 +345,15 @@ The SourcdoughCircle has gone through thorough manual testing that can be found 
 
 ### Performance and Best Practices Analysis
 
-As part of our commitment to excellence, I conducted an in-depth performance and best practices analysis using Lighthouse. My analysis revealed several insights:
-[Perfomance](testing.md#performance-and-best-practices-analysis)
+<!--As part of our commitment to excellence, I conducted an in-depth performance and best practices analysis using Lighthouse. My analysis revealed several insights:
+[Perfomance](testing.md#performance-and-best-practices-analysis)-->
 
 ### Known Bugs
 
-- **Current Status**: As of the latest deployment, no major bugs have been reported. The application is monitored continuously for any anomalies.
+<!--- **Current Status**: As of the latest deployment, no major bugs have been reported. The application is monitored continuously for any anomalies.
 - **Minor Issues**: A log of minor issues is maintained, with details about their nature and the environment in which they were encountered.
 - **Resolution Process**: These issues are being addressed in a prioritized manner, with regular updates and patches being rolled out.
-- **Feedback and Reporting**: Users are encouraged to report any bugs or issues they encounter, contributing to the application's ongoing improvement.
+- **Feedback and Reporting**: Users are encouraged to report any bugs or issues they encounter, contributing to the application's ongoing improvement.-->
 
 ## Deployment
 
@@ -406,17 +406,17 @@ Cloning a GitHub repository creates a local copy on your machine, allowing you t
 
 ### Content
 
-This project has benefited from several educational resources and example projects provided by the Code Institute throughout the course of my bootcamp. The following projects deserve special mention for their direct impact on the development of this application:
+<!--This project has benefited from several educational resources and example projects provided by the Code Institute throughout the course of my bootcamp. The following projects deserve special mention for their direct impact on the development of this application:
 
 - **Django REST Framework Example Project**: A practical example provided by the Code Institute that guided the development of Web APIs using Django REST framework. This project served as a template for best practices in API development with Django and Python.
 
 - **Moments Project**: Another resource from the Code Institute, the Moments project was instrumental in illustrating the development of a full-stack application with a focus on user experience. Various aspects of its design and functionality have been adapted and incorporated into this project.
 
-A heartfelt thank you goes to the Code Institute for the array of projects and resources that have been made available throughout my bootcamp. These resources have not only guided this project but have also been a cornerstone of my learning journey, providing me with a solid foundation in software development and a deep understanding of full-stack development practices.
+A heartfelt thank you goes to the Code Institute for the array of projects and resources that have been made available throughout my bootcamp. These resources have not only guided this project but have also been a cornerstone of my learning journey, providing me with a solid foundation in software development and a deep understanding of full-stack development practices.-->
 
 ### Media
 
-The visual content for this project was sourced from Pixabay and generated using DALL-E by OpenAI:
+<!--The visual content for this project was sourced from Pixabay and generated using DALL-E by OpenAI:
 
 - **Pixabay Images**: A variety of high-quality images were sourced from [Pixabay](https://pixabay.com/), a platform offering free-to-use, royalty-free images. These images were carefully chosen to enhance the visual aspect of the project.
-- **DALL-E Generated Images**: Specific imagery was created using [DALL-E](https://openai.com/dall-e), OpenAI's AI image generator, to produce unique and tailored visuals for the project.
+- **DALL-E Generated Images**: Specific imagery was created using [DALL-E](https://openai.com/dall-e), OpenAI's AI image generator, to produce unique and tailored visuals for the project.-->
