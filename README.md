@@ -404,6 +404,8 @@ Cloning a GitHub repository creates a local copy on your machine, allowing you t
 
 ## Credits
 
+[Modal pop up in ContactForm](https://react-bootstrap.netlify.app/docs/components/modal/)
+
 ### Content
 
 <!--This project has benefited from several educational resources and example projects provided by the Code Institute throughout the course of my bootcamp. The following projects deserve special mention for their direct impact on the development of this application:

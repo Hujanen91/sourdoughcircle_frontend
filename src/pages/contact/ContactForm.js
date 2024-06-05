@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
+import Modal from 'react-bootstrap/Modal';
 
 import contactImage from "../../assets/images/bakery (1).png"
 import styles from "../../styles/ContactForm.module.css";
@@ -25,6 +26,14 @@ const ContactForm = () => {
     content: "",
   });
   const { name, subject, email, message } = contactData;
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => {
+    setShow(false);
+    history.goBack();
+  };
+  const handleShow = () => setShow(true);
 
   const history = useHistory();
 
@@ -46,7 +55,6 @@ const ContactForm = () => {
 
     try {
       await axiosReq.post("/contact/", formData);
-      history.goBack();
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -119,7 +127,7 @@ const ContactForm = () => {
       >
         Cancel
       </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit" onClick={handleShow}>
         Send
       </Button>
     </div>
@@ -140,6 +148,17 @@ const ContactForm = () => {
           <Container className={appStyles.Content}>{textFields}</Container>
         </Col>
       </Row>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Message has been sent!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Thank you! We will contact you as soon as possible!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleClose}>
+            Back to feed
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Form>
   );
 }
