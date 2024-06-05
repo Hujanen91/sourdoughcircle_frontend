@@ -29,8 +29,11 @@ const ProfileEditForm = () => {
     name: "",
     content: "",
     image: "",
+    facebook_link: "",
+    linkedin_link: "",
+    twitter_link: "",
   });
-  const { name, content, image } = profileData;
+  const { name, content, image, facebook_link, linkedin_link, twitter_link } = profileData;
 
   const [errors, setErrors] = useState({});
 
@@ -39,8 +42,8 @@ const ProfileEditForm = () => {
       if (currentUser?.profile_id?.toString() === id) {
         try {
           const { data } = await axiosReq.get(`/profiles/${id}/`);
-          const { name, content, image } = data;
-          setProfileData({ name, content, image });
+          const { name, content, image, facebook_link, linkedin_link, twitter_link,  } = data;
+          setProfileData({ name, content, image, facebook_link, linkedin_link, twitter_link, });
         } catch (err) {
           console.log(err);
           history.push("/");
@@ -65,6 +68,9 @@ const ProfileEditForm = () => {
     const formData = new FormData();
     formData.append("name", name);
     formData.append("content", content);
+    formData.append("facebook_link", facebook_link);
+    formData.append("linkedin_link", linkedin_link);
+    formData.append("twitter_link", twitter_link);
 
     if (imageFile?.current?.files[0]) {
       formData.append("image", imageFile?.current?.files[0]);
@@ -86,7 +92,7 @@ const ProfileEditForm = () => {
   const textFields = (
     <>
       <Form.Group>
-        <Form.Label>Bio</Form.Label>
+        <Form.Label>About Me</Form.Label>
         <Form.Control
           as="textarea"
           value={content}
@@ -96,19 +102,54 @@ const ProfileEditForm = () => {
         />
       </Form.Group>
 
+      {/* Social Media Fields */}
+      <Form.Group>
+        <Form.Label>Facebook Link</Form.Label>
+        <Form.Control
+          type="text"
+          placeholder="Enter Facebook link"
+          name="facebook_link"
+          value={facebook_link}
+          onChange={handleChange}
+        />
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label>LinkedIn Link</Form.Label>
+        <Form.Control
+          type="text"
+          placeholder="Enter LinkedIn link"
+          name="linkedin_link"
+          value={linkedin_link}
+          onChange={handleChange}
+        />
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label>Twitter Link</Form.Label>
+        <Form.Control
+          type="text"
+          placeholder="Enter Twitter link"
+          name="twitter_link"
+          value={twitter_link}
+          onChange={handleChange}
+        />
+      </Form.Group>
+
       {errors?.content?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
       ))}
+
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
       >
-        cancel
+        Cancel
       </Button>
       <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-        save
+        Save
       </Button>
     </>
   );
