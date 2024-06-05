@@ -42,6 +42,8 @@ const ProfileEditForm = () => {
     const [errors, setErrors] = useState({});
 
     useEffect(() => {
+        let isMounted = true;
+
         const handleMount = async () => {
             if (currentUser?.profile_id?.toString() === id) {
                 try {
@@ -54,14 +56,16 @@ const ProfileEditForm = () => {
                         linkedin_link,
                         twitter_link
                     } = data;
-                    setProfileData({
-                        name,
-                        content,
-                        image,
-                        facebook_link,
-                        linkedin_link,
-                        twitter_link
-                    });
+                    if (isMounted) {
+                      setProfileData({
+                          name,
+                          content,
+                          image,
+                          facebook_link,
+                          linkedin_link,
+                          twitter_link
+                      });
+                    }
                 } catch (err) {
                     console.log(err);
                     history.push("/");
@@ -72,7 +76,11 @@ const ProfileEditForm = () => {
         };
 
         handleMount();
-    }, [currentUser, history, id]);
+
+        return () => {
+          isMounted = false;
+      };
+  }, [currentUser, history, id]);
 
     const handleChange = (event) => {
         setProfileData({
