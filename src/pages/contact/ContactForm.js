@@ -24,7 +24,7 @@ const ContactForm = () => {
     email: "",
     content: "",
   });
-  const { name, subject, email, content } = contactData;
+  const { name, subject, email, message } = contactData;
 
   const history = useHistory();
 
@@ -42,7 +42,7 @@ const ContactForm = () => {
     formData.append("name", name);
     formData.append("subject", subject);
     formData.append("email", email);
-    formData.append("content", content);
+    formData.append("message", message);
 
     try {
       await axiosReq.post("/contact/", formData);
@@ -102,12 +102,12 @@ const ContactForm = () => {
         <Form.Control
           as="textarea"
           rows={6}
-          name="content"
-          value={content}
+          name="message"
+          value={message}
           onChange={handleChange}
         />
       </Form.Group>
-      {errors?.content?.map((message, idx) => (
+      {errors?.message?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
