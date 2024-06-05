@@ -20,6 +20,7 @@ const Post = (props) => {
     content,
     image,
     updated_at,
+    category_name,
     postPage,
     setPosts,
   } = props;
@@ -82,6 +83,7 @@ const Post = (props) => {
             <Avatar src={profile_image} height={55} />
             {owner}
           </Link>
+          
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
             {is_owner && postPage && (
@@ -99,6 +101,7 @@ const Post = (props) => {
       <Card.Body>
         {title && <Card.Title className="text-center">{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
+        {category_name && <Card.Text className="text-muted">Category: {category_name}</Card.Text>} {/* Display category */}
         <div className={styles.PostBar}>
           {is_owner ? (
             <OverlayTrigger
