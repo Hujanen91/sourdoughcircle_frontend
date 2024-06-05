@@ -1,12 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { useCurrentUser } from '../contexts/CurrentUserContext';
+import React, { useState, useEffect } from 'react';
+import { Container, Row } from 'react-bootstrap';
+
 import appStyles from "../App.module.css";
+import Form from "react-bootstrap/Form";
 
 const CategoryFilter = ({ setFilter, mobile }) => {
-    const currentUser = useCurrentUser();
-    const [selectedCategory, setSelectedCategory] = useState('');
-    const [categories, setCategories] = useState([]);
+    const [category, setCategories] = useState([]);
 
     useEffect(() => {
         const fetchCategories = async () => {
@@ -22,33 +21,27 @@ const CategoryFilter = ({ setFilter, mobile }) => {
         fetchCategories();
     }, []);
 
-    const handleCategoryChange = useCallback((e) => {
-        const selectedValue = e.target.value;
-        setSelectedCategory(selectedValue);
-        setFilter(`category=${selectedValue}`); // Update the filter string
-
-            if (!currentUser) return;
-        }, [setFilter, currentUser]);
+    
 
     return (
         <Container className={`${appStyles.Content} mb-3 ${mobile ? "p-3 text-center container" : ""}`}>
             <p className="h4">Filter feed</p>
             <Row>
-                <Col>
-                    <label htmlFor="categorySelect">Filter on Category: </label>
-                    <select
-                        id="categorySelect"
-                        value={selectedCategory}
-                        onChange={handleCategoryChange}
-                    >
-                        <option value="">Select a Category</option>
-                        {categories.map((category) => (
-                            <option key={category.id} value={category.id}>
-                                {category.name}
-                            </option>
-                        ))}
-                    </select>
-                </Col>
+            <Form.Group controlId="categorySelect">
+                <Form.Label>Filter by Category</Form.Label>
+                <Form.Control
+                    as="select"
+                    onChange={(e) => setFilter(e.target.value)}
+                    defaultValue=""
+                >
+                    <option value="">All Categories</option>
+                    {category.map((category) => (
+                    <option key={category.id} value={category.id}>
+                        {category.name}
+                    </option>
+                    ))}
+                </Form.Control>
+                </Form.Group>
             </Row>
         </Container>
     );

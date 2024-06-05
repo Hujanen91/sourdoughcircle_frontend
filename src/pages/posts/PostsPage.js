@@ -25,11 +25,18 @@ function PostsPage({ message = "" }) {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const { data } = await axiosReq.get(`/posts/?${filter}$search=${query}`);
+        const params = new URLSearchParams();
+        if (filter) params.append('category', filter);
+        if (query) params.append('search', query);
+
+        console.log("Request URL:", `/posts/?${params.toString()}`);
+        console.log("Filter value:", filter);
+
+        const { data } = await axiosReq.get(`/posts/?${params.toString()}`);
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+        console.log("Error fetching posts:", err);
       }
     };
 
