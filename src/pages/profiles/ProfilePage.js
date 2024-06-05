@@ -86,6 +86,24 @@ function ProfilePage() {
                 <div>following</div>
               </Col>
             </Row>
+            {/* Display Social Media Links */}
+            <div>
+              {profile?.facebook_link && (
+                <a href={profile?.facebook_link} target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-facebook"></i>
+                </a>
+              )}
+              {profile?.linkedin_link && (
+                <a href={profile?.linkedin_link} target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-linkedin"></i>
+                </a>
+              )}
+              {profile?.twitter_link && (
+                <a href={profile?.twitter_link} target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-twitter"></i>
+                </a>
+              )}
+            </div>
           </Col>
           <Col lg={3} className="text-lg-right">
             {currentUser &&
