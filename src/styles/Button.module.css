@@ -1,8 +1,9 @@
 .Button {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     align-self: center;
     border-radius: 100px;
     border-color: transparent;
+    font-weight: 400;
     padding: 4px 10px;
     margin-left: 2px;
     margin-right: 2px;
@@ -50,7 +51,7 @@
 .BlackOutline:hover {
     /* background-color: #242a3d;
     color: white; */
-    background-color: #4d2116;
+    background-color: #ad4a31;
     color: #ffffff;
 }
   
@@ -59,7 +60,7 @@
     /* background-color: #dadadf;
     color: #242a3d;
     border-color: #242a3d; */
-    background-color: #ff8800;
+    background-color: #ffbd63;
     color: #180a06;
 }
   

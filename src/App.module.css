@@ -1,5 +1,7 @@
 .App {
-    font-family: "DM Sans", sans-serif;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: #f8f8f8;
     min-height: 100vh;
   }
