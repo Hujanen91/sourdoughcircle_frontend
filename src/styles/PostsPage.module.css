@@ -5,6 +5,12 @@
     margin-bottom: 16px;
   }
   
+  .Title {
+    font-size: 150%;
+    padding-left: 10px;
+    font-weight: bold;
+  }
+
   .SearchIcon {
     position: absolute;
     font-size: 1.2rem;

@@ -52,9 +52,10 @@ function PostsPage({ message = "" }) {
 
   return (
     <Row className="h-100">
+      <h1 className={`col-12 col-lg-8 d-flex justify-content-center ${styles.Title}`}>The SourdoughCircle</h1>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
-        <CategoryFilter mobile setFilter={setFilter} /> {/* Passing setFilter */}
+        
         <i className={`fas fa-search ${styles.SearchIcon}`} />
         <Form
           className={styles.SearchBar}
@@ -68,6 +69,7 @@ function PostsPage({ message = "" }) {
             placeholder="Search posts"
           />
         </Form>
+        <CategoryFilter mobile setFilter={setFilter} /> {/* Passing setFilter */}
 
         {hasLoaded ? (
           <>

@@ -32,7 +32,7 @@ const NavBar = () => {
       activeClassName={styles.Active}
       to="/posts/create"
     >
-      <i className="far fa-plus-square"></i>Add post
+      <i className="fi fi-sr-add-image"></i>Add post
     </NavLink>
   );
   const loggedInIcons = (
@@ -49,21 +49,21 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/liked"
       >
-        <i className="fas fa-heart"></i>Liked
+        <i className="fi fi-sr-square-heart"></i>Liked
       </NavLink>
       <NavLink 
         className={styles.NavLink}
         activeClassName={styles.Active}
         to="/contact"
       >
-        <i className="fa-solid fa-envelope-open-text"></i>Contact
+        <i className="fi fi-sr-envelopes"></i>Contact
       </NavLink>
       <NavLink 
         className={styles.NavLink} 
         to="/" 
         onClick={handleSignOut}
       >
-        <i className="fas fa-sign-out-alt"></i>Sign out
+        <i className="fi fi-sr-leave"></i>Sign out
       </NavLink>
       <NavLink
         className={styles.NavLink}
@@ -84,21 +84,21 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/signin"
       >
-        <i className="fas fa-sign-in-alt"></i>Sign in
+        <i className="fi fi-sr-sign-in-alt"></i>Sign in
       </NavLink>
       <NavLink
         to="/signup"
         className={styles.NavLink}
         activeClassName={styles.Active}
       >
-        <i className="fas fa-user-plus"></i>Sign up
+        <i className="fi fi-sr-sign-up"></i>Sign up
       </NavLink>
       <NavLink 
         className={styles.NavLink}
         activeClassName={styles.Active}
         to="/contact"
       >
-        <i className="fa-solid fa-envelope-open-text"></i>Contact
+        <i className="fi fi-sr-envelopes"></i>Contact
       </NavLink>
     </>
   );
@@ -113,12 +113,13 @@ const NavBar = () => {
       <Container>
         <NavLink to="/">
           <Navbar.Brand>
-            <img 
+            <img
               src={logo} 
               alt="logo" 
               height="75" 
             />
           </Navbar.Brand>
+          
         </NavLink>
         {currentUser && addPostIcon}
         <Navbar.Toggle 

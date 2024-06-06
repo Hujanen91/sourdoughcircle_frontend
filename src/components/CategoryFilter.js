@@ -26,7 +26,6 @@ const CategoryFilter = ({ setFilter, mobile }) => {
 
     return (
         <Container className={`${appStyles.Content} mb-3 ${mobile ? "p-3 text-center container" : ""}`}>
-            <p className="h4">Filter feed</p>
             <Row className="row d-flex justify-content-center">
             <Form.Group controlId="categorySelect">
                 <Form.Label>Filter by Category</Form.Label>
