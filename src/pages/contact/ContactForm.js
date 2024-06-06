@@ -136,7 +136,7 @@ const ContactForm = () => {
   return (
     
     <Form onSubmit={handleSubmit}>
-      <Col className={`d-none d-md-block col-6 ${styles.ContactImage}`}>
+      <Col className={`justify-content-center ${styles.ContactImage}`}>
         <img
           alt="Baked bread"
           src={contactImage}

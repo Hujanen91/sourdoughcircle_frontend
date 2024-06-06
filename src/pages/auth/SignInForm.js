@@ -10,7 +10,7 @@ import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 
 import { Link, useHistory } from "react-router-dom";
-import signingimg from "../../assets/images/dough-cutter (2).png"
+import signingimg from "../../assets/images/baker.png"
 
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";

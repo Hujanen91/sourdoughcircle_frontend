@@ -10,7 +10,7 @@
 
 .Row {
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 5px;
 }
 
 .ContactImage {
@@ -23,5 +23,12 @@
 .ContactUsText {
     display: flex;
     justify-content: center;
-    font-size: 150%;
+    padding-top: 10px;
+    font-size: 125%;
+}
+
+@media screen and (max-width: 550px) {
+    .ContactImage{
+        display: none;
+    }
 }
