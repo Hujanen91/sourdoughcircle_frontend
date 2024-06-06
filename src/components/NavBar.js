@@ -42,7 +42,7 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/feed"
       >
-        <i className="fas fa-stream"></i>Feed
+        <i className="fi fi-sr-bars-staggered"></i>Feed
       </NavLink>
       <NavLink
         className={styles.NavLink}
@@ -134,7 +134,7 @@ const NavBar = () => {
               activeClassName={styles.Active}
               to="/"
             >
-              <i className="fas fa-home"></i>Home
+              <i className="fi fi-sr-house-chimney-heart"></i>Home
             </NavLink>
 
             {currentUser ? loggedInIcons : loggedOutIcons}
