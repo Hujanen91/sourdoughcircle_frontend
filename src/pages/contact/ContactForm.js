@@ -23,19 +23,19 @@ const ContactForm = () => {
     name: "",
     subject: "",
     email: "",
-    content: "",
+    message: "",
   });
   const { name, subject, email, message } = contactData;
 
   const [show, setShow] = useState(false);
 
+  const history = useHistory();
+
   const handleClose = () => {
     setShow(false);
-    history.goBack();
+    resetForm();
   };
   const handleShow = () => setShow(true);
-
-  const history = useHistory();
 
   const handleChange = (event) => {
     setContactData({
@@ -44,8 +44,20 @@ const ContactForm = () => {
     });
   };
 
+  const validateForm = () => {
+    const newErrors = {};
+    if (!name) newErrors.name = ["Name is required"];
+    if (!subject) newErrors.subject = ["Subject is required"];
+    if (!email) newErrors.email = ["Email is required"];
+    if (!message) newErrors.message = ["Message is required"];
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (!validateForm()) return;
+
     const formData = new FormData();
 
     formData.append("name", name);
@@ -55,6 +67,7 @@ const ContactForm = () => {
 
     try {
       await axiosReq.post("/contact/", formData);
+      handleShow();
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -62,6 +75,17 @@ const ContactForm = () => {
       }
     }
   };
+
+  const resetForm = () => {
+    setContactData({
+      name: "",
+      subject: "",
+      email: "",
+      message: "",
+    });
+    setErrors({});
+  };
+
 
   const textFields = (
     <div className="text-center">
@@ -74,7 +98,7 @@ const ContactForm = () => {
           onChange={handleChange}
         />
       </Form.Group>
-      {errors?.title?.map((message, idx) => (
+      {errors?.name?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
@@ -89,6 +113,11 @@ const ContactForm = () => {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.subject?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Form.Group>
         <Form.Label>Email</Form.Label>
@@ -127,7 +156,7 @@ const ContactForm = () => {
       >
         Cancel
       </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit" onClick={handleShow}>
+      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
         Send
       </Button>
     </div>
@@ -154,8 +183,11 @@ const ContactForm = () => {
         </Modal.Header>
         <Modal.Body>Thank you! We will contact you as soon as possible!</Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={() => history.goBack()}>
             Back to feed
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Close
           </Button>
         </Modal.Footer>
       </Modal>
