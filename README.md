@@ -50,7 +50,7 @@ The repository for the backend of the application can be found here:<br>[Sourdou
 
 ### User Goals
 
-<!--The primary goals of the target audience for Caption of the Day are centered around creative expression, social interaction, and content discovery in a user-friendly digital environment. The platform is tailored to meet the following user aspirations:
+The primary user goals for SourdoughCircle are centered around creative expression, social interaction, and content discovery in a user-friendly digital environment. The platform is tailored to meet the following user aspirations:
 
 1. **Creative Sharing**: Users seek a platform where they can express themselves creatively through unique captions and imagery. The ability to craft and share content that resonates with personal experiences or interests is paramount.
 
@@ -68,30 +68,30 @@ By focusing on these goals, Caption of the Day aims to establish itself as a pre
 
 ### User Stories
 
-#### Epic: User Authentication and Session Management
+#### User Authentication and Session Management
 <!--- **User Story**: New User Sign-Up [#12](https://github.com/Haniibani/pp5_frontend/issues/12)
 - **User Story**: Persistent User Sessions [#5](https://github.com/Haniibani/pp5_frontend/issues/5)
 - **User Story**: Update Login Credentials [#13](https://github.com/Haniibani/pp5_frontend/issues/13)
 - **User Story**: Sign-In and Sign-Up Options for Logged-Out Users [#4](https://github.com/Haniibani/pp5_frontend/issues/4)
 
-#### Epic: Performance and Error Handling
+#### Performance and Error Handling
 - **User Story**: Fast and Responsive Application Performance [#10](https://github.com/Haniibani/pp5_frontend/issues/10)
 - **User Story**: Graceful Error Handling in the Application [#11](https://github.com/Haniibani/pp5_frontend/issues/11)
 - **User Story**: Continuous Access with Token Refresh [#18](https://github.com/Haniibani/pp5_frontend/issues/18)
 
-#### Epic: Navigation and Accessibility
+#### Navigation and Accessibility
 - **User Story**: Consistent Navigation Bar Access [#2](https://github.com/Haniibani/pp5_frontend/issues/2)
 - **User Story**: Navigation Bar Accessibility on All Pages [#19](https://github.com/Haniibani/pp5_frontend/issues/19)
 - **User Story**: Efficient Routing for Seamless Content Viewing [#3](https://github.com/Haniibani/pp5_frontend/issues/3)
 
-#### Epic: User Interface and Experience
+#### User Interface and Experience
 - **User Story**: Aesthetically Pleasing Interface Design [#9](https://github.com/Haniibani/pp5_frontend/issues/9)
 - **User Story**: Consistent Color Scheme and Design [#17](https://github.com/Haniibani/pp5_frontend/issues/17)
 
-#### Epic: Search and Content Discovery
+#### Search and Content Discovery
 - **User Story**: Keyword-Based Search for Posts and Profiles [#8](https://github.com/Haniibani/pp5_frontend/issues/8)
 
-#### Epic: User Interaction and Content Management
+#### User Interaction and Content Management
 - **User Story**: User Profile View and Edit [#6](https://github.com/Haniibani/pp5_frontend/issues/6)
 - **User Story**: Creating and Editing User Posts [#7](https://github.com/Haniibani/pp5_frontend/issues/7)
 - **User Story**: Follow and Unfollow Users [#14](https://github.com/Haniibani/pp5_frontend/issues/14)
