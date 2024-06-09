@@ -29,6 +29,8 @@ function PostsPage({ message = "" }) {
         if (filter) params.append('category', filter);
         if (query) params.append('search', query);
 
+        console.log("Request URL:", `/posts/?${params.toString()}`);
+        console.log("Filter value:", filter);
         let endpoint = "/posts/?";
         if (pathname === "/feed") {
           endpoint = "/followed-posts/?";
@@ -37,16 +39,10 @@ function PostsPage({ message = "" }) {
         }
 
         const { data } = await axiosReq.get(`${endpoint}${params.toString()}`);
-
-        // Ensure posts without categories are not included if a filter is applied
-        const filteredResults = filter 
-          ? data.results.filter(post => post.category && post.category === filter)
-          : data.results;
-
-        setPosts({ ...data, results: filteredResults });
-        setHasLoaded(true);
+            setPosts({ ...data, results: data.results });
+            setHasLoaded(true);
       } catch (err) {
-      
+        console.log("Error fetching posts:", err);
       }
     };
 
