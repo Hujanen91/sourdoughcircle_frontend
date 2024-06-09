@@ -29,10 +29,12 @@ function PostsPage({ message = "" }) {
         if (filter) params.append('category', filter);
         if (query) params.append('search', query);
 
-        console.log("Request URL:", `/posts/?${params.toString()}`);
-        console.log("Filter value:", filter);
+        let endpoint = "/posts/?";
+        if (pathname === "/feed") {
+          endpoint = "/followed-posts/?";
+        }
 
-        const { data } = await axiosReq.get(`/posts/?${params.toString()}`);
+        const { data } = await axiosReq.get(`${endpoint}${params.toString()}`);
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
