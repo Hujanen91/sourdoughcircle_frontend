@@ -25,6 +25,9 @@ const Post = (props) => {
     setPosts,
   } = props;
 
+  console.log("Likes Count:", likes_count); // Log likes count to verify
+  console.log("Comments Count:", comments_count); // Log comments count to verify
+  
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();

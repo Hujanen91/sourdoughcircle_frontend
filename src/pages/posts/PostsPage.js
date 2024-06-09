@@ -81,9 +81,10 @@ function PostsPage({ message = "" }) {
           <>
             {posts.results.length ? (
               <InfiniteScroll
-                children={posts.results.map((post) => (
-                  <Post key={post.id} {...post} setPosts={setPosts} />
-                ))}
+                children={posts.results.map((post) => {
+                  console.log("Post Data:", post); // Log the post data to verify
+                  return <Post key={post.id} {...post} setPosts={setPosts} />;
+                })}
                 dataLength={posts.results.length}
                 loader={<Asset spinner />}
                 hasMore={!!posts.next}
