@@ -34,8 +34,16 @@ function PostsPage({ message = "" }) {
           endpoint = "/followed-posts/?";
         }
 
+        console.log("Fetching posts with params:", params.toString());
+
         const { data } = await axiosReq.get(`${endpoint}${params.toString()}`);
-        setPosts(data);
+
+        // Ensure posts without categories are not included if a filter is applied
+        const filteredResults = filter 
+          ? data.results.filter(post => post.category && post.category === filter)
+          : data.results;
+
+        setPosts({ ...data, results: filteredResults });
         setHasLoaded(true);
       } catch (err) {
         console.log("Error fetching posts:", err);
