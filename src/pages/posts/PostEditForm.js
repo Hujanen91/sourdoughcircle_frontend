@@ -41,7 +41,7 @@ function PostEditForm() {
 
         is_owner ? setPostData({ title, content, image, category }) : history.push("/");
       } catch (err) {
-        console.log(err);
+
       }
     };
 
@@ -53,7 +53,6 @@ function PostEditForm() {
       try {
         const response = await fetch('https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/category/');
         const data = await response.json();
-        console.log('API response:', data); // Log the entire response
         if (Array.isArray(data.results)) {
           setCategories(data.results); // Adjust based on the actual structure
         } else {
@@ -100,7 +99,7 @@ function PostEditForm() {
       await axiosReq.put(`/posts/${id}/`, formData);
       history.push(`/posts/${id}`);
     } catch (err) {
-      console.log(err);
+      
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }

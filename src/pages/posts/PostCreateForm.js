@@ -41,7 +41,6 @@ function PostCreateForm() {
       try {
         const response = await fetch('https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/category/');
         const data = await response.json();
-        console.log('API response:', data); // Log the entire response
         if (Array.isArray(data.results)) {
           setCategories(data.results); // Adjust based on the actual structure
         } else {
@@ -87,7 +86,6 @@ function PostCreateForm() {
       const { data } = await axiosReq.post("/posts/", formData);
       history.push(`/posts/${data.id}`);
     } catch (err) {
-      console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }

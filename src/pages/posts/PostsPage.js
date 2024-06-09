@@ -32,9 +32,9 @@ function PostsPage({ message = "" }) {
         let endpoint = "/posts/?";
         if (pathname === "/feed") {
           endpoint = "/followed-posts/?";
+        } else if (pathname === "/liked") {
+          endpoint = "/liked-posts/?"; // Adjusting endpoint for liked posts
         }
-
-        console.log("Fetching posts with params:", params.toString());
 
         const { data } = await axiosReq.get(`${endpoint}${params.toString()}`);
 
@@ -46,7 +46,7 @@ function PostsPage({ message = "" }) {
         setPosts({ ...data, results: filteredResults });
         setHasLoaded(true);
       } catch (err) {
-        console.log("Error fetching posts:", err);
+      
       }
     };
 
@@ -79,7 +79,7 @@ function PostsPage({ message = "" }) {
             placeholder="Search posts"
           />
         </Form>
-        <CategoryFilter mobile setFilter={setFilter} /> {/* Passing setFilter */}
+        {pathname !== "/liked" && <CategoryFilter mobile setFilter={setFilter} />} {/* Render CategoryFilter only if not on /liked page */}
 
         {hasLoaded ? (
           <>
