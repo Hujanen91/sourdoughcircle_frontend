@@ -158,11 +158,21 @@ Throughout the development process, new milestones were added, where tasks start
 
 ### Design Choices
 
-Our design philosophy at "Caption of the Day" is deeply rooted in providing a serene and approachable environment for our users to share and explore. The design choices are reflective of our commitment to a clean, modern, and user-centric interface.
+- <b>Simple Navigation with Social Proof:</b> The navigation bar uses clear and concise labeling, with icons, to help users find the features they're looking for. It also incorporates a "Most Followed Profiles" section, highlighting users and potentially acting as social proof to new visitors.<br>
+- <b>Content Previews and User Activity:</b> The bottom portion of the page showcases a section with "Search posts" and "Filter by Category" options, encouraging users to explore content. Below this section are previews of user posts, including images and captions. This gives visitors a quick glimpse into the kind of content they can expect to find on the platform.<br>
+- <b>Muted Color Palette:</b> The color scheme uses a muted color palette of whites, greys, and a light olive green. This unobtrusive color scheme puts the focus on the content and avoids overwhelming users.
 
 #### Colors
 
-The color scheme is a soothing mix of soft teal and cloud white, invoking a sense of calm and openness reminiscent of a clear sky. Teal, a color often associated with clarity of thought and communication, aligns perfectly with our platform's goal of fostering clear and open exchanges between users. The neutral grey accents used for text and icons provide a gentle contrast, ensuring readability and focus on user content without overwhelming the senses.
+- <b>Primary Background:</b> The primary background color is a very light beige or off-white (#f8f8f8). This neutral color creates a clean and airy feel for the website.<br>
+- <b>Navigation Bar:</b> The navigation bar uses a dark gray (#363636) for the icons and font. This dark color creates a clear contrast with the light background and makes the text icons easily readable.
+The light background for the navbar is a light green/olive color (#bed1bae7) with some opacity to it for some effect while scrolling.
+- <b>Text Colors:</b> A bluish black (#212529) is used for the fonts on the website.
+- <b>Logo, highlights and hover:</b> The main logo on the page contains colors like (#ad4a31) and (#ff9254) and they have both been used on smaller details like buttons, icons and the hover colors to keep adding some pop of color<br>
+
+Overall, the color palette leans towards cool neutrals with a touch of muted green, creating a sense of calmness and professionalism that aligns with the minimalist design of the website.
+
+![Color palette](docs/images/sourdoughcircle-colors.png)
 
 #### Typography
 
