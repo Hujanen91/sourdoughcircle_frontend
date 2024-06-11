@@ -50,21 +50,21 @@ The repository for the backend of the application can be found here:<br>[Sourdou
 
 ### User Goals
 
-The primary user goals for SourdoughCircle are centered around creative expression, social interaction, and content discovery in a user-friendly digital environment. The platform is tailored to meet the following user aspirations:
+SourdoughCircle is all about sharing your love of sourdough in a fun and supportive space. It's a place to:
 
-1. **Creative Sharing**: Users seek a platform where they can express themselves creatively through unique captions and imagery. The ability to craft and share content that resonates with personal experiences or interests is paramount.
+1. **Show off your creations!**: Everyone loves a good sourdough picture, and SourdoughCircle lets you add your own unique twist with creative captions. It's all about capturing the essence of your sourdough journey, whatever that may be.
 
-2. **Community Engagement**: A strong desire exists for connecting with a like-minded community. Users aim to engage in meaningful interactions, be it through commenting on posts, reacting to content, or participating in caption-themed discussions.
+2. **Connect with fellow bread nerds!**: There's a whole community of people out there who share your passion for sourdough, and SourdoughCircle is the perfect place to meet them. We're all about having meaningful conversations about our bakes, from troubleshooting tips to proud moments.
 
-3. **Discovering Diverse Content**: Users are interested in exploring and discovering a wide range of captions and images that span various themes, moods, and perspectives. This exploration is a source of inspiration, entertainment, and learning.
+3. **Find endless inspiration!**: SourdoughCircle is overflowing with amazing sourdough content. You'll see all sorts of breads, from classic loaves to artistic creations, with captions that will make you laugh, learn, and get excited to try something new.
 
-4. **Ease of Use**: The target audience values an intuitive and straightforward user interface that makes navigation, content creation, and interaction effortless, regardless of their technical expertise.
+4. **Use the platform like a breeze!**: SourdoughCircle is super easy to navigate, no matter how tech-savvy you are. Sharing your bakes and connecting with others should be simple, and that's what we've focused on.
 
-5. **Personalized Experience**: Users look for a personalized feed that reflects their interests, past interactions, and preferred content, enhancing their engagement and time spent on the platform.
+5. **Get a feed that feels like home!**: The more you use SourdoughCircle, the more it tailors itself to your interests. You'll see content that resonates with you, so you can spend your time getting inspired, not lost in a sea of irrelevant posts.
 
-6. **Safe and Supportive Environment**: A safe space for sharing and interaction, where users feel supported and encouraged to express themselves without judgment or negativity.
+6. **Feel safe and supported!**: SourdoughCircle is a positive space where everyone feels comfortable sharing their creations, asking questions, and learning from each other. There's no room for negativity here, just a supportive community cheering each other on.
 
-By focusing on these goals, Caption of the Day aims to establish itself as a premier platform for creative sharing and community building, setting itself apart in the realm of social media.-->
+By focusing on these goals, Caption of the Day aims to establish itself as a premier platform for creative sharing and community building, setting itself apart in the realm of social media.
 
 ### User Stories
 
