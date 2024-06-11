@@ -64,39 +64,97 @@ SourdoughCircle is all about sharing your love of sourdough in a fun and support
 
 6. **Feel safe and supported!**: SourdoughCircle is a positive space where everyone feels comfortable sharing their creations, asking questions, and learning from each other. There's no room for negativity here, just a supportive community cheering each other on.
 
-By focusing on these goals, Caption of the Day aims to establish itself as a premier platform for creative sharing and community building, setting itself apart in the realm of social media.
+By keeping these things in mind, SourdoughCircle is building a one-of-a-kind platform for sourdough lovers to connect, create, and be inspired.
 
 ### User Stories
 
-#### User Authentication and Session Management
-<!--- **User Story**: New User Sign-Up [#12](https://github.com/Haniibani/pp5_frontend/issues/12)
-- **User Story**: Persistent User Sessions [#5](https://github.com/Haniibani/pp5_frontend/issues/5)
-- **User Story**: Update Login Credentials [#13](https://github.com/Haniibani/pp5_frontend/issues/13)
-- **User Story**: Sign-In and Sign-Up Options for Logged-Out Users [#4](https://github.com/Haniibani/pp5_frontend/issues/4)
+The API and Frontend of this project was planned using Agile methodology and MoSCoW prioritization on github projects.
 
-#### Performance and Error Handling
-- **User Story**: Fast and Responsive Application Performance [#10](https://github.com/Haniibani/pp5_frontend/issues/10)
-- **User Story**: Graceful Error Handling in the Application [#11](https://github.com/Haniibani/pp5_frontend/issues/11)
-- **User Story**: Continuous Access with Token Refresh [#18](https://github.com/Haniibani/pp5_frontend/issues/18)
+The user stories project can be found [here](https://github.com/Hujanen91/sourdoughcircle_frontend/milestones)
 
-#### Navigation and Accessibility
-- **User Story**: Consistent Navigation Bar Access [#2](https://github.com/Haniibani/pp5_frontend/issues/2)
-- **User Story**: Navigation Bar Accessibility on All Pages [#19](https://github.com/Haniibani/pp5_frontend/issues/19)
-- **User Story**: Efficient Routing for Seamless Content Viewing [#3](https://github.com/Haniibani/pp5_frontend/issues/3)
+The project was illustrated by 13 initial Milestone entitled<br>
+<b>"Profiles",<br>
+"Posts",<br>
+"Likes",<br>
+"Comments",<br>
+"Category",<br>
+"Followers",<br>
+"Admin",<br>
+"Contact",<br>
+"Community Chat",<br>
+"Authentication",<br>
+"Routing",<br>
+"Notifications"</b> and<br>
+<b>"Navigation"</b> providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline set to June. The Milestones were broken according to their components name main functions.
 
-#### User Interface and Experience
-- **User Story**: Aesthetically Pleasing Interface Design [#9](https://github.com/Haniibani/pp5_frontend/issues/9)
-- **User Story**: Consistent Color Scheme and Design [#17](https://github.com/Haniibani/pp5_frontend/issues/17)
+Throughout the development process, new milestones were added, where tasks started from "Todo," progressing to "In Progress," and finally "Done". The issues were assigned to the sole developer and labeled as "could-have," "should-have,", "must-have", "wont-have" and later on labels like "has been implemented" and "future implementation" was also added.
 
-#### Search and Content Discovery
-- **User Story**: Keyword-Based Search for Posts and Profiles [#8](https://github.com/Haniibani/pp5_frontend/issues/8)
 
-#### User Interaction and Content Management
-- **User Story**: User Profile View and Edit [#6](https://github.com/Haniibani/pp5_frontend/issues/6)
-- **User Story**: Creating and Editing User Posts [#7](https://github.com/Haniibani/pp5_frontend/issues/7)
-- **User Story**: Follow and Unfollow Users [#14](https://github.com/Haniibani/pp5_frontend/issues/14)
-- **User Story**: Discover Recent and Popular Posts [#15](https://github.com/Haniibani/pp5_frontend/issues/15)
-- **User Story**: Personalized Content Feed [#16](https://github.com/Haniibani/pp5_frontend/issues/16)-->
+#### Comments
+- **User Story**: Replying to comments [#44](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/44)
+- **User Story**: Comment date [#27](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/27)
+- **User Story**: Create a comment [#19](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/19)
+- **User Story**: Edit a comment [#25](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/25)
+- **User Story**: Delete comments [#32](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/32)
+- **User Story**: View comments [#33](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/33)
+
+#### Likes
+- **User Story**: Like a post [#29](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/29)
+- **User Story**: View liked posts [#23](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/23)
+
+#### Navigation
+- **User Story**: Navigation [#36](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/36)
+- **User Story**: Navigation: Conditional rendering [#13](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/13)
+
+#### Contact
+- **User Story**: Contactpage [#38](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/38)
+
+#### Category
+- **User Story**: Categories [#37](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/37)
+
+#### Posts
+- **User Story**: Most liked posts [#45](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/45)
+- **User Story**: View specific users posts [#15](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/15)
+- **User Story**: Edit post [#18](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/18)
+- **User Story**: Post page [#21](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/21)
+- **User Story**: View posts of followed users [#30](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/30)
+- **User Story**: Infinite scroll [#31](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/31)
+- **User Story**: Create posts [#20](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/20)
+- **User Story**: View recent posts [#28](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/28)
+- **User Story**: Search posts [#34](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/34)
+- **User Story**: View a post [#35](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/35)
+
+#### Profiles
+- **User Story**: Social media links in profile [#39](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/39)
+- **User Story**: User profile stats [#12](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/12)
+- **User Story**: Edit profile [#14](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/14)
+- **User Story**: Update username and profile [#16](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/16)
+- **User Story**: Profile page [#7](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/7)
+- **User Story**: Basic profile information [#22](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/22)
+- **User Story**: Avatar [#26](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/26)
+
+#### Community Chat
+- **User Story**: Community chat [#46](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/46)
+
+#### Notifications
+- **User Story**: Notifications [#43](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/43)
+
+#### Admin
+- **User Story ADMIN**: Email communication [#42](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/42)
+- **User Story**: Email communication [#41](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/41)
+- **User Story ADMIN**: Respond to users mail [#40](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/40)
+
+#### Followers
+- **User Story**: Follow/Unfollow [#17](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/17)
+- **User Story**: Most followed profiles [#24](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/24)
+
+#### Routing
+- **User Story**: Routing [#11](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/11)
+
+#### Authentication
+- **User Story**: Authentication: Refreshing access tokens [#10](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/10)
+- **User Story**: Authentication: Sign in [#9](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/9)
+- **User Story**: Authentication: Sign up [#8](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/8)
 
 ### Design Choices
 
