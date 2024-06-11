@@ -1,16 +1,16 @@
 # SourdoughCircle
 
-![SourdoughCircle](src/assets/images/sourdoughWEBP.webp)
+![SourdoughCircle ](src/assets/images/android-chrome-192x192.png)
 
 SourdoughCircle is a social media application that allows authenticated members to post images and share their content related to sourdough with other people. Members can post, like posts, comment on posts, and also edit and delete their posts. Members can also follow other members to create a personalized feed.
 
 # Live Page
 [SourdoughCircle](https://sourdoughcircle-81aa321c22de.herokuapp.com/)
 
-![Website Mockup]()
+![Website Mockup](docs/images/mockup_sourdoughcircle.png)
 
 # Django Rest Backend
-The repository for the backend of the application can be found here:<br>[SourdoughCircle_API](https://github.com/Hujanen91/sourdoughcircle_api)
+The repository for the backend of the application can be found here:<br>[SourdoughCircle API](https://github.com/Hujanen91/sourdoughcircle_api)
 
 ## Table of Contents
 
@@ -85,7 +85,7 @@ The project was illustrated by 13 initial Milestone entitled<br>
 "Authentication",<br>
 "Routing",<br>
 "Notifications"</b> and<br>
-<b>"Navigation"</b> providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline set to June. The Milestones were broken according to their components name main functions.
+<b>"Navigation"</b><br> providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline set to June. The Milestones were broken according to their components name main functions.
 
 Throughout the development process, new milestones were added, where tasks started from "Todo," progressing to "In Progress," and finally "Done". The issues were assigned to the sole developer and labeled as "could-have," "should-have,", "must-have", "wont-have" and later on labels like "has been implemented" and "future implementation" was also added.
 
@@ -156,6 +156,11 @@ Throughout the development process, new milestones were added, where tasks start
 - **User Story**: Authentication: Sign in [#9](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/9)
 - **User Story**: Authentication: Sign up [#8](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/8)
 
+<br>
+
+[Project user stories table can be found here](https://github.com/users/Hujanen91/projects/9/views/1?layout=table&visibleFields=%5B%22Title%22%2C%22Labels%22%2C%22Assignees%22%2C%22Status%22%5D&sortedBy%5Bdirection%5D=asc&sortedBy%5BcolumnId%5D=Labels)
+![Project overview](docs/images/Userstories_planning.png)
+
 ### Design Choices
 
 - <b>Simple Navigation with Social Proof:</b> The navigation bar uses clear and concise labeling, with icons, to help users find the features they're looking for. It also incorporates a "Most Followed Profiles" section, highlighting users and potentially acting as social proof to new visitors.<br>
@@ -203,7 +208,7 @@ SourdoughCircle isn't just about pretty pictures, it's about creating a vibrant 
 - **Interactive Features, connect with fellow bakers!**: Like and comment on posts to start conversations and build relationships with other sourdough enthusiasts. Share your knowledge, ask questions, and cheer each other on in your sourdough journeys.
 - **Infinite Scroll, infinite inspiration!**: SourdoughCircle keeps the inspiration flowing with a never-ending stream of sourdough content. Just keep scrolling to discover new techniques, drool-worthy creations, and tips from bakers of all experience levels.
 
-### Future Features
+<!--### Future Features
 
 Looking ahead, Caption of the Day is excited to explore and develop additional features that enhance connection and engagement:
 
