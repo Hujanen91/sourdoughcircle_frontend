@@ -140,6 +140,200 @@ Looking ahead, Caption of the Day is excited to explore and develop additional f
 
 These prospective features aim to keep Caption of the Day at the forefront of innovation, providing users with an ever-evolving platform that not only entertains but also connects and inspires.-->
 
+## Navbar
+
+__Fully responsive navbar with links to:__<br>
+
+  Logged out users:<br>
+  - Home page<br>
+  - Sign in page<br>
+  - Sign up page<br>
+  - Contact page<br>
+
+![Navbar logged out](docs/images/Navbar_loggedout.png)
+
+Logged in users:<br>
+  - Home page<br>
+  - Feed page<br>
+  - Liked page<br>
+  - Contact page<br>
+  - Sign out page<br>
+  - Profile page<br>
+
+![Navbar logged in](docs/images/navbar_loggedin.png)
+
+__Logo hyperlinked to home page:__
+![Logo](static/images/blog_images/File-01-color-1.png)
+
+Featured on all pages across the site.
+
+The navbar will adapt to if user is authenticated or not (When logged in Login and Register will be hidden and Logout will be displayed in the navbar.)
+
+__Navbar for non-authenticated users__:
+
+![Navbar non auth](static/images/readme_files/docs/navbar-links.png)
+__Navbar for authenticated users__:
+
+![Navbar auth](static/images/readme_files/docs/navbar-authenticated.png)
+
+___Purpose of feature:___
+Provide users with an easy and straight-forward way to navigate the site
+
+<hr>
+
+## Home page
+
+__The Home page consists of:__
+
+    - Blog Section
+
+
+__Blog Section__
+
+The Blog Section features the blogposts created by the author and will be displayed the same no matter if the user is logged in or not.
+
+![Blog Section](static/images/readme_files/docs/Index.png)
+
+
+___Purpose of feature:___
+Provide users with a welcoming landing page that is straight forward and clear for the user what the website is all about.
+
+<hr>
+
+## About page
+
+__The About page consists of:__
+
+    - A profile picture of the blog admin
+    - About section
+
+![About page](static/images/readme_files/docs/about-page.png)
+
+__Profile picture__
+
+The About page displays an image of the admin next to the paragraph section.
+
+___Purpose of feature:___
+Provide users with some insight of who the admin is.
+
+__About Section__
+
+Gives a description of the blog and its content and gives a small presentation of who the admin is.
+
+___Purpose of feature:___
+Provide users with information about the blog and a description of the admin.
+
+<hr>
+
+## Contact Page
+
+![Contact Page](static/images/readme_files/docs/contact-page.png)
+
+__The Contact page consists of:__
+
+    - Contact Form
+
+__Contact form__
+
+The contact form gives the user a way to contact the admin of the blog if they have any questions etc.
+
+The fields the user needs to fill in is:
+
+- Name
+- Email
+- Message
+
+_Additional_: All of the fields are required to be filled in, if it's not the user will be prompted to fill in the field before sending. 
+The email field needs to contain an email with @ in it to be sent.
+
+___Purpose of feature:___
+Provide users with a way to contact the admin and creator of the site.
+
+<hr>
+
+## Login page
+
+![Login page](static/images/readme_files/docs/login-page.png)
+
+__The Login page consists of:__
+
+    - Login form
+
+__Login form__
+
+The login form allows the user to enter their credentials and authenticate to enter the sites authenticated state.
+
+The login form also contains a link to the [Register page](https://the-longdog-hunt-9f116eb214b4.herokuapp.com/accounts/signup/) in case the user is not already registered.
+
+___Purpose of feature:___
+Provide users with a way to login to the site.
+
+<hr>
+
+## Register page
+
+![Register page](static/images/readme_files/docs/signup-page.png)
+
+__The Register page consists of:__
+
+    - Sign up form
+
+__Sign up form__
+
+The Sign up form which is provided by django allows the user to enter credentials for registration on the site.
+
+Through django it contains all the functionality for a secure registration and displays help text and error text to give the user feedback
+
+The sign up form also contains a link to the [Login page](https://the-longdog-hunt-9f116eb214b4.herokuapp.com/accounts/login/) in case the user already has an account.
+
+___Purpose of feature:___
+Provide users with a way to register an account on the site.
+
+<hr>
+
+## Blogpost page
+
+![Blogpost page](static/images/readme_files/docs/blogpost_detail_view.gif)
+
+__The Blogpost page consists of:__
+
+    - A view of the blogpost
+    - A commentfield under the blogpost
+
+The Blogpost page displays the Title of the blogpost, the author, a time and date when the blogpost was created, possible images in the blogpost and the text content.
+
+Below the blogpost there's a comment field and a textfield for a logged in user to write a comment in. If the user isn't logged in they can't comment and are prompted to login first along with links to the login page.
+
+___Purpose of feature:___
+Provide users with a way to see the specific blogposts and give logged in users a way to interact with the writer and share their opinion of the blogpost through comments.
+
+
+__Like button__
+
+![Like button](static/images/readme_files/docs/likes.png)
+
+The like button, placed on the left end of the screen right above the comment section, allows users to like or unlike a post.
+
+The liked posts are then stored in the Likes page where the authenticated user can navigate to display all their liked posts.
+
+_Additional_: The like button adapts to if the user is authenticated or not. If the user is not authenticated the like button is disabled.
+
+![Like button](static/images/readme_files/testing_gifs/like-post-signin-req.gif)
+
+___Purpose of feature:___
+Provide users with a way to to like posts they find interesting.
+
+__Comment section__
+
+![Comment section](static/images/readme_files/docs/comments.png)
+
+The comment section allows users to post comments on a post aswell as delete and edit their comment using the buttons displayed below the users comments.
+
+_Additional_: The delete button displays a modal requiring the user to confirm deletion of the comment.
+![Delete modal](static/images/readme_files/docs/delete-comment.png)
+
+<hr>
+
 ## Reusability
 
 <!--In this section, we explore the current reusability of our components and envision future scenarios where our components' flexibility can be further utilized.-->

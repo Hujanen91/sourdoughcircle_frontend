@@ -16,7 +16,7 @@ import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 
 function PostsPage({ message = "" }) {
-  const [filter, setFilter] = useState(""); // Corrected useState initialization
+  const [filter, setFilter] = useState("");
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
@@ -29,20 +29,17 @@ function PostsPage({ message = "" }) {
         if (filter) params.append('category', filter);
         if (query) params.append('search', query);
 
-        console.log("Request URL:", `/posts/?${params.toString()}`);
-        console.log("Filter value:", filter);
         let endpoint = "/posts/?";
         if (pathname === "/feed") {
           endpoint = "/followed-posts/?";
         } else if (pathname === "/liked") {
-          endpoint = "/liked-posts/?"; // Adjusting endpoint for liked posts
+          endpoint = "/liked-posts/?";
         }
 
         const { data } = await axiosReq.get(`${endpoint}${params.toString()}`);
             setPosts({ ...data, results: data.results });
             setHasLoaded(true);
       } catch (err) {
-        console.log("Error fetching posts:", err);
       }
     };
 
@@ -82,7 +79,6 @@ function PostsPage({ message = "" }) {
             {posts.results.length ? (
               <InfiniteScroll
                 children={posts.results.map((post) => {
-                  console.log("Post Data:", post); // Log the post data to verify
                   return <Post key={post.id} {...post} setPosts={setPosts} />;
                 })}
                 dataLength={posts.results.length}

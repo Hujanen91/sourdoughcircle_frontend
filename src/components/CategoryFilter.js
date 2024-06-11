@@ -13,10 +13,9 @@ const CategoryFilter = ({ setFilter, mobile }) => {
             try {
                 const response = await fetch('https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/category/');
                 const data = await response.json();
-                console.log(data.results); // Log the results to verify
-                setCategories(data.results); // Access the nested results array
-            } catch (error) {
-                console.error('Error fetching categories:', error);
+                setCategories(data.results);
+            } catch (err) {
+                // console.log(err);
             }
         };
 
