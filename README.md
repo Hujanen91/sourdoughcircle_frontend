@@ -158,7 +158,7 @@ Throughout the development process, new milestones were added, where tasks start
 
 ### Design Choices
 
-<!--Our design philosophy at "Caption of the Day" is deeply rooted in providing a serene and approachable environment for our users to share and explore. The design choices are reflective of our commitment to a clean, modern, and user-centric interface.
+Our design philosophy at "Caption of the Day" is deeply rooted in providing a serene and approachable environment for our users to share and explore. The design choices are reflective of our commitment to a clean, modern, and user-centric interface.
 
 #### Colors
 
@@ -176,13 +176,13 @@ These design elements come together to create an atmosphere that is both inspiri
 
 ## Features
 
-<!--Caption of the Day enriches the user experience with a suite of interactive features designed to foster engagement and creativity within the community:
+SourdoughCircle isn't just about pretty pictures, it's about creating a vibrant community where everyone feels welcome to share their love of sourdough. Here are some features that make it all possible:
 
-- **User Authentication**: A robust and secure login and registration system that protects user data and ensures a trustworthy environment for sharing personal moments.
-- **Profile Management**: Comprehensive profile customization options allow users to express their identity through bios, profile images, and a catalogue of their posts.
-- **Post Creation**: An intuitive and user-friendly interface for creating posts, enabling users to share their stories with text and image content that captures the essence of their experiences.
-- **Interactive Features**: Engaging social interaction tools that allow users to like and comment on posts, creating a dialogue and connection between community members.
-- **Infinite Scroll**: A smooth and uninterrupted browsing experience that dynamically loads content as the user scrolls, making content discovery seamless and enjoyable.
+- **User Authentication, join the Circle!**: Signing up for SourdoughCircle is quick and easy. I take user privacy seriously, so you can relax and enjoy sharing your creations in a safe and secure space.
+- **Profile Management, make it your space!**: Craft a profile that reflects your unique sourdough personality. Add a bio, choose a profile picture that shows off your baking skills, add your socials and build a collection of all your posts.
+- **Post Creation, sharing made simple!**: Uploading photos and adding captions to your sourdough masterpieces is a breeze. The user-friendly interface lets you tell the story behind your bake, share tips, or just show off your beautiful bread!
+- **Interactive Features, connect with fellow bakers!**: Like and comment on posts to start conversations and build relationships with other sourdough enthusiasts. Share your knowledge, ask questions, and cheer each other on in your sourdough journeys.
+- **Infinite Scroll, infinite inspiration!**: SourdoughCircle keeps the inspiration flowing with a never-ending stream of sourdough content. Just keep scrolling to discover new techniques, drool-worthy creations, and tips from bakers of all experience levels.
 
 ### Future Features
 
