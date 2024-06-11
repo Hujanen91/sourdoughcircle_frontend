@@ -166,13 +166,22 @@ The color scheme is a soothing mix of soft teal and cloud white, invoking a sens
 
 #### Typography
 
-We've selected a sans-serif font that balances form and function, offering excellent readability and a contemporary feel. This choice reflects our aim to present text in a manner that is both appealing and easy on the eyes, facilitating longer periods of engagement without strain. The font weight is carefully chosen to ensure that the textual content stands out against the light background, enhancing user focus on the stories and captions shared by the community.
+The font used is Barlow, a friendly and approachable sans-serif font, to make everything on the platform clear, easy to read, and inviting.<br>
+
+Here's why Barlow is perfect for SourdoughCircle:<br>
+
+- <b>Clear and Crisp:</b> Barlow's clean lines and open letterforms ensure all the sourdough goodness – from your post captions to comments – is easy to see, no matter what device you're using.<br>
+- <b>Warm and Welcoming:</b> The slightly rounded edges of the Barlow typeface give it a touch of friendliness, reflecting the warm and inviting atmosphere of the SourdoughCircle community.<br>
+- <b>Modern and Versatile:</b> Barlow's modern style keeps SourdoughCircle feeling fresh and up-to-date, while its versatility allows it to adapt to all kinds of content.
 
 #### Imagery
 
-The use of cloud imagery in our upload icon is symbolic of the seamless and boundless experience we offer, akin to uploading your thoughts to the vastness of the sky. User avatars are presented in greyscale to maintain uniformity and visual harmony, while also allowing the vibrant user-generated content to take center stage. Our logo, which combines a caption bubble and a camera shutter, encapsulates our core offering — a platform to visually share and caption life's moments.
+SourdoughCircle keeps it simple and to the point with its app iconography.
 
-These design elements come together to create an atmosphere that is both inspiring and tranquil, inviting users to stay, explore, and express themselves freely on Caption of the Day.-->
+- <b>Sourdough Icon:</b> The app utilizes a single, clean line drawing of a loaf of sourdough bread as both the favicon and the main icon in the navbar. This minimalist design makes the icon easily recognizable and ensures it scales well across different devices and screen sizes.<br>
+- <b>Focus on Sourdough:</b> By featuring the bread itself, the icon immediately communicates the app’s purpose – a platform dedicated to sourdough bread.
+
+- The rest of the icons and imagery follows along matching the colors and styles of the main navbar logo with clean lines, playful colors and easy for the eyes.
 
 ## Features
 
