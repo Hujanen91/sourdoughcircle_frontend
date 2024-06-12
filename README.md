@@ -671,10 +671,31 @@ The SourcdoughCircle has gone through thorough manual testing that can be found 
 
 ### Known Bugs
 
-<!--- **Current Status**: As of the latest deployment, no major bugs have been reported. The application is monitored continuously for any anomalies.
-- **Minor Issues**: A log of minor issues is maintained, with details about their nature and the environment in which they were encountered.
-- **Resolution Process**: These issues are being addressed in a prioritized manner, with regular updates and patches being rolled out.
-- **Feedback and Reporting**: Users are encouraged to report any bugs or issues they encounter, contributing to the application's ongoing improvement.-->
+**Current Status**:<br> 
+As of the latest deployment, no major bugs are deployed to the website. There's been a few during production that has been either temporarily solved or left as it is:<br>
+
+- During production somehow the /Feed and /Likes searchfield and category filtering stopped working. 
+Different AI:s was asked about the issue without any of them finding a solution that would work.
+Console.logs and console.errors was used to try to pinpoint the issue but the API was fetching everything as it was supposed to.
+My mentor looked at it for a moment and couldn't really see where the problem was due to the filtering and searchfield being defined in the same components as the <br>
+
+      Solution:
+      Due to the timelimit of this project this bug had to be either left as it was or hidden. I went with the last option and decided to hide the Searchbar and Category filtering on the /Feed and /Liked pages.
+      This solution felt like the better one so that the page did not contain non functional features for the users.
+      The Homepage still has these futures and they are working perfectly on that page and is fetching the right data.
+
+- The like and comment count on /Feed and /Liked page also stopped working probably at the same time as the previus bug above. The icons are displayed just as they should and the like button is clickable and is acting as it should. 
+The comment count on the other hand is not working as it should and is not displaying. 
+If a user likes the post and then unlike it the word "NaN" is appearing next to the like icon. The "NaN" will then be gone if the user updates the page and the icon will still be marked as "liked".<br>
+
+      Solution: 
+      This has been left as it is due to the timelimit but also due to it not being such an extreme bug and it functions as it should apart from not displaying the numbers.
+
+**Devtools**
+
+Websocket warning:
+A websocket warning is happening in the console in devtools. After searching in Slack for this issue I found out it is a known bug and something with some packages in the background non reachable to the user.
+Different solutions was tested withouth any success.
 
 ## Deployment
 
