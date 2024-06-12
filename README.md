@@ -237,6 +237,7 @@ A fully responsive navbar is futured on top of the page and is always visible. O
 ![Navbar logged out](docs/images/Navbar_loggedout.png)
 
 Logged in users:<br>
+  - Add posts<br>
   - Home page<br>
   - Feed page<br>
   - Liked page<br>
@@ -248,15 +249,15 @@ Logged in users:<br>
 
 __Logo hyperlinked to home page:__
 
-A logo is featured on all pages across the site inside the navbar, this is the main logo and makes it clear that the website is bread related. When not on home page the user will be sent back to home when clicking the Logo
-![Logo](./src/assets/images/android-chrome-192x192.png)
+A logo is featured on all pages across the site inside the navbar, this is the main logo and makes it clear that the website is bread related. When not on home page the user will be sent back to home when clicking the Logo<br>
+![Logo](./src/assets/images/android-chrome-192x192.png)<br>
 
 __Navbar on smaller screens:__
 
 The navbar will adapt depending on screen size to keept it looking good and make every icon fit as needed.
 Below is two images displaying the navbar in small screens and medium sized screens:<br>
-![Navbar small screen](docs/images/navbar_smallscreens.png)
-![Navbar medium screen](docs/images/navbar_mediumscreens.png)
+![Navbar small screen](docs/images/navbar_smallscreens.png)<br>
+![Navbar medium screen](docs/images/navbar_mediumscreens.png)<br>
 
 
 ## Home page
@@ -265,158 +266,198 @@ __The Home page consists of:__
 
 __The posts page__
 
-the main page where all users posts is displayed, this page is available to non authenticated users.
-The homepage displays the posts, the number of comments and likes, a "most followed" box to the right where a list of the most followed users are displayed.
+The main page where all users posts is displayed, this page is available to non authenticated users.
+The homepage displays the posts, the number of comments and likes, a "most followed" box to the right where a list of the most followed users are displayed.<br>
 
-![Home page](docs/images/home_landingpage.png)
+![Home page](docs/images/home_landingpage.png)<br>
 
 
 __Most followed profiles__
 
 The most followed profiles container sits on the right on big screens and then on the top of the page on smaller screens. The Follow/Unfollow button is hidden on smaller screens to not make the container too crouded and keep a clean look.
-The most followed profiles container is visible for the user on all pages displaying posts.
+The most followed profiles container is visible for the user on all pages displaying posts.<br>
 
-![Most followed](docs/images/most_followed.png)
-![Most followed small screens](docs/images/most_followed_smallscreen.png)
+![Most followed](docs/images/most_followed.png)<br>
+![Most followed small screens](docs/images/most_followed_smallscreen.png)<br>
 
 
 __The website title__
-Provide users with a welcoming landing page that is straight forward and clear for the user what the website is all about.
+
+The title of the website has been positioned below the navbar and above the main content on each page, this was done to save space in the navbar and not have too much happening in one place.
+The title is visible on all pages except for Contact, Profile, Login and Signup page.<br>
+![Website title](docs/images/sourdoughcircle_title.png)<br>
 
 __Searchbar__
+
+The searchbar, a function for the user to search and find posts in a simple way.
+The searchbar is displayed on the main Home page where all users posts are displayed.<br>
+![Searchbar](docs/images/searchbar.png)<br>
 
 
 __Category filtering__
 
-<hr>
+The category filtering is a filter the user can apply at the Homepage to quickly filter posts by category. The user can click on the dropdown list and in a simple way get all the posts related to one specific category.<br>
+![Categories](docs/images/search_category.png)<br>
 
 ## Feed page
 
 __The feed page consists of:__
 
-    - A profile picture of the blog admin
-    - About section
+__Feed posts__
 
-![About page](static/images/readme_files/docs/about-page.png)
-
-<hr>
+The feed page is the page that collects the posts from the users followed profiles.
+It's a simple and great way for the user to filter their feed and always be up to date with what their followers are posting.<br>
+![Feed posts](docs/images/feed_following_posts.png)<br>
 
 ## Contact Page
 
-![Contact Page](static/images/readme_files/docs/contact-page.png)
-
 __The Contact page consists of:__
-
-    - Contact Form
 
 __Contact form__
 
-The contact form gives the user a way to contact the admin of the blog if they have any questions etc.
+The contact form gives the user a way to contact the admin of the website if they have any questions, need help etc.
+The contact form is always available in the navbar no matter if the user is authenticated or not, this to ensure that a user that has trouble with their login or signup easily can contact the admin to be assisted further with their technical issues.
 
 The fields the user needs to fill in is:
 
-- Name
-- Email
-- Message
+    - Name
+    - Subject
+    - Email
+    - Message
+
 
 _Additional_: All of the fields are required to be filled in, if it's not the user will be prompted to fill in the field before sending. 
 The email field needs to contain an email with @ in it to be sent.
 
-___Purpose of feature:___
-Provide users with a way to contact the admin and creator of the site.
+A modal will appear when hitting the submit/send button to confirm that the message has been sent, the user can then choose to close the modal and stay on the contact page or hit the "back to feed" button and be sent back to the homepage.
 
-<hr>
+__Purpose of feature:__
+Provide users with a way to contact the admin and creator of the site when users need help, wants to ask questions or just vent their opinions.<br>
+
+![Contact Page](docs/images/contact_page.png)<br>
 
 ## Login page
 
-![Login page](static/images/readme_files/docs/login-page.png)
-
 __The Login page consists of:__
-
-    - Login form
 
 __Login form__
 
 The login form allows the user to enter their credentials and authenticate to enter the sites authenticated state.
 
-The login form also contains a link to the [Register page](https://the-longdog-hunt-9f116eb214b4.herokuapp.com/accounts/signup/) in case the user is not already registered.
+The login form also contains a link to the [Sign up page](https://3000-hujanen91-sourdoughcirc-97h40xcm3uw.ws-eu114.gitpod.io/signup) in case the user is not already registered.
 
-___Purpose of feature:___
-Provide users with a way to login to the site.
+_Additional_: If the user enters the fields incorrectly or the user isn's recognized the're will be clear messages displaying to make the user aware.
 
-<hr>
+__Purpose of feature:__
+Provide users with a way to login to the site.<br>
 
-## Register page
+![Login page](docs/images/signin_landingpage.png)<br>
 
-![Register page](static/images/readme_files/docs/signup-page.png)
+## Sign up page
 
 __The Register page consists of:__
 
-    - Sign up form
-
 __Sign up form__
 
-The Sign up form which is provided by django allows the user to enter credentials for registration on the site.
+The Sign up form which allows the user to enter credentials for registration on the site, 
+it contains all the functionality for a secure registration and displays help text and error text to give the user feedback.
 
-Through django it contains all the functionality for a secure registration and displays help text and error text to give the user feedback
+The sign up form also contains a link to the [Sign in page](https://3000-hujanen91-sourdoughcirc-97h40xcm3uw.ws-eu114.gitpod.io/signin) in case the user already has an account.
 
-The sign up form also contains a link to the [Login page](https://the-longdog-hunt-9f116eb214b4.herokuapp.com/accounts/login/) in case the user already has an account.
+_Additional_: All of the fields are required to be filled in, if it's not the user will be prompted to fill in the field correctly before being able to sign up. 
+The email field needs to contain an email with @ in it for the form to accept the sign up request.
 
-___Purpose of feature:___
-Provide users with a way to register an account on the site.
+__Purpose of feature:__
+Provide users with a way to sign up to the site.
 
-<hr>
+![Sign up page](docs/images/signup_landingpage.png)<br>
 
 ## Profile page
 
-![Blogpost page](static/images/readme_files/docs/blogpost_detail_view.gif)
+__The profile page consists of:__
 
-__The Blogpost page consists of:__
+__Profile page and avatar__
 
-    - A view of the blogpost
-    - A commentfield under the blogpost
+The profile page consists of the user avatar, a bio for the user to fill in and give everyone an image of who they are or what they like to post about.
+A logged in user is presented with a button to "Follow" or "Unfollow" when navigating to another users profile.
+The profile page also presents social media links so others can decide to follow them on other platforms. If a user does not add any socials the icons will be hidden.
+The profile page also displays stats about the specific user such as posts posted, followers and how many the user is following.
 
-The Blogpost page displays the Title of the blogpost, the author, a time and date when the blogpost was created, possible images in the blogpost and the text content.
+__Purpose of feature:__
+Provides the user with the function to express themselves, present themselves and display to other users who they are. For other users it's a way to get som information about the user and to see what that specific user has posted.
 
-Below the blogpost there's a comment field and a textfield for a logged in user to write a comment in. If the user isn't logged in they can't comment and are prompted to login first along with links to the login page.
+_Additional_: When a logged in user navigates to their own profile three dots will appear up at the top of the right corner of the profile container. Here the user can edit their profile information or delete th
 
-___Purpose of feature:___
-Provide users with a way to see the specific blogposts and give logged in users a way to interact with the writer and share their opinion of the blogpost through comments.
+Main view:
+![Profile page](docs/images/profile_page.png)<br>
+Other users profile with follow/unfollow button:<br>
+![Profile page not user](docs/images/profile_page_notuser.png)<br>
+Edit profile menu:<br>
+![Profile edit options](docs/images/Profile_edit.png)<br>
+Edit profile view:<br>
+![Edit profile](docs/images/Profile_edit_page.png)<br>
+Change username view:<br>
+![Change username](docs/images/change_username.png)<br>
+Change password view:<br>
+![Change password](docs/images/change_password.png)<br>
 
-__Create post__
+## Create post
+__The Create post page consists of:__
 
-![Comment section](static/images/readme_files/docs/comments.png)
+__Creat post field__
 
-The comment section allows users to post comments on a post aswell as delete and edit their comment using the buttons displayed below the users comments.
+In the navbar there's a "Add post" text and icon for authenticated users.
+Clicking this button will send the user to the creat post page where the user can upload images, add titel and description and add a category.
+After posting the user is sent back to home page where the post is published at the top.
 
-_Additional_: The delete button displays a modal requiring the user to confirm deletion of the comment.
-![Delete modal](static/images/readme_files/docs/delete-comment.png)
+_Additional_: The user will be alerted when required fields are not filled in.
+The user will also get an alert when they try to upload images that are too big.<br>
 
-__Like button__
+![Create post view](docs/images/post_creation_page.png)<br>
+Requierd fields alerts:<br>
+![Create post required fields](docs/images/Create_post_reqfields.png)<br>
 
-![Like button](static/images/readme_files/docs/likes.png)
+__The Post page consists of:__
 
-The like button, placed on the left end of the screen right above the comment section, allows users to like or unlike a post.
+__The post__
 
-The liked posts are then stored in the Likes page where the authenticated user can navigate to display all their liked posts.
+When clicking on a specific post the user will be sent to the Post page.
+Here logged in users can comment and other users than the creator of the post can like the post.
 
-_Additional_: The like button adapts to if the user is authenticated or not. If the user is not authenticated the like button is disabled.
+_Additional_: 
+The owner of the post has an option to click on three dots in the right upper corner to get the option to edit or delete their own posts.
+The user will get alert messages if image is too big or Title isn't added, this function is identical to the Add post alerts.
 
-![Like button](static/images/readme_files/testing_gifs/like-post-signin-req.gif)
+__Purpose of feature:__
+Provide the user with a detailed view of one specific post and to present the user with the comment field where they can interact and socialize with the post creator and other users.<br>
 
-___Purpose of feature:___
-Provide users with a way to to like posts they find interesting.
+Post page view:<br>
+![Post page view](docs/images/Post_page.png)<br>
+Post edit menu:<br>
+![Post edit menu](docs/images/post_page_edit.png)<br>
+Post edit view:<br>
+![Post edit view](docs/images/post_page_edit_view.png)<br>
 
 __Comment section__
 
-![Comment section](static/images/readme_files/docs/comments.png)
+The comment section allows users to post comments on a post aswell as delete and edit their comment using the menu displayed to the right in the comment field.<br>
 
-The comment section allows users to post comments on a post aswell as delete and edit their comment using the buttons displayed below the users comments.
-
-_Additional_: The delete button displays a modal requiring the user to confirm deletion of the comment.
-![Delete modal](static/images/readme_files/docs/delete-comment.png)
+Comment section:<br>
+![Comment section](docs/images/Comments_field.png)<br>
+Comment edit menu:<br>
+![Comment menu](docs/images/comment_edit_menu.png)<br>
+Comment edit view:<br>
+![Comment edit](docs/images/comment_edit_view.png)<br>
 
 <hr>
+
+__Additional functions non visible to users:__
+
+__Infinite scroll__
+
+Infinite scroll is a future that will fetch new posts from the api while the user scrolls to create an infinte scroll. This effect is applied to both posts page, feed, liked feed, comments feed and profile page feed.
+
+
 
 ## Reusability
 
