@@ -247,7 +247,7 @@ Logged in users:<br>
 __Logo hyperlinked to home page:__
 ![Logo](static/images/blog_images/File-01-color-1.png)
 
-Featured on all pages across the site.
+Featured on all pages across the site.gfd
 
 The navbar will adapt to if user is authenticated or not (When logged in Login and Register will be hidden and Logout will be displayed in the navbar.)
 
