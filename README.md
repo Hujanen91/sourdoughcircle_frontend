@@ -268,15 +268,16 @@ __The posts page__
 the main page where all users posts is displayed, this page is available to non authenticated users.
 The homepage displays the posts, the number of comments and likes, a "most followed" box to the right where a list of the most followed users are displayed.
 
-![Home page](static/images/readme_files/docs/Index.png)
-![Home page](static/images/readme_files/docs/Index.png)
+![Home page](docs/images/home_landingpage.png)
 
 
 __Most followed profiles__
 
-The Blog Section features the blogposts created by the author and will be displayed the same no matter if the user is logged in or not.
+The most followed profiles container sits on the right on big screens and then on the top of the page on smaller screens. The Follow/Unfollow button is hidden on smaller screens to not make the container too crouded and keep a clean look.
+The most followed profiles container is visible for the user on all pages displaying posts.
 
-![Blog Section](static/images/readme_files/docs/Index.png)
+![Most followed](docs/images/most_followed.png)
+![Most followed small screens](docs/images/most_followed_smallscreen.png)
 
 
 __The website title__
@@ -284,32 +285,19 @@ Provide users with a welcoming landing page that is straight forward and clear f
 
 __Searchbar__
 
+
 __Category filtering__
 
 <hr>
 
-## About page
+## Feed page
 
-__The About page consists of:__
+__The feed page consists of:__
 
     - A profile picture of the blog admin
     - About section
 
 ![About page](static/images/readme_files/docs/about-page.png)
-
-__Profile picture__
-
-The About page displays an image of the admin next to the paragraph section.
-
-___Purpose of feature:___
-Provide users with some insight of who the admin is.
-
-__About Section__
-
-Gives a description of the blog and its content and gives a small presentation of who the admin is.
-
-___Purpose of feature:___
-Provide users with information about the blog and a description of the admin.
 
 <hr>
 
@@ -379,7 +367,7 @@ Provide users with a way to register an account on the site.
 
 <hr>
 
-## Blogpost page
+## Profile page
 
 ![Blogpost page](static/images/readme_files/docs/blogpost_detail_view.gif)
 
@@ -395,6 +383,14 @@ Below the blogpost there's a comment field and a textfield for a logged in user 
 ___Purpose of feature:___
 Provide users with a way to see the specific blogposts and give logged in users a way to interact with the writer and share their opinion of the blogpost through comments.
 
+__Create post__
+
+![Comment section](static/images/readme_files/docs/comments.png)
+
+The comment section allows users to post comments on a post aswell as delete and edit their comment using the buttons displayed below the users comments.
+
+_Additional_: The delete button displays a modal requiring the user to confirm deletion of the comment.
+![Delete modal](static/images/readme_files/docs/delete-comment.png)
 
 __Like button__
 
