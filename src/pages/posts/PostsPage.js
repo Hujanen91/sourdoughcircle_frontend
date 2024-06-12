@@ -56,23 +56,38 @@ function PostsPage({ message = "" }) {
   return (
     <Row className="h-100">
       <h1 className={`col-12 col-lg-8 d-flex justify-content-center ${styles.Title}`}>The SourdoughCircle</h1>
+      {pathname === "/feed" && (
+        <h2 className={`col-12 col-lg-8 d-flex justify-content-center ${styles.FeedLiked}`}>
+          Your followed users' posts:
+        </h2>
+      )}
+      {pathname === "/liked" && (
+        <h2 className={`col-12 col-lg-8 d-flex justify-content-center ${styles.FeedLiked}`}>
+          Your liked posts:
+        </h2>
+      )}
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
         
-        <i className={`fas fa-search ${styles.SearchIcon}`} />
-        <Form
-          className={styles.SearchBar}
-          onSubmit={(event) => event.preventDefault()}
-        >
-          <Form.Control
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            type="text"
-            className="mr-sm-2"
-            placeholder="Search posts"
-          />
-        </Form>
-        {pathname !== "/liked" && <CategoryFilter mobile setFilter={setFilter} />} {/* Render CategoryFilter only if not on /liked page */}
+          
+         {pathname !== "/feed" && pathname !== "/liked" && (
+          <>
+            <i className={`fas fa-search ${styles.SearchIcon}`} />
+            <Form
+              className={styles.SearchBar}
+              onSubmit={(event) => event.preventDefault()}
+            >
+              <Form.Control
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                type="text"
+                className="mr-sm-2"
+                placeholder="Search posts"
+              />
+            </Form>
+          </>
+        )}
+        {pathname !== "/liked" && pathname !== "/feed" && <CategoryFilter mobile setFilter={setFilter} />}
 
         {hasLoaded ? (
           <>

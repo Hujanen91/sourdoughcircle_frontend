@@ -11,6 +11,13 @@
     font-weight: 600;
   }
 
+  .FeedLiked {
+    font-size: 100%;
+    font-weight: 400;
+    background-image: linear-gradient(to right, #f8f8f8,#bed1bace,#f8f8f8);
+    padding: 10px;
+  }
+
   .SearchIcon {
     position: absolute;
     font-size: 1.2rem;

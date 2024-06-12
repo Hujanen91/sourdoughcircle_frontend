@@ -173,7 +173,7 @@ const ContactForm = () => {
       <h1 className={styles.ContactUsText}>Contact us!</h1>
       <Row className={styles.Row}>
         <Col className="col-md-7 col-lg-5 col-md-5">
-          <Container className={appStyles.Content}>{textFields}</Container>
+          <Container className={styles.ContactContainer}>{textFields}</Container>
         </Col>
       </Row>
       <Modal show={show} onHide={handleClose}>
