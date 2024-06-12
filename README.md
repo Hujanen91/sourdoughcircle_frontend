@@ -746,17 +746,27 @@ Cloning a GitHub repository creates a local copy on your machine, allowing you t
 
 ## Credits
 
-[Modal pop up in ContactForm](https://react-bootstrap.netlify.app/docs/components/modal/)
+The following sources and references were resorted for the creation of this website:<br>
+
+- The lessons and tutorials provided by Code Institute, on the final module entitled "Django REST Framework" for the 'Advanced Front-End' specialization<br>
+- Modal pop up in ContactForm:<br>
+https://react-bootstrap.netlify.app/docs/components/modal/
+
+- I have been getting insperation from following users:<br>
+[Gareth McGirr](https://github.com/Gareth-McGirr),<br>
+[Hannibani](https://github.com/Haniibani),<br>
+[TiagoMA90](https://github.com/TiagoMA90),<br>
+[Cushione](https://github.com/Cushione)<br>
+
+
 
 ### Content
 
-<!--This project has benefited from several educational resources and example projects provided by the Code Institute throughout the course of my bootcamp. The following projects deserve special mention for their direct impact on the development of this application:
+This project has benefited from several educational resources and example projects provided by the Code Institute throughout the course of my bootcamp. The following projects deserve special mention for their direct impact on the development of this application:
 
 - **Django REST Framework Example Project**: A practical example provided by the Code Institute that guided the development of Web APIs using Django REST framework. This project served as a template for best practices in API development with Django and Python.
 
 - **Moments Project**: Another resource from the Code Institute, the Moments project was instrumental in illustrating the development of a full-stack application with a focus on user experience. Various aspects of its design and functionality have been adapted and incorporated into this project.
-
-A heartfelt thank you goes to the Code Institute for the array of projects and resources that have been made available throughout my bootcamp. These resources have not only guided this project but have also been a cornerstone of my learning journey, providing me with a solid foundation in software development and a deep understanding of full-stack development practices.-->
 
 ### Media
 
@@ -764,3 +774,14 @@ A heartfelt thank you goes to the Code Institute for the array of projects and r
 
 - **Pixabay Images**: A variety of high-quality images were sourced from [Pixabay](https://pixabay.com/), a platform offering free-to-use, royalty-free images. These images were carefully chosen to enhance the visual aspect of the project.
 - **DALL-E Generated Images**: Specific imagery was created using [DALL-E](https://openai.com/dall-e), OpenAI's AI image generator, to produce unique and tailored visuals for the project.-->
+
+- SourdoughCircle icons:<br>
+https://www.flaticon.com/authors/mangsaabguru
+- Other Icons:<br>
+https://www.flaticon.com
+
+### Acknowledgements:
+
+- My mentor [Gareth McGirr](https://github.com/Gareth-McGirr) for his continuing support and great advice throughout this project and all my other projects in this entire course at Code Institute.
+
+- The Code Institute community at Slack that always have people ready to help and more specific the #community-sweden channel with all the amazing people that I have both talked to in the channels but also met in real life for some irl study sessions, you guys are amazing and made this entire course easier and more fun to push through!
