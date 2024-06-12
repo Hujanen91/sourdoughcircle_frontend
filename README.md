@@ -224,7 +224,9 @@ These prospective features aim to keep Caption of the Day at the forefront of in
 
 ## Navbar
 
-__Fully responsive navbar with links to:__<br>
+__Fully responsive navbar__<br>
+
+A fully responsive navbar is futured on top of the page and is always visible. On smaller screens the menu will hide in a hamburger menu bottom for a cleaner look.
 
   Logged out users:<br>
   - Home page<br>
@@ -245,40 +247,44 @@ Logged in users:<br>
 ![Navbar logged in](docs/images/navbar_loggedin.png)
 
 __Logo hyperlinked to home page:__
-![Logo](static/images/blog_images/File-01-color-1.png)
 
-Featured on all pages across the site.gfd
+A logo is featured on all pages across the site inside the navbar, this is the main logo and makes it clear that the website is bread related. When not on home page the user will be sent back to home when clicking the Logo
+![Logo](./src/assets/images/android-chrome-192x192.png)
 
-The navbar will adapt to if user is authenticated or not (When logged in Login and Register will be hidden and Logout will be displayed in the navbar.)
+__Navbar on smaller screens:__
 
-__Navbar for non-authenticated users__:
+The navbar will adapt depending on screen size to keept it looking good and make every icon fit as needed.
+Below is two images displaying the navbar in small screens and medium sized screens:<br>
+![Navbar small screen](docs/images/navbar_smallscreens.png)
+![Navbar medium screen](docs/images/navbar_mediumscreens.png)
 
-![Navbar non auth](static/images/readme_files/docs/navbar-links.png)
-__Navbar for authenticated users__:
-
-![Navbar auth](static/images/readme_files/docs/navbar-authenticated.png)
-
-___Purpose of feature:___
-Provide users with an easy and straight-forward way to navigate the site
-
-<hr>
 
 ## Home page
 
 __The Home page consists of:__
 
-    - Blog Section
+__The posts page__
+
+the main page where all users posts is displayed, this page is available to non authenticated users.
+The homepage displays the posts, the number of comments and likes, a "most followed" box to the right where a list of the most followed users are displayed.
+
+![Home page](static/images/readme_files/docs/Index.png)
+![Home page](static/images/readme_files/docs/Index.png)
 
 
-__Blog Section__
+__Most followed profiles__
 
 The Blog Section features the blogposts created by the author and will be displayed the same no matter if the user is logged in or not.
 
 ![Blog Section](static/images/readme_files/docs/Index.png)
 
 
-___Purpose of feature:___
+__The website title__
 Provide users with a welcoming landing page that is straight forward and clear for the user what the website is all about.
+
+__Searchbar__
+
+__Category filtering__
 
 <hr>
 
