@@ -208,19 +208,21 @@ SourdoughCircle isn't just about pretty pictures, it's about creating a vibrant 
 - **Interactive Features, connect with fellow bakers!**: Like and comment on posts to start conversations and build relationships with other sourdough enthusiasts. Share your knowledge, ask questions, and cheer each other on in your sourdough journeys.
 - **Infinite Scroll, infinite inspiration!**: SourdoughCircle keeps the inspiration flowing with a never-ending stream of sourdough content. Just keep scrolling to discover new techniques, drool-worthy creations, and tips from bakers of all experience levels.
 
-<!--### Future Features
+### Future Features
 
-Looking ahead, Caption of the Day is excited to explore and develop additional features that enhance connection and engagement:
+There are several different future implementations that could be done to the SourdoughCircle to make it even better:
 
-- **Live Streaming**: Introduce the ability for users to share live moments with their followers, bringing real-time connection to the community.
-- **Advanced Content Filters**: Implement smart filters that allow users to customize their content discovery based on their interests, trends, and activities.
-- **Augmented Reality (AR) Integration**: Explore AR technology to enable users to create and share immersive posts that blur the lines between digital and physical worlds.
-- **Virtual Gatherings**: Create virtual spaces where users can host and participate in events, fostering deeper community bonds.
-- **Mood-Based Content Suggestion**: Develop a mood analysis feature that suggests content based on the user's current mood, detected through machine learning algorithms.
-- **Multi-Language Support**: Broaden the platform's reach by offering a multilingual interface that welcomes users from different linguistic backgrounds.
-- **Eco-Friendly Initiatives**: Introduce features that promote environmental awareness, including eco-challenges and sustainability-focused content sharing.
+- **Live community chat**: A field alwats available in the post feeds where users can chat with each other, a live chatroom or community chat.
+- **Sharing to other social media**: Implement the option to share posts to other social medias.
+- **Admin page specifically for handling user messages**: A page visible only to logged in admin, a frontend page to handle messages sent through the contact form where admins can answer directly to the users messages.
+- **Answering other comments**: To boost the social possibilities in the community an option to answer other users comments in the comment field could be added.
+- **Like or vote on other comments**: The option to like or vote others comments could be implemented for further social interactions
+- **Multi image uploads**: The option to upload several images in one post where the other users then can swipe through the images in the post view
+- **User status sharing**: A field next to the username or user avatar that displays a status the user can add themselves.
+- **Notifications**: Live notifications for a better user experiens. Could also be used by admins to send out alerts or information to all users on the website.
+- **Direct messages between users**: A private message chat to boost the social interactions. Could also be used by admins for easier contact options between admins and users.
 
-These prospective features aim to keep Caption of the Day at the forefront of innovation, providing users with an ever-evolving platform that not only entertains but also connects and inspires.-->
+These future implementations are just a few of many features that could improve the website further and make it even more fun to use and easier to use.
 
 ## Navbar
 
