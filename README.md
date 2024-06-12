@@ -664,10 +664,10 @@ The SourcdoughCircle has gone through thorough manual testing that can be found 
 [Manual testing](testing.md)
 
 
-### Performance and Best Practices Analysis
+### Performance and Validation
 
-<!--As part of our commitment to excellence, I conducted an in-depth performance and best practices analysis using Lighthouse. My analysis revealed several insights:
-[Perfomance](testing.md#performance-and-best-practices-analysis)-->
+The SourcdoughCircle perfomance, best practice and validation reports can all be found here:
+[Perfomance and Validation](testing.md)
 
 ### Known Bugs
 
