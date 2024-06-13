@@ -44,7 +44,6 @@ The repository for the backend of the application can be found here:<br>[Sourdou
   * [Content](#content)
   * [Media](#media)
 
----
 
 ## UX
 
@@ -64,31 +63,45 @@ SourdoughCircle is all about sharing your love of sourdough in a fun and support
 
 6. **Feel safe and supported!**: SourdoughCircle is a positive space where everyone feels comfortable sharing their creations, asking questions, and learning from each other. There's no room for negativity here, just a supportive community cheering each other on.
 
-By keeping these things in mind, SourdoughCircle is building a one-of-a-kind platform for sourdough lovers to connect, create, and be inspired.
+By keeping these things in mind, SourdoughCircle is building a one-of-a-kind platform for sourdough lovers to connect, create, and be inspired
 
-### User Stories
+&ensp;
 
+### Agile and planning
+<hr>
 The API and Frontend of this project was planned using Agile methodology and MoSCoW prioritization on github projects.
 
-The user stories project can be found [here](https://github.com/Hujanen91/sourdoughcircle_frontend/milestones)
+**The user stories project can be found [here](https://github.com/users/Hujanen91/projects/9)**
+
 
 The project was illustrated by 13 initial Milestone entitled<br>
-<b>"Profiles",<br>
-"Posts",<br>
-"Likes",<br>
-"Comments",<br>
-"Category",<br>
-"Followers",<br>
-"Admin",<br>
-"Contact",<br>
-"Community Chat",<br>
-"Authentication",<br>
-"Routing",<br>
-"Notifications"</b> and<br>
-<b>"Navigation"</b><br> providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline set to June. The Milestones were broken according to their components name main functions.
+
+`Profiles`
+`Posts`
+`Likes`
+`Comments`
+`Category`
+`Followers`
+`Admin`
+`Contact`<br>
+`Community Chat`
+`Authentication`
+`Routing`
+`Notifications`
+`Navigation`<br>
+
+providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline set to June. The Milestones were broken according to their components name main functions.
 
 Throughout the development process, new milestones were added, where tasks started from "Todo," progressing to "In Progress," and finally "Done". The issues were assigned to the sole developer and labeled as "could-have," "should-have,", "must-have", "wont-have" and later on labels like "has been implemented" and "future implementation" was also added.
 
+&ensp;
+### User Stories:
+
+<details>
+<summary>
+<b style="font-size: 15px; font-style: italic;">User stories Milestone list</b>
+</summary>
+<summary>
 
 #### Comments
 - **User Story**: Replying to comments [#44](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/44)
@@ -97,6 +110,8 @@ Throughout the development process, new milestones were added, where tasks start
 - **User Story**: Edit a comment [#25](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/25)
 - **User Story**: Delete comments [#32](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/32)
 - **User Story**: View comments [#33](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/33)
+
+
 
 #### Likes
 - **User Story**: Like a post [#29](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/29)
@@ -156,6 +171,9 @@ Throughout the development process, new milestones were added, where tasks start
 - **User Story**: Authentication: Sign in [#9](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/9)
 - **User Story**: Authentication: Sign up [#8](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/8)
 
+</summary>
+</details>
+
 <br>
 
 [Project user stories table can be found here](https://github.com/users/Hujanen91/projects/9/views/1?layout=table&visibleFields=%5B%22Title%22%2C%22Labels%22%2C%22Assignees%22%2C%22Status%22%5D&sortedBy%5Bdirection%5D=asc&sortedBy%5BcolumnId%5D=Labels)
@@ -187,7 +205,9 @@ Here's why Barlow is perfect for SourdoughCircle:<br>
 
 - <b>Clear and Crisp:</b> Barlow's clean lines and open letterforms ensure all the sourdough goodness – from your post captions to comments – is easy to see, no matter what device you're using.<br>
 - <b>Warm and Welcoming:</b> The slightly rounded edges of the Barlow typeface give it a touch of friendliness, reflecting the warm and inviting atmosphere of the SourdoughCircle community.<br>
-- <b>Modern and Versatile:</b> Barlow's modern style keeps SourdoughCircle feeling fresh and up-to-date, while its versatility allows it to adapt to all kinds of content.
+- <b>Modern and Versatile:</b> Barlow's modern style keeps SourdoughCircle feeling fresh and up-to-date, while its versatility allows it to adapt to all kinds of content.<br>
+
+![Barlow font](docs/images/6262e1576a23db81ff6fe626_60b7b98f118948b13908fa1f_barlow.png)<br>
 
 #### Imagery
 
@@ -197,6 +217,10 @@ SourdoughCircle keeps it simple and to the point with its app iconography.
 - <b>Focus on Sourdough:</b> By featuring the bread itself, the icon immediately communicates the app’s purpose – a platform dedicated to sourdough bread.
 
 - The rest of the icons and imagery follows along matching the colors and styles of the main navbar logo with clean lines, playful colors and easy for the eyes.
+
+![Barlow font](docs/images/6262e1576a23db81ff6fe626_60b7b98f118948b13908fa1f_barlow.png)
+![Barlow font](docs/images/6262e1576a23db81ff6fe626_60b7b98f118948b13908fa1f_barlow.png)
+![Barlow font](docs/images/6262e1576a23db81ff6fe626_60b7b98f118948b13908fa1f_barlow.png)
 
 ## Features
 
@@ -770,11 +794,12 @@ This project has benefited from several educational resources and example projec
 
 ### Media
 
-<!--The visual content for this project was sourced from Pixabay and generated using DALL-E by OpenAI:
-
-- **Pixabay Images**: A variety of high-quality images were sourced from [Pixabay](https://pixabay.com/), a platform offering free-to-use, royalty-free images. These images were carefully chosen to enhance the visual aspect of the project.
-- **DALL-E Generated Images**: Specific imagery was created using [DALL-E](https://openai.com/dall-e), OpenAI's AI image generator, to produce unique and tailored visuals for the project.-->
-
+- Stock images for profile pictures from:<br> 
+https://www.pexels.com/
+- Font style from:<br>
+https://fonts.google.com/specimen/Barlow?query=Barlow
+- Image of Barlow font:<br> 
+https://www.fontpair.co/fonts/barlow
 - SourdoughCircle icons:<br>
 https://www.flaticon.com/authors/mangsaabguru
 - Other Icons:<br>
