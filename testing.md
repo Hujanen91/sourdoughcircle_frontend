@@ -73,15 +73,15 @@ This section outlines the approach and results of testing the frontend features 
 
 | Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
-| Create a Post with valid data                         | Request is successful, post is created and user is redirected to profile                           | ✅ PASS     | [Recording](docs/)          |
-| Create a Post with invalid data                       | Request fails, form shows error                                                                    | ✅ PASS     | [Recording](docs/)          |
-| Edit a Post with valid data                           | Request is successful, post is updated and user is redirected to post detail                       | ✅ PASS     | [Recording](docs/)            |
-| Edit a Post with invalid data                         | Request fails, form shows error                                                                    | ✅ PASS     | [Recording](docs/)            |
-| Delete a Post                                         | Request is successful, Post is deleted and user is redirected to profile                           | ✅ PASS     | [Recording](docs/)          |
-| Open a post by clicking                               | Post Detail page loads with correct data                                                           | ✅ PASS     | [Recording](docs/)            |
-| Open a post through url                               | Post Detail page loads with correct data                                                           | ✅ PASS     | [Recording](docs/)            |
-| Search posts invalid data                             | Page is loading and displays hint to adjust searchword                                             | ✅ PASS     | [Recording](docs/)            |
-| Search posts valid data                               | Page is loading and displays posts with searchword                                                 | ✅ PASS     | [Recording](docs/)            |
+| Create a Post with valid data                         | Request is successful, post is created and user is redirected to profile                           | ✅ PASS     | [Recording](docs/testinggifs/Post_createpost_correctdata.gif)          |
+| Create a Post with invalid data                       | Request fails, form shows error                                                                    | ✅ PASS     | [Recording](docs/testinggifs/Post_createpost_incorrectdata.gif)          |
+| Edit a Post with valid data                           | Request is successful, post is updated and user is redirected to post detail                       | ✅ PASS     | [Recording](docs/testinggifs/Post_editpost_correctdata.gif)            |
+| Edit a Post with invalid data                         | Request fails, form shows error                                                                    | ✅ PASS     | [Recording](docs/testinggifs/Post_editpost_incorrectdata.gif)            |
+| Delete a Post                                         | Request is successful, Post is deleted and user is redirected to profile                           | ✅ PASS     | [Recording](docs/testinggifs/Post_delete.gif)          |
+| Open a post by clicking                               | Post Detail page loads with correct data                                                           | ✅ PASS     | [Recording](docs/testinggifs/Post_openpost.gif)            |
+| Open a post through url                               | Post Detail page loads with correct data                                                           | ✅ PASS     | [Recording](docs/testinggifs/Post_openpost_url.gif)            |
+| Search posts invalid data                             | Page is loading and displays hint to adjust searchword                                             | ✅ PASS     | [Recording](docs/testinggifs/Posts_searchbar_invalid.gif)            |
+| Search posts valid data                               | Page is loading and displays posts with searchword                                                 | ✅ PASS     | [Recording](docs/testinggifs/Posts_searchbar_valid.gif)            |
 
 ## Followers
 
