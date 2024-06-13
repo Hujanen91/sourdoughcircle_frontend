@@ -7,16 +7,17 @@
   * [Likes](#likes)
   * [Navigation](#navigation)
   * [Profiles](#profiles)
-  * [Contact](#contact)
   * [Posts](#posts)
   * [Followers](#followers)
+  * [Category](#category)
+  * [Contact](#contact)
   * [Authentication](#authentication)
   * [Conclusion](#conclusion)
 * [Perfomance and Validations](#perfomance-and-validations)
 
 # Manual testing
 
-This section outlines the approach and results of testing the frontend features of the Caption of the Day platform. Each test case is designed to validate the functionality and user experience against the specified requirements and user stories.
+This section outlines the approach and results of testing the frontend features of the SourdoughCircle website. Each test case is designed to validate the functionality and user experience categorized in sections of all the websites futures and functions.
 
 ## Comments
 
@@ -123,17 +124,26 @@ This section outlines the approach and results of testing the frontend features 
 
 ## Conclusion
 
-This frontend testing documentation presents a comprehensive review of key functionalities within the Caption of the Day platform, ensuring that user experiences align with the project's goals and user stories. Through a combination of manual and automated testing strategies, we have validated the platform's readiness for public release, ensuring a reliable, efficient, and user-friendly environment for our community.
+This frontend testing documentation presents a comprehensive review of key functionalities within the SourdoughCircle platform, ensuring that user experiences align with the project's goals and user stories. Through a combination of manual and automated testing strategies, we have validated the platform's readiness for public release, ensuring a reliable, efficient, and user-friendly environment for our community.
+
+The Failed testcases is documented [here](README.md#known-bugs)
 
 
 # Perfomance and Validations
 
-As part of our commitment to excellence, I conducted an in-depth performance and best practices analysis using Lighthouse. My analysis revealed several insights:
-[Perfomance](testing.md)
+The website has been validated and the scores and results have been well documented.
 
 ![Lighthouse report]()
 
-- **Performance**: This score prompted me to look into optimization opportunities. I'm currently focusing on improving the Time to Interactive and Speed Index by optimizing images and reducing JavaScript size for a faster, more responsive experience.
+![Lighthouse report]()
+
+![Lighthouse report]()
+
+![Lighthouse report]()
+
+Eslinter was used to validate the react files:
+![Lighthouse report]()
+
 
 
 [Back to Readme](README.md#testing)
