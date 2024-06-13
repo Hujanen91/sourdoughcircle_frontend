@@ -96,19 +96,19 @@ This section outlines the approach and results of testing the frontend features 
 
 | Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
-| Filtering categories valid                            | Request is successful, posts with filtered categories are fetched                                  | ✅ PASS     | [Recording](docs/)       |
-| Filtering categories invalid                          | Request is fails, displays hint to adjust searchword                                               | ✅ PASS     | [Recording](docs/)       |
-| Filtering categories All categories                   | Request is successful, all posts are loaded again                                                  | ✅ PASS     | [Recording](docs/)       |
+| Filtering categories valid                            | Request is successful, posts with filtered categories are fetched                                  | ✅ PASS     | [Recording](docs/testinggifs/Category_valid_option.gif)       |
+| Filtering categories invalid                          | Request is fails, displays hint to adjust searchword                                               | ✅ PASS     | [Recording](docs/testinggifs/Category_invalid.gif)       |
+| Filtering categories All categories                   | Request is successful, all posts are loaded again                                                  | ✅ PASS     | [Recording](docs/testinggifs/Category_reset_loadsallposts.gif)       |
 
 ## Contact
 
 | Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
-| All fields are filled in                              | Request is successful, user can send form                                                          | ✅ PASS     | [Recording](docs/)         |
-| Not all fields are filled in                          | Request fails, form loads with data and errors                                                     | ✅ PASS     | [Recording](docs/) |
-| Modal when sending message                            | Request is successful, user is presented with a modal that the message has been sent               | ✅ PASS     | [Recording](docs/)     |
-| Modal "back to feed" button                           | Request is successful, user is sent back to home feed                                              | ✅ PASS     | [Recording](docs/)      |
-| Modal close button form is reset                      | Request is successful, modal is closed and form is reset                                           | ✅ PASS     | [Recording](docs/)        |
+| All fields are filled in                              | Request is successful, user can send form                                                          | ✅ PASS     | [Recording](docs/testinggifs/contact_correctdata_msg.gif)         |
+| Not all fields are filled in                          | Request fails, form loads with data and errors                                                     | ✅ PASS     | [Recording](docs/testinggifs/contact_incorrectdata_msg.gif) |
+| Modal when sending message                            | Request is successful, user is presented with a modal that the message has been sent               | ✅ PASS     | [Recording](docs/testinggifs/contact_correctdata_msg.gif)     |
+| Modal "back to feed" button                           | Request is successful, user is sent back to home feed                                              | ✅ PASS     | [Recording](docs/testinggifs/contact_modal_backtofeed.gif)      |
+| Modal close button form is reset                      | Request is successful, modal is closed and form is reset                                           | ✅ PASS     | [Recording](docs/testinggifs/contact_modal_close.gif)        |
 
 
 ## Authentication
