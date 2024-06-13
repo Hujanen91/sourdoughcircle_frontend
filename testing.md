@@ -115,11 +115,11 @@ This section outlines the approach and results of testing the frontend features 
 
 | Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
-| Register a user with valid data                       | Request is successful, user is registered and sent to login                                        | ✅ PASS     | [Recording](docs/)     |
-| Register a user with invalid data                     | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/)      |
-| Login a user with valid data                          | Request is successful, user is logged in                                                           | ✅ PASS     | [Recording](docs/)        |
-| Login a user with invalid data                        | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/)         |
-| Logout a user                                         | Request is successful, user is logged out                                              | ✅ PASS     | [Recording](docs/)         |
+| Register a user with valid data                       | Request is successful, user is registered and sent to login                                        | ✅ PASS     | [Recording](docs/testinggifs/signup_correctdata_fields.gif)     |
+| Register a user with invalid data                     | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/testinggifs/signup_invalid_data.gif)      |
+| Login a user with valid data                          | Request is successful, user is logged in                                                           | ✅ PASS     | [Recording](docs/testinggifs/signin_correctdata.gif)        |
+| Login a user with invalid data                        | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/testinggifs/signin_incorrectdata.gif)         |
+| Logout a user                                         | Request is successful, user is logged out                                              | ✅ PASS     | [Recording](docs/testinggifs/Authentication_signout_user.gif)         |
 
 ## Conclusion
 
