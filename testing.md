@@ -34,14 +34,12 @@ This section outlines the approach and results of testing the frontend features 
 
 | Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
-| Liking a post on home page                            | Like count increases and like button changes                                                       | ✅ PASS     | [Recording](docs/)            |
-| Unliking a post on home page                          | Like count decreases and like button changes                                                       | ✅ PASS     | [Recording](docs/)            |
-| Liking a post on post page                            | Like count increases and like button changes                                                       | ✅ PASS     | [Recording](docs/)            |
+| Liking a post on home page                            | Like count increases and like button changes                                                       | ✅ PASS     | [Recording](docs/testinggifs/like_count_home_increase.gif)            |
+| Unliking a post on home page                          | Like count decreases and like button changes                                                       | ✅ PASS     | [Recording](docs/testinggifs/like_count_home_decrease.gif)            |
+| Liking a post on post page                            | Like count increases and like button changes                                                       | ✅ PASS     | [Recording](docs/testinggifs/lik)            |
 | Unliking a post on post page                          | Like count decreases and like button changes                                                       | ✅ PASS     | [Recording](docs/)            |
-| Liking a post on /Feed page                           | Like count increases and like button changes                                                       |  FAILED/BUG  | [Recording](docs/)            |
-| Unliking a post on /Feed page                         | Like count decreases and like button changes                                                       |  FAILED/BUG  | [Recording](docs/)            |
-| Liking a post on /Liked page                          | Like count increases and like button changes                                                       |  FAILED/BUG  | [Recording](docs/)            |
-| Unliking a post on /Liked page                        | Like count decreases and like button changes                                                       |  FAILED/BUG  | [Recording](docs/)            |
+| Liking a post on /Feed and /Liked page                | Like count increases and like button changes                                                       |  FAILED/BUG  | [Recording](docs/testinggifs/Like_error_increase_likedpage.gif)            |
+| Unliking a post on /Feed and /Liked page              | Like count decreases and like button changes                                                       |  FAILED/BUG  | [Recording](docs/testinggifs/Like_error_decrease_likedpage.gif)            |
 
 ## Navigation
 
