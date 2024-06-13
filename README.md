@@ -260,6 +260,12 @@ These future implementations are just a few of many features that could improve 
 
 # Website layout
 
+<details>
+<summary>
+<b>Website layout</b>
+</summary>
+<summary>
+
 ## Navbar
 
 __Fully responsive navbar__<br>
@@ -498,146 +504,182 @@ __Infinite scroll__
 
 Infinite scroll is a future that will fetch new posts from the api while the user scrolls to create an infinte scroll. This effect is applied to both posts page, feed, liked feed, comments feed and profile page feed.
 
+</summary>
+</details><br>
+
+
 # Reusability
+
+
 
 ## Component Reusability
 
-1. **Asset.js:** This component displays a spinner wherever the page is loading in data, scr or messages that can be edited for the specific purpose in the specific .js component.<br>It can be reused wherever a spinner could be needed, where a scr needs to be called (a specific image for example) or when a message needs to be specified.<br>
-From this component `Const Asset` is considered a reusable component and has been reused in:<br>
+<details>
+<summary>Component Reusability</summary>
+<summary>
+
+1. **Asset.js:**<br> This component displays a spinner wherever the page is loading in data, scr or messages that can be edited for the specific purpose in the specific .js component.<br>It can be reused wherever a spinner could be needed, where a scr needs to be called (a specific image for example) or when a message needs to be specified.<br>
+
+* From this component `Const Asset` is considered a reusable component and has been reused in:<br>
 
    NotFound.js, PostCreateForm.js, PostPage.js, PostsPage.js, PopularProfiles.js, ProfilePage.js to display a spinner whenever content is loading. <br>
 
-2. **Avatar.js:** This component provides a form for handling the Avatar images.<br>
+2. **Avatar.js:**<br> This component provides a form for handling the Avatar images.<br>
 It can be reused whenever users need to add avatars or static images before a user or admin changes the image.<br>
-From this component `Const Avatar` is considered a reusable component and has been reused in:<br>
+
+* From this component `Const Avatar` is considered a reusable component and has been reused in:<br>
 
    NavBar.js, Comment.js, CommentCreateForm.js, Post.js and Profile.js to handle and import the avatar for the user.<br>
 
-3. **CategoryFilter.js:** This component incapsulates functionality that fetches categories from an API and displays them in a dropdown menu, allowing users to filter items based on the selected category.<br>
+3. **CategoryFilter.js:**<br> This component incapsulates functionality that fetches categories from an API and displays them in a dropdown menu, allowing users to filter items based on the selected category.<br>
 Can be reused in different situations where a drop down list with filtering for categories etc is needed.<br>
-From this component `Const CategoryFilter` is considered a reusable component and has been reused in:<br>
+
+* From this component `Const CategoryFilter` is considered a reusable component and has been reused in:<br>
 
    PostsPage.js to render the Category filtering of posts.<br>
 
-4. **MoreDropdown.js:** This component are designed to be modular and configurable, which allows for easy reuse with different props and configurations.<br>
+4. **MoreDropdown.js:**<br> This component are designed to be modular and configurable, which allows for easy reuse with different props and configurations.<br>
 Can be reused as a simple dropdown menu in different scenarios for when users need to edit a comment, post, photos etc.<br>
-From this component `const MoreDropdown` is considered a reusable component and has been reused in:<br>
+
+* From this component `const MoreDropdown` is considered a reusable component and has been reused in:<br>
 
    Comment.js, Post.js and ProfilePage.js to render the dropdown menu the enable the user to edit their data.<br>
 
-5. **Navbar.js:** This component presents a form for users to update their passwords.<br>
+5. **Navbar.js:**<br> This component presents a form for users to update their passwords.<br>
 It can be reused across different parts of the application where password updating functionality is needed.<br>
-From this component `const NavBar` is considered a reusable component and has been reused in:<br>
+
+* From this component `const NavBar` is considered a reusable component and has been reused in:<br>
 
    App.js to render the navbar on the entire website no matter what url path the user is currently located at.
 
-6. **NotFound.js:** This component displays and handles the image and message that is displayed when information can't be found.<br>
-From this component `const NotFound` has been used in App.js inside a path to display a "Not found" message when a user wants to use a path that doesn't exist. 
+6. **NotFound.js:**<br> This component displays and handles the image and message that is displayed when information can't be found.<br>
+
+* From this component `const NotFound` has been used in App.js inside a path to display a "Not found" message when a user wants to use a path that doesn't exist. 
 The `const NotFound` was also given a source of `NoResults` and this has been reused in:<br>
 
    PostsPage.js and ProfilePage.js to display an image and a message to the user when no posts can be found.<br>
 
-7. **SignInForm.js:** This component displays and handles user sign in to the website.<br>
+7. **SignInForm.js:**<br> This component displays and handles user sign in to the website.<br>
 It can be reused in different scenarios such as Employee Portals, Admin Dashboard or in E-commerce stores for users to sign in to their accounts.<br>
-From this component `function SignInForm` is considered a reusable component and has been used in:<br>
+
+* From this component `function SignInForm` is considered a reusable component and has been used in:<br>
 
    App.js to render the SignInForm on the correct url path.<br>
 
-8. **SignUp.js:** This component provides a way for users to register an account on the website.<br>
+8. **SignUp.js:**<br> This component provides a way for users to register an account on the website.<br>
 It can be reused in situations like event registrations, subscriptions or online course platforms for example.<br>
-From this component `const SignUpForm` is considered a reusable component and has been used in:<br>
+
+* From this component `const SignUpForm` is considered a reusable component and has been used in:<br>
 
    App.js to render the SignInForm on the correct url path.<br>
 
-9. **Comment.js:** This component is designed to display a comment with options to edit or delete it if the current user is the owner.<br>
+9. **Comment.js:**<br> This component is designed to display a comment with options to edit or delete it if the current user is the owner.<br>
 This component can be reused in different contexts where similar functionality is needed such as blog post comments, forum threads or product reviews.<br>
-From this component `const Comment` is considered a reusable component and has been reused in:<br>
 
-   PostPage.js to fetch comments related to the specific post.<br>
+* From this component `const Comment` is considered a reusable component and has been reused in:<br>
 
-10. **CommentCreateForm.js:** This component is designed to allow users to create new comments. It includes functionality to submit the comment, update the UI with the newly created comment, and reset the form state after submission.<br>
+    PostPage.js to fetch comments related to the specific post.<br>
+
+10. **CommentCreateForm.js:**<br> This component is designed to allow users to create new comments. It includes functionality to submit the comment, update the UI with the newly created comment, and reset the form state after submission.<br>
 Can be used in the same scenarios and together with Comment.js.<br>
-From this component `function CommentCreateForm` is considered a reusable component and has been reused in:<br>
 
-   PostPage.js to render a form to create and post comments.<br>
+* From this component `function CommentCreateForm` is considered a reusable component and has been reused in:<br>
 
-11. **CommentEditForm.js:** This component allows users to edit existing comments. It provides functionality to update the comment's content and save those changes via an API request.<br>
+    PostPage.js to render a form to create and post comments.<br>
+
+11. **CommentEditForm.js:**<br> This component allows users to edit existing comments. It provides functionality to update the comment's content and save those changes via an API request.<br>
 Can be used in the same scenarios and together with Comment.js and CommentCreateForm.js.<br>
-From this component `function CommentEditForm` is considered a reusable component and has been reused in:<br>
 
-   Comment.js to render a form for editing the posted comment.<br>
+* From this component `function CommentEditForm` is considered a reusable component and has been reused in:<br>
 
-12. **ContactForm.js:** This component is designed to facilitate user interactions for sending messages through a contact form. It handles form validation, submission via API, and displays success messages in a modal upon successful submission.<br>
+    Comment.js to render a form for editing the posted comment.<br>
+
+12. **ContactForm.js:**<br> This component is designed to facilitate user interactions for sending messages through a contact form. It handles form validation, submission via API, and displays success messages in a modal upon successful submission.<br>
 Can be reused as Customer support portals, Feedback forms or Business inquiry forms.<br>
-From this component `const ContactForm` is considered a reusable component and has been reused in:<br>
 
-   App.js to fetch the ContactForm url path for the Contact Page.<br>
+* From this component `const ContactForm` is considered a reusable component and has been reused in:<br>
 
-13. **Post.js:** This component is quite versatile and can be reused in various scenarios where displaying and interacting with posts is required.<br>
+    App.js to fetch the ContactForm url path for the Contact Page.<br>
+
+13. **Post.js:**<br> This component is quite versatile and can be reused in various scenarios where displaying and interacting with posts is required.<br>
 Can be reused as Blog post display, Forum threads or Portfolio showcases.<br>
-From this component `const Post` is considered a reusable component and has been reused in:<br>
 
-   PostPage.js and PostsPage.js to import all the data related to the specific post.<br>
+* From this component `const Post` is considered a reusable component and has been reused in:<br>
 
-14. **PostCreateForm.js:** This component is designed to facilitate the creation of new posts within an application. It includes form fields for entering a post title, content, an optional image upload, and selecting a category. Users can fill out these fields, upload an image if desired, and submit the form to create a new post.<br>
+    PostPage.js and PostsPage.js to import all the data related to the specific post.<br>
+
+14. **PostCreateForm.js:**<br> This component is designed to facilitate the creation of new posts within an application. It includes form fields for entering a post title, content, an optional image upload, and selecting a category. Users can fill out these fields, upload an image if desired, and submit the form to create a new post.<br>
 Can be used in Poll creation.<br>
-From this component `function PostCreateForm` is considered a reusable component and has been reused in:<br>
 
-   App.js to render the correct path url for the page that is presenting the Post Create form for creating a post.<br>
+* From this component `function PostCreateForm` is considered a reusable component and has been reused in:<br>
 
-14. **PostEditForm.js:** This component is designed to handle the edit form of posts within an application. It includes form fields for entering a post title, content, an optional image upload, and selecting a category but with the option to edit them. Users can edit these fields, change image if desired, and resubmit the form to update the existing post.<br>
+    App.js to render the correct path url for the page that is presenting the Post Create form for creating a post.<br>
+
+14. **PostEditForm.js:**<br> This component is designed to handle the edit form of posts within an application. It includes form fields for entering a post title, content, an optional image upload, and selecting a category but with the option to edit them. Users can edit these fields, change image if desired, and resubmit the form to update the existing post.<br>
 Can be used in Poll creation.<br>
-From this component `function PostEditForm` is considered a reusable component and has been reused in:<br>
 
-   App.js to render the correct path url for the page that is presenting the Post Edit form for editing an already existing post created with the PostCreateForm component.<br>
+* From this component `function PostEditForm` is considered a reusable component and has been reused in:<br>
 
-15. **PostPage.js:** This component serves as a detailed view for a specific post, displaying the post content along with its comments.<br>
+    App.js to render the correct path url for the page that is presenting the Post Edit form for editing an already existing post created with the PostCreateForm component.<br>
+
+15. **PostPage.js:**<br> This component serves as a detailed view for a specific post, displaying the post content along with its comments.<br>
 Can be used as Event page, Recipe page, Article detail page.<br>
-From this component `function PostPage` is considered a reusable component and has been reused in:<br>
 
-   App.js to render a specific postPage with the users posts.<br>
+* From this component `function PostPage` is considered a reusable component and has been reused in:<br>
 
-16. **PostsPage.js:** This component is designed to display a list of posts based on different filters and conditions, such as categories, search queries, or user-specific feeds.<br>
+    App.js to render a specific postPage with the users posts.<br>
+
+16. **PostsPage.js:**<br> This component is designed to display a list of posts based on different filters and conditions, such as categories, search queries, or user-specific feeds.<br>
 Can be used as a Product listing page, Job listing page or Tutorial/Course directory.<br>
-From this component `function PostsPage` is considered a reusable component and has been reused in:<br>
 
-   App.js to render the PostsPage with every users posted posts.<br>
+* From this component `function PostsPage` is considered a reusable component and has been reused in:<br>
 
-17. **PopularProfiles.js:** This component is designed to display a list of popular profiles, either in a compact format for mobile devices or a full format for larger screens.<br>
+    App.js to render the PostsPage with every users posted posts.<br>
+
+17. **PopularProfiles.js:**<br> This component is designed to display a list of popular profiles, either in a compact format for mobile devices or a full format for larger screens.<br>
 Can be used as a Featured authors section, Artist spotlight or Top contributors widget.<br>
-From this component `const PopularProfiles` is considered a reusable component and has been reused in:<br>
 
-   PostPage.js, PostsPage.js and ProfilePage.js to render the popular profiles field to the right of the main containers.<br>
+* From this component `const PopularProfiles` is considered a reusable component and has been reused in:<br>
 
-18. **Profile.js:** This component is designed to render a user profile with options for following or unfollowing based on the current user's interaction status with the profile.<br>
+    PostPage.js, PostsPage.js and ProfilePage.js to render the popular profiles field to the right of the main containers.<br>
+
+18. **Profile.js:**<br> This component is designed to render a user profile with options for following or unfollowing based on the current user's interaction status with the profile.<br>
 Can be used as a Community memeber widget, Author card in blog posts, Participant list in events pages. <br>
-From this component `const Profile` is considered a reusable component and has been reused in:<br>
 
-   PopularProfiles.js tho render the profiles in the popular profiles field.<br>
+* From this component `const Profile` is considered a reusable component and has been reused in:<br>
 
-19. **ProfileEditForm.js:** This component allows a user to edit their profile information, including their name, bio, social media links, and profile picture.<br>
+    PopularProfiles.js tho render the profiles in the popular profiles field.<br>
+
+19. **ProfileEditForm.js:**<br> This component allows a user to edit their profile information, including their name, bio, social media links, and profile picture.<br>
 Can be used as User account settings, Artist profile edit, Event organizers profile edit.<br>
-From this component `const ProfileEditForm` is considered a reusable component and has been reused in:<br>
 
-   App.js to fetch the correct url path and the view for the ProfileEditForm page. <br>
+* From this component `const ProfileEditForm` is considered a reusable component and has been reused in:<br>
 
-20. **ProfilePage.js:** This component is designed to display a user's profile information, including their profile picture, bio, social media links, follower counts, and their posts.<br>
+    App.js to fetch the correct url path and the view for the ProfileEditForm page. <br>
+
+20. **ProfilePage.js:**<br> This component is designed to display a user's profile information, including their profile picture, bio, social media links, follower counts, and their posts.<br>
 Can be used as a Portfolio or Company page.<br> 
-From this component `function ProfilePage` is considered a reusable component and has been reused in:<br>
 
-  App.js to fetch the correct url path and the correct data and view for the Profile Page<br>
+* From this component `function ProfilePage` is considered a reusable component and has been reused in:<br>
 
-21. **UsernameForm.js:** This component allows users to change their username.<br>
+    App.js to fetch the correct url path and the correct data and view for the Profile Page<br>
+
+21. **UsernameForm.js:**<br> This component allows users to change their username.<br>
 Can be used in similar situations where a field of static information can be updated.<br>
-From this component `const UsernameForm` is considered a reusable component and has been reused in:<br>
 
-   App.js to fetch the correct url path and the correct data and view for the Username form used in the Change username page.<br>
+* From this component `const UsernameForm` is considered a reusable component and has been reused in:<br>
 
-22. **UserPasswordForm.js:** This component allows users to change their password. It integrates with React, React Bootstrap for UI components, and Axios for making HTTP requests.
+    App.js to fetch the correct url path and the correct data and view for the Username form used in the Change username page.<br>
+
+22. **UserPasswordForm.js:**<br> This component allows users to change their password. It integrates with React, React Bootstrap for UI components, and Axios for making HTTP requests.
 Can be used in similar situations to give users the possibility to change/update secret data.<br> 
-From this component `const UserPasswordForm` is considered a reusable component and has been reused in:<br>
 
-   App.js to fetch the correct url path and the correct data and view for the user password form used in the Change password page.<br>
+* From this component `const UserPasswordForm` is considered a reusable component and has been reused in:<br>
+
+    App.js to fetch the correct url path and the correct data and view for the user password form used in the Change password page.<br>
+
+</summary>
+</details>
 
 ## Packages and Tools
 
