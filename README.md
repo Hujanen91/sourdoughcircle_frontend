@@ -14,36 +14,46 @@ The repository for the backend of the application can be found here:<br>[Sourdou
 
 ## Table of Contents
 
-* [Introduction](#introduction)
+* [SourdoughCircle](#sourdoughcircle)
 * [UX](#ux)
   * [User Goals](#user-goals)
-  * [User Stories](#user-stories)
-  * [Design Choices](#design-choices)
+  * [Agile and planning](#agile-and-planning)
+  * [User stories](#user-stories)
+  * [Design choices](#design-choices)
     * [Colors](#colors)
     * [Typography](#typography)
     * [Imagery](#imagery)
 * [Features](#features)
-  * [Existing Features](#existing-features)
   * [Future Features](#future-features)
+* [Website layout](#website-layout)
+  * [Navbar](#navbar)
+  * [Home page](#home-page)
+  * [Feed page](#feed-page)
+  * [Contact page](#contact-page)
+  * [Sign in page](#sign-in-page)
+  * [Sign up page](#sign-up-page)
+  * [Profile page](#profile-page)
+  * [Create post](#create-post)
+  * [Post page](#post-page)
 * [Reusability](#reusability)
   * [Component Reusability](#component-reusability)
-  * [Future Possible Reusable Scenarios](#future-possible-reusable-scenarios)
-* [Packages and Tools](#packages-and-tools)
+  * [Packages and Tools](#packages-and-tools)
 * [Testing](#testing)
   * [Manual Testing](#manual-testing)
-  * [Performance and Best Practices Analysis](#performance-and-best-practices-analysis)
-  * [Known Bugs](#known-bugs)
+  * [Performance and Validation](#performance-and-validation)
+* [Known Bugs](#known-bugs)
 * [Deployment](#deployment)
   * [Heroku](#heroku)
     *[Initial Setup](#initial-setup)
     *[Preparing the Application](#preparing-the-application)
     *[Deployment](#deployment)
+    *[Final steps](#final-steps)
   * [Forking the GitHub Repository](#forking-the-github-repository)
   * [Making a Local Clone](#making-a-local-clone)
 * [Credits](#credits)
   * [Content](#content)
   * [Media](#media)
-
+* [Acknowledgements](#acknowledgements)
 
 ## UX
 
@@ -222,7 +232,7 @@ SourdoughCircle keeps it simple and to the point with its app iconography.
 ![Barlow font](docs/images/6262e1576a23db81ff6fe626_60b7b98f118948b13908fa1f_barlow.png)
 ![Barlow font](docs/images/6262e1576a23db81ff6fe626_60b7b98f118948b13908fa1f_barlow.png)
 
-## Features
+# Features
 
 SourdoughCircle isn't just about pretty pictures, it's about creating a vibrant community where everyone feels welcome to share their love of sourdough. Here are some features that make it all possible:
 
@@ -232,7 +242,7 @@ SourdoughCircle isn't just about pretty pictures, it's about creating a vibrant 
 - **Interactive Features, connect with fellow bakers!**: Like and comment on posts to start conversations and build relationships with other sourdough enthusiasts. Share your knowledge, ask questions, and cheer each other on in your sourdough journeys.
 - **Infinite Scroll, infinite inspiration!**: SourdoughCircle keeps the inspiration flowing with a never-ending stream of sourdough content. Just keep scrolling to discover new techniques, drool-worthy creations, and tips from bakers of all experience levels.
 
-### Future Features
+## Future Features
 
 There are several different future implementations that could be done to the SourdoughCircle to make it even better:
 
@@ -247,6 +257,8 @@ There are several different future implementations that could be done to the Sou
 - **Direct messages between users**: A private message chat to boost the social interactions. Could also be used by admins for easier contact options between admins and users.
 
 These future implementations are just a few of many features that could improve the website further and make it even more fun to use and easier to use.
+
+# Website layout
 
 ## Navbar
 
@@ -362,15 +374,15 @@ Provide users with a way to contact the admin and creator of the site when users
 
 ![Contact Page](docs/images/contact_page.png)<br>
 
-## Login page
+## Sign in page
 
-__The Login page consists of:__
+__The Sign in page consists of:__
 
-__Login form__
+__Sign in form__
 
-The login form allows the user to enter their credentials and authenticate to enter the sites authenticated state.
+The sign in form allows the user to enter their credentials and authenticate to enter the sites authenticated state.
 
-The login form also contains a link to the [Sign up page](https://3000-hujanen91-sourdoughcirc-97h40xcm3uw.ws-eu114.gitpod.io/signup) in case the user is not already registered.
+The sign in form also contains a link to the [Sign up page](https://3000-hujanen91-sourdoughcirc-97h40xcm3uw.ws-eu114.gitpod.io/signup) in case the user is not already registered.
 
 _Additional_: If the user enters the fields incorrectly or the user isn's recognized the're will be clear messages displaying to make the user aware.
 
@@ -428,6 +440,7 @@ Change password view:<br>
 ![Change password](docs/images/change_password.png)<br>
 
 ## Create post
+
 __The Create post page consists of:__
 
 __Creat post field__
@@ -442,6 +455,8 @@ The user will also get an alert when they try to upload images that are too big.
 ![Create post view](docs/images/post_creation_page.png)<br>
 Requierd fields alerts:<br>
 ![Create post required fields](docs/images/Create_post_reqfields.png)<br>
+
+## Post page
 
 __The Post page consists of:__
 
@@ -483,6 +498,7 @@ __Infinite scroll__
 
 Infinite scroll is a future that will fetch new posts from the api while the user scrolls to create an infinte scroll. This effect is applied to both posts page, feed, liked feed, comments feed and profile page feed.
 
+# Reusability
 
 ## Component Reusability
 
@@ -660,22 +676,22 @@ In this project, we've utilized a variety of libraries and tools to enhance func
 
 Additionally, specific scripts were defined for building, testing, and starting the application, particularly with Heroku deployment in mind. The project also specifies Node.js and npm versions for consistent environment setup.
 
-## Testing
+# Testing
 
-### Manual testing
+## Manual testing
 
 
 The SourcdoughCircle has gone through thorough manual testing that can be found here:
 [Manual testing](testing.md)
 
 
-### Performance and Validation
+## Performance and Validation
 
 
 The SourcdoughCircle perfomance, best practice and validation reports can all be found here:
 [Perfomance and Validation](testing.md#performance-and-validation)
 
-### Known Bugs
+# Known Bugs
 
 <hr>
 
@@ -706,38 +722,38 @@ A websocket warning is happening in the console in devtools. After searching in 
 Different solutions was tested withouth any success.<br>
 ![Websocket warning](docs/images/Websocket_error.png)<br>
 
-## Deployment
+# Deployment
 
-### Heroku
+## Heroku
 
 This project is deployed on Heroku, a cloud platform service that enables easy deployment and scaling for web applications. The deployment process includes the following steps:
 
-#### Initial Setup
+### Initial Setup
 
 1. **Create a Heroku Account**: Sign up for a Heroku account at [Heroku's website](https://www.heroku.com/).
 2. **Install Heroku CLI**: Download and install the Heroku Command Line Interface (CLI) to interact with Heroku from your local machine.
 
-#### Preparing the Application
+### Preparing the Application
 
 1. **Procfile**: Create a `Procfile` in your project root directory. This file tells Heroku how to run your application.
 2. **Requirements.txt**: Ensure you have a `requirements.txt` file listing all project dependencies.
 3. **Config Vars**: Set up necessary configuration variables in Heroku (like `SECRET_KEY`, database URL, etc.).
 
-#### Deployment
+### Deployment
 
 1. **Create a Heroku App**: Use the Heroku CLI to create a new app.
 2. **Add Buildpacks**: If necessary, add the correct buildpacks via the Heroku dashboard or CLI.
 3. **Deploy**: Push your code to Heroku either by connecting your GitHub repository to Heroku or using the Heroku CLI to deploy your application.
 4. **Database Migration (if applicable)**: Run database migrations using the Heroku CLI.
 
-#### Final Steps
+### Final Steps
 
 1. **Enable the Web Dyno**: Make sure the web dyno is up and running after deployment.
 2. **Open the App**: You can open your application from the Heroku dashboard or using the CLI command `heroku open`.
 
 For more detailed instructions and troubleshooting, visit the official [Heroku Dev Center](https://devcenter.heroku.com/).
 
-### Forking the GitHub Repository
+## Forking the GitHub Repository
 <hr>
 Forking the GitHub repository allows you to make a copy of the original project on your own GitHub account, enabling you to make changes without affecting the original. Here's how to do it:
 
@@ -745,7 +761,7 @@ Forking the GitHub repository allows you to make a copy of the original project 
 2. **Fork the Repository**: Click the 'Fork' button, located at the top right of the repository page. This creates a copy of the repository in your GitHub account.
 3. **Clone Your Fork**: Once forked, you can clone your fork to your local machine for further development.
 
-### Making a Local Clone
+## Making a Local Clone
 
 Cloning a GitHub repository creates a local copy on your machine, allowing you to sync between the two locations. Here are the steps:
 
@@ -753,7 +769,7 @@ Cloning a GitHub repository creates a local copy on your machine, allowing you t
 2. **Open Terminal**: Open your terminal and navigate to the directory where you want the clone to be created.
 3. **Clone Command**: Type `git clone`, and then paste the URL you copied in Step 1. Press Enter to create your local clone.
 
-## Credits
+# Credits
 
 The following sources and references were resorted for the creation of this website:<br>
 
@@ -769,7 +785,7 @@ https://react-bootstrap.netlify.app/docs/components/modal/
 
 
 
-### Content
+## Content
 
 This project has benefited from several educational resources and example projects provided by the Code Institute throughout the course of my bootcamp. The following projects deserve special mention for their direct impact on the development of this application:
 
@@ -777,7 +793,7 @@ This project has benefited from several educational resources and example projec
 
 - **Moments Project**: Another resource from the Code Institute, the Moments project was instrumental in illustrating the development of a full-stack application with a focus on user experience. Various aspects of its design and functionality have been adapted and incorporated into this project.
 
-### Media
+## Media
 
 - Stock images for profile pictures from:<br> 
 https://www.pexels.com/
@@ -790,7 +806,7 @@ https://www.flaticon.com/authors/mangsaabguru
 - Other Icons:<br>
 https://www.flaticon.com
 
-### Acknowledgements:
+# Acknowledgements:
 
 - My mentor [Gareth McGirr](https://github.com/Gareth-McGirr) for his continuing support and great advice throughout this project and all my other projects in this entire course at Code Institute.
 
