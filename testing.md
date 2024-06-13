@@ -22,9 +22,13 @@ This section outlines the approach and results of testing the frontend features 
 
 | Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
-| Writing a comment                                     | Request is successful, comment is added to the list, message is shown                              | ✅ PASS     | [Recording](docs/)          |
-| Editing a comment                                     | Request is successful, comment content is updated, message is shown                                | ✅ PASS     | [Recording](docs/)         |
-| Delete a comment                                      | Request is successful, comment is deleted, message is shown                                        | ✅ PASS     | [Recording](docs/)       |
+| Writing a comment                                     | Request is successful, comment is added to the list, message is shown                              | ✅ PASS     | [Recording](docs/testinggifs/comment_create.gif)          |
+| Editing a comment                                     | Request is successful, comment content is updated, message is shown                                | ✅ PASS     | [Recording](docs/testinggifs/comment_edit.gif)         |
+| Delete a comment                                      | Request is successful, comment is deleted, message is shown                                        | ✅ PASS     | [Recording](docs/testinggifs/Comment_deletecomment.gif)       |
+| Comment count increase                                | New comments will increase the comment count                                                       | ✅ PASS     | [Recording](docs/testinggifs/comment_count_increase.gif)          |
+| Comment count decrease                                | Deleting comments will decrease the comment count                                                  | ✅ PASS     | [Recording](docs/testinggifs/comment_count_decrease.gif)         |
+| Comment count /Feed                                   | Like count decreases and like button changes                                                       | FAILED/BUG   | [Recording](docs/testinggifs/comment_count_feed_error.gif)            |
+| Comment count /Liked                                  | Comment count should display in Liked page                                                         | FAILED/BUG  | [Recording](docs/testinggifs/comment_count_feed_error.gif)            |
 
 ## Likes
 
@@ -34,10 +38,10 @@ This section outlines the approach and results of testing the frontend features 
 | Unliking a post on home page                          | Like count decreases and like button changes                                                       | ✅ PASS     | [Recording](docs/)            |
 | Liking a post on post page                            | Like count increases and like button changes                                                       | ✅ PASS     | [Recording](docs/)            |
 | Unliking a post on post page                          | Like count decreases and like button changes                                                       | ✅ PASS     | [Recording](docs/)            |
-| Liking a post on /Feed page                           | Like count increases and like button changes                                                       |  FAILED     | [Recording](docs/)            |
-| Unliking a post on /Feed page                         | Like count decreases and like button changes                                                       |  FAILED     | [Recording](docs/)            |
-| Liking a post on /Liked page                          | Like count increases and like button changes                                                       |  FAILED     | [Recording](docs/)            |
-| Unliking a post on /Liked page                        | Like count decreases and like button changes                                                       |  FAILED     | [Recording](docs/)            |
+| Liking a post on /Feed page                           | Like count increases and like button changes                                                       |  FAILED/BUG  | [Recording](docs/)            |
+| Unliking a post on /Feed page                         | Like count decreases and like button changes                                                       |  FAILED/BUG  | [Recording](docs/)            |
+| Liking a post on /Liked page                          | Like count increases and like button changes                                                       |  FAILED/BUG  | [Recording](docs/)            |
+| Unliking a post on /Liked page                        | Like count decreases and like button changes                                                       |  FAILED/BUG  | [Recording](docs/)            |
 
 ## Navigation
 
@@ -61,17 +65,9 @@ This section outlines the approach and results of testing the frontend features 
 | Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
 | Open Profile                                          | Opens Profile Page with correct data                                                               | ✅ PASS     | [Recording](docs/)         |
-| Open own Profile                                      | Opens Profile Page with correct data                                                               | ✅ PASS     | [Recording](docs/)     |
+| Open owner Profile                                    | Opens owner Profile Page with correct data                                                         | ✅ PASS     | [Recording](docs/)     |
 | Edit Profile                                          | If data is valid, form is submitted, the profile is updated and the user is redirected to profile  | ✅ PASS     | [Recording](docs/)         |
-
-| Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
-| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
-| Open the Landing Page                                 | Landing Page loads and displays content correctly                                                  | ✅ PASS     | [Recording](docs/)         |
-| Buttons on the Landing Page                           | The buttons on the landing page navigate to the correct page                                       | ✅ PASS     | [Recording](docs/) |
-| Register a user with valid data                       | Request is successful, user is registered and logged in                                            | ✅ PASS     | [Recording](docs/)     |
-| Register a user with invalid data                     | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/)      |
-| Login a user with valid data                          | Request is successful, user is logged in                                                           | ✅ PASS     | [Recording](docs/)        |
-| Login a user with invalid data                        | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/)         |
+| Open Profile through url                              | Opens Profile Page with correct data                                                               | ✅ PASS     | [Recording](docs/)         |
 
 ## Posts
 
@@ -84,6 +80,8 @@ This section outlines the approach and results of testing the frontend features 
 | Delete a Post                                         | Request is successful, Post is deleted and user is redirected to profile                           | ✅ PASS     | [Recording](docs/)          |
 | Open a post by clicking                               | Post Detail page loads with correct data                                                           | ✅ PASS     | [Recording](docs/)            |
 | Open a post through url                               | Post Detail page loads with correct data                                                           | ✅ PASS     | [Recording](docs/)            |
+| Search posts invalid data                             | Page is loading and displays hint to adjust searchword                                             | ✅ PASS     | [Recording](docs/)            |
+| Search posts valid data                               | Page is loading and displays posts with searchword                                                 | ✅ PASS     | [Recording](docs/)            |
 
 ## Followers
 
@@ -93,6 +91,14 @@ This section outlines the approach and results of testing the frontend features 
 | Unfollow Profile from profile page                    | Request is successful, Follow button changes                                                       | ✅ PASS     | [Recording](docs/)       |
 | Follow Profile from popular profiles container        | Request is successful, Follow button changes                                                       | ✅ PASS     | [Recording](docs/)       |
 | Unfollow Profile from popular profiles container      | Request is successful, Follow button changes                                                       | ✅ PASS     | [Recording](docs/)       |
+
+## Category
+
+| Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
+| Filtering categories valid                            | Request is successful, posts with filtered categories are fetched                                  | ✅ PASS     | [Recording](docs/)       |
+| Filtering categories invalid                          | Request is fails, displays hint to adjust searchword                                               | ✅ PASS     | [Recording](docs/)       |
+| Filtering categories All categories                   | Request is successful, all posts are loaded again                                                  | ✅ PASS     | [Recording](docs/)       |
 
 ## Contact
 
@@ -109,7 +115,7 @@ This section outlines the approach and results of testing the frontend features 
 
 | Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
-| Register a user with valid data                       | Request is successful, user is registered and logged in                                            | ✅ PASS     | [Recording](docs/)     |
+| Register a user with valid data                       | Request is successful, user is registered and sent to login                                        | ✅ PASS     | [Recording](docs/)     |
 | Register a user with invalid data                     | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/)      |
 | Login a user with valid data                          | Request is successful, user is logged in                                                           | ✅ PASS     | [Recording](docs/)        |
 | Login a user with invalid data                        | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/)         |
