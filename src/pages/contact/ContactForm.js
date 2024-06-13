@@ -10,7 +10,6 @@ import Modal from 'react-bootstrap/Modal';
 
 import contactImage from "../../assets/images/bakery (1).png"
 import styles from "../../styles/ContactForm.module.css";
-import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 import { axiosReq } from "../../api/axiosDefaults";

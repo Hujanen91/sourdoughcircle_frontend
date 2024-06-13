@@ -7,6 +7,7 @@ import styles from "../../styles/Comment.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
 import CommentEditForm from "./CommentEditForm";
+import PropTypes from 'prop-types';
 
 const Comment = (props) => {
   const {
@@ -19,6 +20,18 @@ const Comment = (props) => {
     setPost,
     setComments,
   } = props;
+
+  // Comment propTypes added to remove prop-types errors in Eslint.
+  Comment.propTypes = {
+    profile_id: PropTypes.string.isRequired,
+    profile_image: PropTypes.string.isRequired,
+    owner: PropTypes.string.isRequired,
+    updated_at: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    setPost: PropTypes.func,
+    setComments: PropTypes.func,
+  };
 
   const [showEditForm, setShowEditForm] = useState(false);
 
@@ -41,7 +54,9 @@ const Comment = (props) => {
         ...prevComments,
         results: prevComments.results.filter((comment) => comment.id !== id),
       }));
-    } catch (err) {}
+    } catch (err) {
+      // console.log(err);
+    }
   };
 
   return (

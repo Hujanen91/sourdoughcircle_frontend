@@ -4,9 +4,14 @@ import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
 import {useProfileData} from "../../contexts/ProfileDataContext";
 import Profile from "./Profile";
+import PropTypes from 'prop-types';
 
 const PopularProfiles = ({mobile}) => {
     const {popularProfiles} = useProfileData();
+
+PopularProfiles.propTypes = {
+    mobile: PropTypes.bool,
+    };
 
     return (
         <Container className={

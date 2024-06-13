@@ -1,14 +1,20 @@
 import React, { useState } from "react";
-
 import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/axiosDefaults";
-
 import styles from "../../styles/CommentCreateEditForm.module.css";
+import PropTypes from 'prop-types';
 
 function CommentEditForm(props) {
   const { id, content, setShowEditForm, setComments } = props;
 
   const [formContent, setFormContent] = useState(content);
+
+  CommentEditForm.propTypes = {
+    id: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    setShowEditForm: PropTypes.func.isRequired,
+    setComments: PropTypes.func.isRequired,
+  };
 
   const handleChange = (event) => {
     setFormContent(event.target.value);
@@ -34,6 +40,7 @@ function CommentEditForm(props) {
       }));
       setShowEditForm(false);
     } catch (err) {
+      // console.log(err);
       
     }
   };

@@ -14,6 +14,7 @@ import NoResults from "../../assets/images/search.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
+import PropTypes from 'prop-types';
 
 function PostsPage({ message = "" }) {
   const [filter, setFilter] = useState("");
@@ -21,6 +22,10 @@ function PostsPage({ message = "" }) {
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
   const [query, setQuery] = useState("");
+
+  PostsPage.propTypes = {
+    message: PropTypes.string, // Optional prop for message
+  };
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -40,6 +45,7 @@ function PostsPage({ message = "" }) {
             setPosts({ ...data, results: data.results });
             setHasLoaded(true);
       } catch (err) {
+        //console.error(err);
       }
     };
 
@@ -58,7 +64,7 @@ function PostsPage({ message = "" }) {
       <h1 className={`col-12 col-lg-8 d-flex justify-content-center ${styles.Title}`}>The SourdoughCircle</h1>
       {pathname === "/feed" && (
         <h2 className={`col-12 col-lg-8 d-flex justify-content-center ${styles.FeedLiked}`}>
-          Your followed users' posts:
+          Your followed users posts:
         </h2>
       )}
       {pathname === "/liked" && (
@@ -93,14 +99,15 @@ function PostsPage({ message = "" }) {
           <>
             {posts.results.length ? (
               <InfiniteScroll
-                children={posts.results.map((post) => {
-                  return <Post key={post.id} {...post} setPosts={setPosts} />;
-                })}
                 dataLength={posts.results.length}
                 loader={<Asset spinner />}
                 hasMore={!!posts.next}
                 next={() => fetchMoreData(posts, setPosts)}
-              />
+              >
+                {posts.results.map((post) => (
+                  <Post key={post.id} {...post} setPosts={setPosts} />
+                ))}
+              </InfiniteScroll>
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />

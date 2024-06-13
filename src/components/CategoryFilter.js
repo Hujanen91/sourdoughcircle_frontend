@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
-
 import appStyles from "../App.module.css";
 import Form from "react-bootstrap/Form";
 import styles from "../App.module.css"
+import PropTypes from 'prop-types';
 
 const CategoryFilter = ({ setFilter, mobile }) => {
     const [category, setCategories] = useState([]);
@@ -18,6 +18,11 @@ const CategoryFilter = ({ setFilter, mobile }) => {
                 // console.log(err);
             }
         };
+
+        CategoryFilter.propTypes = {
+            setFilter: PropTypes.func.isRequired,
+            mobile: PropTypes.bool,
+          };
 
         fetchCategories();
     }, []);

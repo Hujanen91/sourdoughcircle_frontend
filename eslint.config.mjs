@@ -13,11 +13,17 @@ export default [
         ecmaVersion: 2021,
         sourceType: "module",
         ecmaFeatures: { jsx: true },
+        env: { jest: true },
       },
     },
     plugins: {
       react: pluginReact,
       "@typescript-eslint": tsEslintPlugin,
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
     },
     rules: {
       ...pluginJs.configs.recommended.rules,

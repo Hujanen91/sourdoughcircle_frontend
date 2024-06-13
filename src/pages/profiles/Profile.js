@@ -6,6 +6,8 @@ import {Link} from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import {Button} from "react-bootstrap";
 import {useSetProfileData} from "../../contexts/ProfileDataContext";
+import PropTypes from 'prop-types';
+
 
 const Profile = (props) => {
     const {
@@ -20,6 +22,17 @@ const Profile = (props) => {
 
     const {handleFollow, handleUnfollow} = useSetProfileData();
 
+Profile.propTypes = {
+    profile: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      following_id: PropTypes.string, // Optional property
+      image: PropTypes.string.isRequired,
+      owner: PropTypes.string.isRequired, // Add owner validation
+    }).isRequired,
+    mobile: PropTypes.bool, // Optional prop, adjust type if needed
+    imageSize: PropTypes.number, // Optional prop, adjust type if needed
+  };
+  
     return (
         <div className={
             `my-3 d-flex align-items-center ${

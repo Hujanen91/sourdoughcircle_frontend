@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-
 import styles from "../../styles/CommentCreateEditForm.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import PropTypes from 'prop-types';
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
+
+  CommentCreateForm.propTypes = {
+    post: PropTypes.object.isRequired,
+    setPost: PropTypes.func.isRequired,
+    setComments: PropTypes.func.isRequired,
+    profileImage: PropTypes.string.isRequired,
+    profile_id: PropTypes.string.isRequired,
+  };
 
   const handleChange = (event) => {
     setContent(event.target.value);
@@ -37,6 +44,7 @@ function CommentCreateForm(props) {
       }));
       setContent("");
     } catch (err) {
+      // console.log(err);
     }
   };
 
