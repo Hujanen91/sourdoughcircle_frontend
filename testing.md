@@ -6,6 +6,7 @@
   * [Comments](#comments)
   * [Likes](#likes)
   * [Navigation](#navigation)
+  * [Profiles](#profiles)
   * [Contact](#contact)
   * [Posts](#posts)
   * [Followers](#followers)
@@ -18,37 +19,101 @@
 This section outlines the approach and results of testing the frontend features of the Caption of the Day platform. Each test case is designed to validate the functionality and user experience against the specified requirements and user stories.
 
 ## Comments
-### Test Case: New User Sign-Up
 
-### Test Case: Persistent User Sessions
-
+| Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
+| Writing a comment                                     | Request is successful, comment is added to the list, message is shown                              | ✅ PASS     | [Recording](docs/)          |
+| Editing a comment                                     | Request is successful, comment content is updated, message is shown                                | ✅ PASS     | [Recording](docs/)         |
+| Delete a comment                                      | Request is successful, comment is deleted, message is shown                                        | ✅ PASS     | [Recording](docs/)       |
 
 ## Likes
-### Test Case: Application Responsiveness
 
-### Test Case: Graceful Error Handling
-
+| Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
+| Liking a post on home page                            | Like count increases and like button changes                                                       | ✅ PASS     | [Recording](docs/)            |
+| Unliking a post on home page                          | Like count decreases and like button changes                                                       | ✅ PASS     | [Recording](docs/)            |
+| Liking a post on /Feed page                           | Like count increases and like button changes                                                       |  FAILED     | [Recording](docs/)            |
+| Unliking a post on /Feed page                         | Like count decreases and like button changes                                                       |  FAILED     | [Recording](docs/)            |
+| Liking a post on /Liked page                          | Like count increases and like button changes                                                       |  FAILED     | [Recording](docs/)            |
+| Unliking a post on /Liked page                        | Like count decreases and like button changes                                                       |  FAILED     | [Recording](docs/)            |
 
 ## Navigation
-### Test Case: Consistent Navigation Bar Access
 
+| Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
+| Open the Landing Page                                 | Landing Page loads and displays content correctly                                                  | ✅ PASS     | [Recording](docs/)         |
+| Buttons on the Landing Page                           | The buttons on the landing page navigate to the correct page                                       | ✅ PASS     | [Recording](docs/) |
+| Register a user with valid data                       | Request is successful, user is registered and logged in                                            | ✅ PASS     | [Recording](docs/)     |
+| Register a user with invalid data                     | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/)      |
+| Login a user with valid data                          | Request is successful, user is logged in                                                           | ✅ PASS     | [Recording](docs/)        |
+| Login a user with invalid data                        | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/)         |
+| Open the Homepage unauthenticated                     | Homepage loads and displays information for unauthenticated users                                  | ✅ PASS     | [Recording](docs/) |
+| Open the Homepage authenticated but without followers | Homepage loads and displays hint to follow members                                                 | ✅ PASS     | [Recording](docs/)       |
+| Open the Homepage with feed                           | Homepage loads and displays the feed of the user                                                   | ✅ PASS     | [Recording](docs/)            |
+| Open the Explore page unauthenticated                 | Explore page loads and displays all the posts                                                      | ✅ PASS     | [Recording](docs/)              |
+| Open the Explore page authenticated                   | Explore page loads and displays all the posts from other members                                   | ✅ PASS     | [Recording](docs/)              |
+| Open the Explore page with follow                     | Explore page loads and displays all the posts from other members that are not followed by the user | ✅ PASS     | [Recording](docs/)       |
+| Open Search Page                                      | Search Page loads and shows input                                                                  | ✅ PASS     | [Recording](docs/)               |
+| Send search request                                   | After entering keywords the request is send and the result is shown below                          | ✅ PASS     | [Recording](docs/)               |
 
-## Contact
-### Test Case: Interface Design Consistency
+## Profiles
+
+| Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
+| Open Profile                                          | Opens Profile Page with correct data                                                               | ✅ PASS     | [Recording](docs/)         |
+| Open own Profile                                      | Opens Profile Page with correct data                                                               | ✅ PASS     | [Recording](docs/)     |
+| Edit Profile                                          | If data is valid, form is submitted, the profile is updated and the user is redirected to profile  | ✅ PASS     | [Recording](docs/)         |
+
+| Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
+| Open the Landing Page                                 | Landing Page loads and displays content correctly                                                  | ✅ PASS     | [Recording](docs/)         |
+| Buttons on the Landing Page                           | The buttons on the landing page navigate to the correct page                                       | ✅ PASS     | [Recording](docs/) |
+| Register a user with valid data                       | Request is successful, user is registered and logged in                                            | ✅ PASS     | [Recording](docs/)     |
+| Register a user with invalid data                     | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/)      |
+| Login a user with valid data                          | Request is successful, user is logged in                                                           | ✅ PASS     | [Recording](docs/)        |
+| Login a user with invalid data                        | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/)         |
 
 ## Posts
-### Test Case: Application Responsiveness
 
-### Test Case: Graceful Error Handling
-
+| Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
+| Create a Post with valid data                         | Request is successful, post is created and user is redirected to profile                           | ✅ PASS     | [Recording](docs/)          |
+| Create a Post with invalid data                       | Request fails, form shows error                                                                    | ✅ PASS     | [Recording](docs/)          |
+| Edit a Post with valid data                           | Request is successful, post is updated and user is redirected to post detail                       | ✅ PASS     | [Recording](docs/)            |
+| Edit a Post with invalid data                         | Request fails, form shows error                                                                    | ✅ PASS     | [Recording](docs/)            |
+| Delete a Post                                         | Request is successful, Post is deleted and user is redirected to profile                           | ✅ PASS     | [Recording](docs/)          |
+| Open a post by clicking                               | Post Detail page loads with correct data                                                           | ✅ PASS     | [Recording](docs/)            |
+| Open a post through url                               | Post Detail page loads with correct data                                                           | ✅ PASS     | [Recording](docs/)            |
 
 ## Followers
-### Test Case: Consistent Navigation Bar Access
+
+| Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
+| Follow Profile from profile page                      | Request is successful, Follow button changes                                                       | ✅ PASS     | [Recording](docs/)       |
+| Unfollow Profile from profile page                    | Request is successful, Follow button changes                                                       | ✅ PASS     | [Recording](docs/)       |
+| Follow Profile from popular profiles container        | Request is successful, Follow button changes                                                       | ✅ PASS     | [Recording](docs/)       |
+| Unfollow Profile from popular profiles container      | Request is successful, Follow button changes                                                       | ✅ PASS     | [Recording](docs/)       |
+
+## Contact
+
+| Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
+| All fields are filled in                              | Request is successful, user can send form                                                          | ✅ PASS     | [Recording](docs/)         |
+| Not all fields are filled in                          | Request fails, form loads with data and errors                                                     | ✅ PASS     | [Recording](docs/) |
+| Modal when sending message                            | Request is successful, user is presented with a modal that the message has been sent               | ✅ PASS     | [Recording](docs/)     |
+| Modal "back to feed" button                           | Request is successful, user is sent back to home feed                                              | ✅ PASS     | [Recording](docs/)      |
+| Modal close button form is reset                      | Request is successful, modal is closed and form is reset                                           | ✅ PASS     | [Recording](docs/)        |
 
 
 ## Authentication
-### Test Case: Interface Design Consistency
 
+| Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
+| Register a user with valid data                       | Request is successful, user is registered and logged in                                            | ✅ PASS     | [Recording](docs/)     |
+| Register a user with invalid data                     | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/)      |
+| Login a user with valid data                          | Request is successful, user is logged in                                                           | ✅ PASS     | [Recording](docs/)        |
+| Login a user with invalid data                        | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/)         |
+| Logout a user                                         | Request is successful, user is logged out                                              | ✅ PASS     | [Recording](docs/)         |
 
 ## Conclusion
 
