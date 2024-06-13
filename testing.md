@@ -36,8 +36,8 @@ This section outlines the approach and results of testing the frontend features 
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
 | Liking a post on home page                            | Like count increases and like button changes                                                       | ✅ PASS     | [Recording](docs/testinggifs/like_count_home_increase.gif)            |
 | Unliking a post on home page                          | Like count decreases and like button changes                                                       | ✅ PASS     | [Recording](docs/testinggifs/like_count_home_decrease.gif)            |
-| Liking a post on post page                            | Like count increases and like button changes                                                       | ✅ PASS     | [Recording](docs/)            |
-| Unliking a post on post page                          | Like count decreases and like button changes                                                       | ✅ PASS     | [Recording](docs/)            |
+| Liking a post on post page                            | Like count increases and like button changes                                                       | ✅ PASS     | [Recording](docs/testinggifs/Like_like_in_post.gif)            |
+| Unliking a post on post page                          | Like count decreases and like button changes                                                       | ✅ PASS     | [Recording](docs/testinggifs/Like_ulike_in_post.gif)            |
 | Liking a post on /Feed and /Liked page                | Like count increases and like button changes                                                       |  FAILED/BUG  | [Recording](docs/testinggifs/Like_error_increase_likedpage.gif)            |
 | Unliking a post on /Feed and /Liked page              | Like count decreases and like button changes                                                       |  FAILED/BUG  | [Recording](docs/testinggifs/Like_error_decrease_likedpage.gif)            |
 
@@ -46,14 +46,14 @@ This section outlines the approach and results of testing the frontend features 
 | Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
 | Buttons in navbar                                     | The buttons on the landing page navigate to the correct page                                       | ✅ PASS     | [Recording](docs/testinggifs/navbar_alllinks_path.gif) |
-| Open the Homepage unauthenticated                     | Homepage loads and displays posts                                                                  | ✅ PASS     | [Recording](docs/) |
+| Open the Homepage unauthenticated                     | Homepage loads and displays posts                                                                  | ✅ PASS     | [Recording](docs/testinggifs/clicking_home_loggedout.gif) |
 | Open the Feed without following users                 | Feed loads and displays hint to follow members                                                     | ✅ PASS     | [Recording](docs/testinggifs/Navigation_feed_withoutfollowing.gif)       |
 | Open the Feed when following users                    | Feed loads and displays the followed users posts                                                   | ✅ PASS     | [Recording](docs/testinggifs/Navigation_feed_withfollowing.gif)            |
 | Open the Like page without liked posts                | Liked page loads and displays hint to like posts                                                   | ✅ PASS     | [Recording](docs/testinggifs/Navigation_liked_withoutfollowing.gif)              |
 | Open the Like page with liked posts                   | Liked page loads and displays the liked posts                                                      | ✅ PASS     | [Recording](docs/testinggifs/Navigation_liked_withfollowing.gif)              |
-| Open the Contact page                                 | Contact page and the contact form opens                                                            | ✅ PASS     | [Recording](docs/)       |
+| Open the Contact page                                 | Contact page and the contact form opens                                                            | ✅ PASS     | [Recording](docs/testinggifs/Contact_opencontact.gif)       |
 | Open profile page                                     | Clicking on profile page in navbar opens the profile                                               | ✅ PASS     | [Recording](docs/testinggifs/Profile_navigate_to.gif)               |
-| Clicking the logo in navbar loads home page           | Clicking the logo in the navbar sends the user to home page                                        | ✅ PASS     | [Recording](docs/)               |
+| Clicking the logo in navbar loads home page           | Clicking the logo in the navbar sends the user to home page                                        | ✅ PASS     | [Recording](docs/testinggifs/logo_home.gif)               |
 | Profile in navbar sends user to their profile         | Clicking on profile page in navbar opens the profile                                               | ✅ PASS     | [Recording](docs/testinggifs/Profile_navigate_to.gif)               |
 | Profile images on posts sends users to the profile    | Clicking on profile image in posts opens the profile                                               | ✅ PASS     | [Recording](docs/testinggifs/Navigation_profilepic_inpost_sendtoprofile.gif)               |
 | Profile images in top followed users go to profile    | Clicking on profile image in most followed profiles opens the profile                              | ✅ PASS     | [Recording](docs/testinggifs/Navigation_profilepic_inpopular_sendtoprofile.gif)               |
@@ -67,7 +67,7 @@ This section outlines the approach and results of testing the frontend features 
 | Edit Profile                                          | If data is valid, form is submitted, the profile is updated and the user is redirected to profile  | ✅ PASS     | [Recording](docs/testinggifs/Profile_editprofile.gif)         |
 | Edit username                                         | If data is valid, form is submitted, the username is updated and the user is redirected to profile | ✅ PASS     | [Recording](docs/testinggifs/Profile_editusername.gif)     |
 | Change password                                       | If data is valid, form is submitted, the password is updated and the user is redirected to profile  | ✅ PASS     | [Recording](docs/testinggifs/Profile_editpassword_correctdata.gif)         |
-| Open Profile through url                              | Opens Profile Page with correct data                                                               | ✅ PASS     | [Recording](docs/)         |
+| Open Profile through url                              | Opens Profile Page with correct data                                                               | ✅ PASS     | [Recording](docs/testinggifs/profile_url.gif)         |
 
 ## Posts
 
