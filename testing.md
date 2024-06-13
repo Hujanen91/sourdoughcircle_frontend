@@ -87,10 +87,10 @@ This section outlines the approach and results of testing the frontend features 
 
 | Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
-| Follow Profile from profile page                      | Request is successful, Follow button changes                                                       | ✅ PASS     | [Recording](docs/)       |
-| Unfollow Profile from profile page                    | Request is successful, Follow button changes                                                       | ✅ PASS     | [Recording](docs/)       |
-| Follow Profile from popular profiles container        | Request is successful, Follow button changes                                                       | ✅ PASS     | [Recording](docs/)       |
-| Unfollow Profile from popular profiles container      | Request is successful, Follow button changes                                                       | ✅ PASS     | [Recording](docs/)       |
+| Follow Profile from profile page                      | Request is successful, Follow button changes                                                       | ✅ PASS     | [Recording](docs/testinggifs/follow_followfrom_profile.gif)       |
+| Unfollow Profile from profile page                    | Request is successful, Follow button changes                                                       | ✅ PASS     | [Recording](docs/testinggifs/follow_unfollowfrom_profile.gif)       |
+| Follow Profile from popular profiles container        | Request is successful, Follow button changes                                                       | ✅ PASS     | [Recording](docs/testinggifs/follow_followfrom_PopProfiles.gif)       |
+| Unfollow Profile from popular profiles container      | Request is successful, Follow button changes                                                       | ✅ PASS     | [Recording](docs/testinggifs/follow_unfollowfrom_PopProfiles.gif)       |
 
 ## Category
 
