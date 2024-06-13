@@ -131,7 +131,7 @@ This frontend testing documentation presents a comprehensive review of key funct
 As part of our commitment to excellence, I conducted an in-depth performance and best practices analysis using Lighthouse. My analysis revealed several insights:
 [Perfomance](testing.md)
 
-![Lighthouse report](src\assets\Performance.png)
+![Lighthouse report]()
 
 - **Performance**: This score prompted me to look into optimization opportunities. I'm currently focusing on improving the Time to Interactive and Speed Index by optimizing images and reducing JavaScript size for a faster, more responsive experience.
 

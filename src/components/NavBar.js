@@ -113,7 +113,7 @@ const NavBar = () => {
           <Navbar.Brand>
             <img
               src={logo} 
-              alt="logo" 
+              alt="sourdough-logo" 
               height="75" 
             />
           </Navbar.Brand>

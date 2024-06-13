@@ -124,6 +124,7 @@ const SignUpForm = () => {
         <Image
           className={`${appStyles.FillerImage}`}
           src={signupimg}
+          alt="signin image"
         />
       </Col>
     </Row>
