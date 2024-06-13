@@ -228,9 +228,8 @@ SourdoughCircle keeps it simple and to the point with its app iconography.
 
 - The rest of the icons and imagery follows along matching the colors and styles of the main navbar logo with clean lines, playful colors and easy for the eyes.
 
-![Barlow font](docs/images/6262e1576a23db81ff6fe626_60b7b98f118948b13908fa1f_barlow.png)
-![Barlow font](docs/images/6262e1576a23db81ff6fe626_60b7b98f118948b13908fa1f_barlow.png)
-![Barlow font](docs/images/6262e1576a23db81ff6fe626_60b7b98f118948b13908fa1f_barlow.png)
+![Logo](src/assets/images/android-chrome-192x192.png)
+
 
 # Features
 
