@@ -486,10 +486,12 @@ Infinite scroll is a future that will fetch new posts from the api while the use
 
 
 ## Reusability
+<hr>
 
 <!--In this section, we explore the current reusability of our components and envision future scenarios where our components' flexibility can be further utilized.-->
 
 ### Component Reusability
+
 
 <!--Our application's architecture emphasizes reusability and modularity. Here is an overview of the reusable components:
 
@@ -577,6 +579,7 @@ By designing our application with these reusable components, we've created a sca
 
 ### Possible Reusable Scenarios
 
+
 <!--As we continue to evolve the Caption of the Day platform, we anticipate new features that will further leverage our existing components. Below are some scenarios where our components could be reused or extended:
 
 #### `Avatar.jsx`
@@ -640,9 +643,10 @@ By designing our application with these reusable components, we've created a sca
 - **Possible Props**:
   - `additionalPlatforms`: An array of new platform identifiers to include in the profile.
 
-These scenarios are guided by our commitment to flexibility and scalability. As we develop new features, we'll continue to assess our component library for opportunities to reuse and extend components, ensuring a consistent and efficient development experience.
+These scenarios are guided by our commitment to flexibility and scalability. As we develop new features, we'll continue to assess our component library for opportunities to reuse and extend components, ensuring a consistent and efficient development experience.-->
 
 ## Packages and Tools
+
 
 In this project, we've utilized a variety of libraries and tools to enhance functionality and development efficiency. Below is a list of these technologies along with their purposes:
 
@@ -667,9 +671,6 @@ In this project, we've utilized a variety of libraries and tools to enhance func
 - **Testing Libraries (Jest, React Testing Library)**
   - Jest is a simple testing framework, and React Testing Library provides utility functions for testing React components.
 
-- **Web Vitals**
-  - Measures website performance in terms of loading, interactivity, and visual stability.
-
 - **Mock Service Worker (MSW)**
   - Mocks HTTP requests in development and testing environments. Ideal for testing network request scenarios.
 
@@ -679,21 +680,26 @@ In this project, we've utilized a variety of libraries and tools to enhance func
 - **Node.js and npm Versions**
   - The project specifies Node.js and npm versions to ensure a consistent environment setup.
 
-Additionally, specific scripts were defined for building, testing, and starting the application, particularly with Heroku deployment in mind. The project also specifies Node.js and npm versions for consistent environment setup.-->
+Additionally, specific scripts were defined for building, testing, and starting the application, particularly with Heroku deployment in mind. The project also specifies Node.js and npm versions for consistent environment setup.
 
 ## Testing
 
 ### Manual testing
+
+
 The SourcdoughCircle has gone through thorough manual testing that can be found here:
 [Manual testing](testing.md)
 
 
 ### Performance and Validation
 
+
 The SourcdoughCircle perfomance, best practice and validation reports can all be found here:
 [Perfomance and Validation](testing.md)
 
 ### Known Bugs
+
+<hr>
 
 **Current Status**:<br> 
 As of the latest deployment, no major bugs are deployed to the website. There's been a few during production that has been either temporarily solved or left as it is:<br>
@@ -703,23 +709,24 @@ Different AI:s was asked about the issue without any of them finding a solution 
 Console.logs and console.errors was used to try to pinpoint the issue but the API was fetching everything as it was supposed to.
 My mentor looked at it for a moment and couldn't really see where the problem was due to the filtering and searchfield being defined in the same components as the <br>
 
-      Solution:
-      Due to the timelimit of this project this bug had to be either left as it was or hidden. I went with the last option and decided to hide the Searchbar and Category filtering on the /Feed and /Liked pages.
-      This solution felt like the better one so that the page did not contain non functional features for the users.
-      The Homepage still has these futures and they are working perfectly on that page and is fetching the right data.
+<b><i>Solution:</i></b>
+Due to the timelimit of this project this bug had to be either left as it was or hidden. I went with the last option and decided to hide the Searchbar and Category filtering on the /Feed and /Liked pages.
+This solution felt like the better one so that the page did not contain non functional features for the users.
+The Homepage still has these futures and they are working perfectly on that page and is fetching the right data.
 
 - The like and comment count on /Feed and /Liked page also stopped working probably at the same time as the previus bug above. The icons are displayed just as they should and the like button is clickable and is acting as it should. 
 The comment count on the other hand is not working as it should and is not displaying. 
 If a user likes the post and then unlike it the word "NaN" is appearing next to the like icon. The "NaN" will then be gone if the user updates the page and the icon will still be marked as "liked".<br>
 
-      Solution: 
-      This has been left as it is due to the timelimit but also due to it not being such an extreme bug and it functions as it should apart from not displaying the numbers.
+<b><i>Solution:</i></b>
+This has been left as it is due to the timelimit but also due to it not being such an extreme bug and it functions as it should apart from not displaying the numbers.
 
 **Devtools**
 
-Websocket warning:
+<b><i>Websocket warning:</i></b>
 A websocket warning is happening in the console in devtools. After searching in Slack for this issue I found out it is a known bug and something with some packages in the background non reachable to the user.
-Different solutions was tested withouth any success.
+Different solutions was tested withouth any success.<br>
+![Websocket warning](docs/images/Websocket_error.png)<br>
 
 ## Deployment
 
@@ -753,7 +760,7 @@ This project is deployed on Heroku, a cloud platform service that enables easy d
 For more detailed instructions and troubleshooting, visit the official [Heroku Dev Center](https://devcenter.heroku.com/).
 
 ### Forking the GitHub Repository
-
+<hr>
 Forking the GitHub repository allows you to make a copy of the original project on your own GitHub account, enabling you to make changes without affecting the original. Here's how to do it:
 
 1. **Go to the Repository**: Navigate to the original repository on GitHub.
