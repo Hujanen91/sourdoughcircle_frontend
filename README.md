@@ -484,166 +484,144 @@ __Infinite scroll__
 Infinite scroll is a future that will fetch new posts from the api while the user scrolls to create an infinte scroll. This effect is applied to both posts page, feed, liked feed, comments feed and profile page feed.
 
 
+## Component Reusability
 
-## Reusability
-<hr>
+1. **Asset.js:** This component displays a spinner wherever the page is loading in data, scr or messages that can be edited for the specific purpose in the specific .js component.<br>It can be reused wherever a spinner could be needed, where a scr needs to be called (a specific image for example) or when a message needs to be specified.<br>
+From this component `Const Asset` is considered a reusable component and has been reused in:<br>
 
-<!--In this section, we explore the current reusability of our components and envision future scenarios where our components' flexibility can be further utilized.-->
+   NotFound.js, PostCreateForm.js, PostPage.js, PostsPage.js, PopularProfiles.js, ProfilePage.js to display a spinner whenever content is loading. <br>
 
-### Component Reusability
+2. **Avatar.js:** This component provides a form for handling the Avatar images.<br>
+It can be reused whenever users need to add avatars or static images before a user or admin changes the image.<br>
+From this component `Const Avatar` is considered a reusable component and has been reused in:<br>
 
+   NavBar.js, Comment.js, CommentCreateForm.js, Post.js and Profile.js to handle and import the avatar for the user.<br>
 
-<!--Our application's architecture emphasizes reusability and modularity. Here is an overview of the reusable components:
+3. **CategoryFilter.js:** This component incapsulates functionality that fetches categories from an API and displays them in a dropdown menu, allowing users to filter items based on the selected category.<br>
+Can be reused in different situations where a drop down list with filtering for categories etc is needed.<br>
+From this component `Const CategoryFilter` is considered a reusable component and has been reused in:<br>
 
-#### `Avatar.jsx`
+   PostsPage.js to render the Category filtering of posts.<br>
 
-- **Description**: Displays user avatars with optional text.
-- **Props**:
-  - `src`: The image source URL for the avatar.
-  - `height`: The size of the avatar (default `45`).
-  - `text`: Optional text to display alongside the avatar.
-- **Usage**: Used in user profiles, comment sections, and as navigational items.
+4. **MoreDropdown.js:** This component are designed to be modular and configurable, which allows for easy reuse with different props and configurations.<br>
+Can be reused as a simple dropdown menu in different scenarios for when users need to edit a comment, post, photos etc.<br>
+From this component `const MoreDropdown` is considered a reusable component and has been reused in:<br>
 
-#### `LikeButton.jsx`
+   Comment.js, Post.js and ProfilePage.js to render the dropdown menu the enable the user to edit their data.<br>
 
-- **Description**: A button for liking posts, with dynamic rendering based on like status.
-- **Props**:
-  - `isOwner`: Boolean indicating if the current user owns the post.
-  - `likeId`: The ID of the like associated with the post, if it exists.
-  - `setPosts`: Function to update the state of posts.
-  - `postId`: The ID of the post to be liked or unliked.
-- **Usage**: Embedded in post components to allow users to like/unlike posts.
+5. **Navbar.js:** This component presents a form for users to update their passwords.<br>
+It can be reused across different parts of the application where password updating functionality is needed.<br>
+From this component `const NavBar` is considered a reusable component and has been reused in:<br>
 
-#### `NavBar.jsx`
+   App.js to render the navbar on the entire website no matter what url path the user is currently located at.
 
-- **Description**: The navigation bar for the application, responsive and adaptive based on user authentication status.
-- **Props**: None (utilizes context to determine the current user state).
-- **Usage**: Placed at the top of all page layouts for consistent navigation.
+6. **NotFound.js:** This component displays and handles the image and message that is displayed when information can't be found.<br>
+From this component `const NotFound` has been used in App.js inside a path to display a "Not found" message when a user wants to use a path that doesn't exist. 
+The `const NotFound` was also given a source of `NoResults` and this has been reused in:<br>
 
-#### `Notifications.jsx`
+   PostsPage.js and ProfilePage.js to display an image and a message to the user when no posts can be found.<br>
 
-- **Description**: A dropdown component to display user notifications.
-- **Props**:
-  - `id`: (From `useParams`) The ID used to fetch notifications if needed.
-- **Usage**: Included in the `NavBar` for easy access to notifications.
+7. **SignInForm.js:** This component displays and handles user sign in to the website.<br>
+It can be reused in different scenarios such as Employee Portals, Admin Dashboard or in E-commerce stores for users to sign in to their accounts.<br>
+From this component `function SignInForm` is considered a reusable component and has been used in:<br>
 
-#### `PopularProfiles.jsx`
+   App.js to render the SignInForm on the correct url path.<br>
 
-- **Description**: Displays a list of popular profiles.
-- **Props**:
-  - `mobile`: Boolean indicating if the view is rendered on a mobile device.
-- **Usage**: Utilized in the sidebar or main content area to showcase popular users.
+8. **SignUp.js:** This component provides a way for users to register an account on the website.<br>
+It can be reused in situations like event registrations, subscriptions or online course platforms for example.<br>
+From this component `const SignUpForm` is considered a reusable component and has been used in:<br>
 
-#### `Post.jsx`
+   App.js to render the SignInForm on the correct url path.<br>
 
-- **Description**: Represents a single post in the feed.
-- **Props**: Includes post details such as `id`, `owner`, `title`, `content`, and interaction counts.
-- **Usage**: Used in profile pages and feeds to display individual posts.
+9. **Comment.js:** This component is designed to display a comment with options to edit or delete it if the current user is the owner.<br>
+This component can be reused in different contexts where similar functionality is needed such as blog post comments, forum threads or product reviews.<br>
+From this component `const Comment` is considered a reusable component and has been reused in:<br>
 
-#### `Profile.jsx`
+   PostPage.js to fetch comments related to the specific post.<br>
 
-- **Description**: Displays a brief profile summary for a user.
-- **Props**:
-  - `profile`: Object containing profile information.
-  - `mobile`: Boolean for mobile view adjustments.
-  - `imageSize`: The size of the profile image (default `55`).
-- **Usage**: Showcased in lists where a user profile summary is needed, such as in search results or the popular profiles section.
+10. **CommentCreateForm.js:** This component is designed to allow users to create new comments. It includes functionality to submit the comment, update the UI with the newly created comment, and reset the form state after submission.<br>
+Can be used in the same scenarios and together with Comment.js.<br>
+From this component `function CommentCreateForm` is considered a reusable component and has been reused in:<br>
 
-#### `ProfileInformation.jsx`
+   PostPage.js to render a form to create and post comments.<br>
 
-- **Description**: Provides detailed profile information, including social media links and follow/unfollow functionality.
-- **Props**:
-  - `profile`: Object containing detailed profile information.
-  - `isOwner`: Boolean indicating if the profile belongs to the current user.
-  - `handleFollow`: Function to handle following a user.
-  - `handleUnfollow`: Function to handle unfollowing a user.
-- **Usage**: Used on the main profile page to display user information and actions.
+11. **CommentEditForm.js:** This component allows users to edit existing comments. It provides functionality to update the comment's content and save those changes via an API request.<br>
+Can be used in the same scenarios and together with Comment.js and CommentCreateForm.js.<br>
+From this component `function CommentEditForm` is considered a reusable component and has been reused in:<br>
 
-#### `ProfilePosts.jsx`
+   Comment.js to render a form for editing the posted comment.<br>
 
-- **Description**: Displays a list of posts created by a specific user.
-- **Props**:
-  - `profilePosts`: The list of posts to display.
-  - `setProfilePosts`: Function to update the list of posts.
-- **Usage**: Employed in the profile details page to show all posts from a user.
+12. **ContactForm.js:** This component is designed to facilitate user interactions for sending messages through a contact form. It handles form validation, submission via API, and displays success messages in a modal upon successful submission.<br>
+Can be reused as Customer support portals, Feedback forms or Business inquiry forms.<br>
+From this component `const ContactForm` is considered a reusable component and has been reused in:<br>
 
-#### `SocialMediaLinks.jsx`
+   App.js to fetch the ContactForm url path for the Contact Page.<br>
 
-- **Description**: Renders social media icons linked to user profiles.
-- **Props**:
-  - `profile`: Object containing URLs to social media profiles.
-- **Usage**: Included in the `ProfileInformation` component to link to user's social media.
+13. **Post.js:** This component is quite versatile and can be reused in various scenarios where displaying and interacting with posts is required.<br>
+Can be reused as Blog post display, Forum threads or Portfolio showcases.<br>
+From this component `const Post` is considered a reusable component and has been reused in:<br>
 
-By designing our application with these reusable components, we've created a scalable and maintainable codebase. Each component is crafted to be independent and versatile, promoting consistency and efficiency throughout our development process.-->
+   PostPage.js and PostsPage.js to import all the data related to the specific post.<br>
 
+14. **PostCreateForm.js:** This component is designed to facilitate the creation of new posts within an application. It includes form fields for entering a post title, content, an optional image upload, and selecting a category. Users can fill out these fields, upload an image if desired, and submit the form to create a new post.<br>
+Can be used in Poll creation.<br>
+From this component `function PostCreateForm` is considered a reusable component and has been reused in:<br>
 
-### Possible Reusable Scenarios
+   App.js to render the correct path url for the page that is presenting the Post Create form for creating a post.<br>
 
+14. **PostEditForm.js:** This component is designed to handle the edit form of posts within an application. It includes form fields for entering a post title, content, an optional image upload, and selecting a category but with the option to edit them. Users can edit these fields, change image if desired, and resubmit the form to update the existing post.<br>
+Can be used in Poll creation.<br>
+From this component `function PostEditForm` is considered a reusable component and has been reused in:<br>
 
-<!--As we continue to evolve the Caption of the Day platform, we anticipate new features that will further leverage our existing components. Below are some scenarios where our components could be reused or extended:
+   App.js to render the correct path url for the page that is presenting the Post Edit form for editing an already existing post created with the PostCreateForm component.<br>
 
-#### `Avatar.jsx`
+15. **PostPage.js:** This component serves as a detailed view for a specific post, displaying the post content along with its comments.<br>
+Can be used as Event page, Recipe page, Article detail page.<br>
+From this component `function PostPage` is considered a reusable component and has been reused in:<br>
 
-- **Future Use**: Incorporating user status indicators (such as online/offline) next to the avatar for real-time social features.
-- **Possible Props**:
-  - `status`: A string or boolean indicating the user's current status.
+   App.js to render a specific postPage with the users posts.<br>
 
-#### `LikeButton.jsx`
+16. **PostsPage.js:** This component is designed to display a list of posts based on different filters and conditions, such as categories, search queries, or user-specific feeds.<br>
+Can be used as a Product listing page, Job listing page or Tutorial/Course directory.<br>
+From this component `function PostsPage` is considered a reusable component and has been reused in:<br>
 
-- **Future Use**: Expansion to support liking comments or other user-generated content beyond posts.
-- **Possible Props**:
-  - `contentType`: A string indicating the type of content being liked (e.g., 'post', 'comment').
+   App.js to render the PostsPage with every users posted posts.<br>
 
-#### `NavBar.jsx`
+17. **PopularProfiles.js:** This component is designed to display a list of popular profiles, either in a compact format for mobile devices or a full format for larger screens.<br>
+Can be used as a Featured authors section, Artist spotlight or Top contributors widget.<br>
+From this component `const PopularProfiles` is considered a reusable component and has been reused in:<br>
 
-- **Future Use**: Adding quick-search functionality within the navigation bar for immediate content discovery.
-- **Possible Props**:
-  - `onSearch`: Function to handle search queries directly from the navigation bar.
+   PostPage.js, PostsPage.js and ProfilePage.js to render the popular profiles field to the right of the main containers.<br>
 
-#### `Notifications.jsx`
+18. **Profile.js:** This component is designed to render a user profile with options for following or unfollowing based on the current user's interaction status with the profile.<br>
+Can be used as a Community memeber widget, Author card in blog posts, Participant list in events pages. <br>
+From this component `const Profile` is considered a reusable component and has been reused in:<br>
 
-- **Future Use**: Introducing categorization of notifications to filter by type (likes, comments, follows).
-- **Possible Props**:
-  - `filterType`: An array or string to specify which notification types to display.
+   PopularProfiles.js tho render the profiles in the popular profiles field.<br>
 
-#### `PopularProfiles.jsx`
+19. **ProfileEditForm.js:** This component allows a user to edit their profile information, including their name, bio, social media links, and profile picture.<br>
+Can be used as User account settings, Artist profile edit, Event organizers profile edit.<br>
+From this component `const ProfileEditForm` is considered a reusable component and has been reused in:<br>
 
-- **Future Use**: Adding filtering options to sort popular profiles by different criteria (e.g., most active, recently joined).
-- **Possible Props**:
-  - `sortBy`: A string indicating the sorting criterion for popular profiles.
+   App.js to fetch the correct url path and the view for the ProfileEditForm page. <br>
 
-#### `Post.jsx`
+20. **ProfilePage.js:** This component is designed to display a user's profile information, including their profile picture, bio, social media links, follower counts, and their posts.<br>
+Can be used as a Portfolio or Company page.<br> 
+From this component `function ProfilePage` is considered a reusable component and has been reused in:<br>
 
-- **Future Use**: Implementing a feature to highlight posts based on trending topics or hashtags.
-- **Possible Props**:
-  - `isTrending`: A boolean to highlight the post if it's associated with a trending topic.
+  App.js to fetch the correct url path and the correct data and view for the Profile Page<br>
 
-#### `Profile.jsx`
+21. **UsernameForm.js:** This component allows users to change their username.<br>
+Can be used in similar situations where a field of static information can be updated.<br>
+From this component `const UsernameForm` is considered a reusable component and has been reused in:<br>
 
-- **Future Use**: Enabling a 'quick view' mode to see more details on hover or click without navigating away from the current page.
-- **Possible Props**:
-  - `quickViewEnabled`: A boolean to enable the quick view feature.
+   App.js to fetch the correct url path and the correct data and view for the Username form used in the Change username page.<br>
 
-#### `ProfileInformation.jsx`
+22. **UserPasswordForm.js:** This component allows users to change their password. It integrates with React, React Bootstrap for UI components, and Axios for making HTTP requests.
+Can be used in similar situations to give users the possibility to change/update secret data.<br> 
+From this component `const UserPasswordForm` is considered a reusable component and has been reused in:<br>
 
-- **Future Use**: Adding the capability for users to customize the visibility of certain profile sections to different audience groups.
-- **Possible Props**:
-  - `visibilitySettings`: An object detailing visibility preferences for profile sections.
-
-#### `ProfilePosts.jsx`
-
-- **Future Use**: Allowing embedding of posts in external websites or sharing via social media platforms.
-- **Possible Props**:
-  - `embeddable`: A boolean indicating if the post can be embedded.
-  - `onShare`: Function to handle sharing the post externally.
-
-#### `SocialMediaLinks.jsx`
-
-- **Future Use**: Expanding to include more social platforms and integrating with APIs to display live social feed previews.
-- **Possible Props**:
-  - `additionalPlatforms`: An array of new platform identifiers to include in the profile.
-
-These scenarios are guided by our commitment to flexibility and scalability. As we develop new features, we'll continue to assess our component library for opportunities to reuse and extend components, ensuring a consistent and efficient development experience.-->
+   App.js to fetch the correct url path and the correct data and view for the user password form used in the Change password page.<br>
 
 ## Packages and Tools
 
@@ -695,7 +673,7 @@ The SourcdoughCircle has gone through thorough manual testing that can be found 
 
 
 The SourcdoughCircle perfomance, best practice and validation reports can all be found here:
-[Perfomance and Validation](testing.md)
+[Perfomance and Validation](testing.md#performance-and-validation)
 
 ### Known Bugs
 

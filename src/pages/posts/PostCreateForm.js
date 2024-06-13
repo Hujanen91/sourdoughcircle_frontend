@@ -6,8 +6,6 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
 import Image from "react-bootstrap/Image";
-// Remove this import since you'll be fetching categories from the API
-// import Categories from "../../constants/Categories"
 
 import Asset from "../../components/Asset";
 import Upload from "../../assets/images/upload (6).png";
