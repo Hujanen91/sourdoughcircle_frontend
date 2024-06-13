@@ -32,6 +32,8 @@ This section outlines the approach and results of testing the frontend features 
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
 | Liking a post on home page                            | Like count increases and like button changes                                                       | ✅ PASS     | [Recording](docs/)            |
 | Unliking a post on home page                          | Like count decreases and like button changes                                                       | ✅ PASS     | [Recording](docs/)            |
+| Liking a post on post page                            | Like count increases and like button changes                                                       | ✅ PASS     | [Recording](docs/)            |
+| Unliking a post on post page                          | Like count decreases and like button changes                                                       | ✅ PASS     | [Recording](docs/)            |
 | Liking a post on /Feed page                           | Like count increases and like button changes                                                       |  FAILED     | [Recording](docs/)            |
 | Unliking a post on /Feed page                         | Like count decreases and like button changes                                                       |  FAILED     | [Recording](docs/)            |
 | Liking a post on /Liked page                          | Like count increases and like button changes                                                       |  FAILED     | [Recording](docs/)            |
@@ -41,20 +43,18 @@ This section outlines the approach and results of testing the frontend features 
 
 | Testcase                                              | Expected Result                                                                                    | Test Result | Recording                                        |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------ |
-| Open the Landing Page                                 | Landing Page loads and displays content correctly                                                  | ✅ PASS     | [Recording](docs/)         |
-| Buttons on the Landing Page                           | The buttons on the landing page navigate to the correct page                                       | ✅ PASS     | [Recording](docs/) |
-| Register a user with valid data                       | Request is successful, user is registered and logged in                                            | ✅ PASS     | [Recording](docs/)     |
-| Register a user with invalid data                     | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/)      |
-| Login a user with valid data                          | Request is successful, user is logged in                                                           | ✅ PASS     | [Recording](docs/)        |
-| Login a user with invalid data                        | Request fails, form loads again with data and errors                                               | ✅ PASS     | [Recording](docs/)         |
-| Open the Homepage unauthenticated                     | Homepage loads and displays information for unauthenticated users                                  | ✅ PASS     | [Recording](docs/) |
-| Open the Homepage authenticated but without followers | Homepage loads and displays hint to follow members                                                 | ✅ PASS     | [Recording](docs/)       |
-| Open the Homepage with feed                           | Homepage loads and displays the feed of the user                                                   | ✅ PASS     | [Recording](docs/)            |
-| Open the Explore page unauthenticated                 | Explore page loads and displays all the posts                                                      | ✅ PASS     | [Recording](docs/)              |
-| Open the Explore page authenticated                   | Explore page loads and displays all the posts from other members                                   | ✅ PASS     | [Recording](docs/)              |
-| Open the Explore page with follow                     | Explore page loads and displays all the posts from other members that are not followed by the user | ✅ PASS     | [Recording](docs/)       |
-| Open Search Page                                      | Search Page loads and shows input                                                                  | ✅ PASS     | [Recording](docs/)               |
-| Send search request                                   | After entering keywords the request is send and the result is shown below                          | ✅ PASS     | [Recording](docs/)               |
+| Buttons in navbar                                     | The buttons on the landing page navigate to the correct page                                       | ✅ PASS     | [Recording](docs/) |
+| Open the Homepage unauthenticated                     | Homepage loads and displays posts                                                                  | ✅ PASS     | [Recording](docs/) |
+| Open the Feed without following users                 | Feed loads and displays hint to follow members                                                     | ✅ PASS     | [Recording](docs/)       |
+| Open the Feed when following users                    | Feed loads and displays the followed users posts                                                   | ✅ PASS     | [Recording](docs/)            |
+| Open the Like page without liked posts                | Liked page loads and displays hint to like posts                                                   | ✅ PASS     | [Recording](docs/)              |
+| Open the Like page with liked posts                   | Liked page loads and displays the liked posts                                                      | ✅ PASS     | [Recording](docs/)              |
+| Open the Contact page                                 | Contact page and the contact form opens                                                            | ✅ PASS     | [Recording](docs/)       |
+| Open profile page                                     | Clicking on profile page in navbar opens the profile                                               | ✅ PASS     | [Recording](docs/)               |
+| Clicking the logo in navbar loads home page           | Clicking the logo in the navbar sends the user to home page                                        | ✅ PASS     | [Recording](docs/)               |
+| Profile in navbar sends user to their profile         | Clicking on profile page in navbar opens the profile                                               | ✅ PASS     | [Recording](docs/)               |
+| Profile images on posts sends users to the profile    | Clicking on profile image in posts opens the profile                                               | ✅ PASS     | [Recording](docs/)               |
+| Profile images in top followed users go to profile    | Clicking on profile image in most followed profiles opens the profile                              | ✅ PASS     | [Recording](docs/)               |
 
 ## Profiles
 
