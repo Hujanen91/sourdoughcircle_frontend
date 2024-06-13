@@ -25,12 +25,12 @@ const Profile = (props) => {
 Profile.propTypes = {
     profile: PropTypes.shape({
       id: PropTypes.string.isRequired,
-      following_id: PropTypes.string, // Optional property
+      following_id: PropTypes.string,
       image: PropTypes.string.isRequired,
-      owner: PropTypes.string.isRequired, // Add owner validation
+      owner: PropTypes.string.isRequired,
     }).isRequired,
-    mobile: PropTypes.bool, // Optional prop, adjust type if needed
-    imageSize: PropTypes.number, // Optional prop, adjust type if needed
+    mobile: PropTypes.bool,
+    imageSize: PropTypes.number,
   };
   
     return (

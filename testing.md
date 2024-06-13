@@ -14,6 +14,7 @@
   * [Authentication](#authentication)
   * [Conclusion](#conclusion)
 * [Perfomance and Validations](#perfomance-and-validations)
+* [Responsiveness](#responsiveness)
 
 # Manual testing
 
@@ -133,17 +134,43 @@ The Failed testcases is documented [here](README.md#known-bugs)
 
 The website has been validated and the scores and results have been well documented.
 
-![Lighthouse report]()
+Logged in Lighthouse report:<br>
+![Lighthouse report logged in](docs/validation/lighthouse.png)
 
-![Lighthouse report]()
+Logged out Lighthouse report:<br>
+![Lighthouse report logged out](docs/validation/lighthouse_loggedout.png)
 
-![Lighthouse report]()
-
-![Lighthouse report]()
-
-Eslinter was used to validate the react files:
-![Lighthouse report]()
+All CSS files was validated and no errors or warnings was found.<br>
+![CSS Validation](docs/validation/CSS.png)
 
 
+Eslinter was used to validate the react files.
+At first I got around 89 Errors. They turned out to be easy fixes like empty fields and having to add propTypes code to several files.
+After doing this all errors was cleared in the validation:<br> 
+![Eslint validation](docs/validation/Eslint%20validation.png)
+
+# Responsiveness
+
+All pages were tested to ensure responsiveness on screen sizes from 320px and upwards as defined in WCAG 2.1 Reflow criteria for responsive design on Chrome, Edge, Firefox and Opera browsers.<br>
+
+<b>Steps to test:</b><br>
+
+Open browser and navigate to SourdougCircle
+Open the developer tools (right click and inspect)
+Set to responsive and decrease width to 320px
+Set the zoom to 50%
+Click and drag the responsive window to maximum width<br>
+
+<b>Expected:</b><br>
+
+Website is responsive on all screen sizes and no images are pixelated or stretched. No horizontal scroll is present. No elements overlap.
+
+<b>Actual:</b><br>
+
+Website behaved as expected.
+
+Website was also opened on the following devices and no responsive issues were seen:
+
+Google pixel 8 pro, 
 
 [Back to Readme](README.md#testing)

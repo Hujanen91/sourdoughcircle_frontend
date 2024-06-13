@@ -24,7 +24,7 @@ function PostsPage({ message = "" }) {
   const [query, setQuery] = useState("");
 
   PostsPage.propTypes = {
-    message: PropTypes.string, // Optional prop for message
+    message: PropTypes.string,
   };
 
   useEffect(() => {
