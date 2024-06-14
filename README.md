@@ -18,6 +18,7 @@ The repository for the backend of the application can be found here:<br>[Sourdou
 * [UX](#ux)
   * [User Goals](#user-goals)
   * [Agile and planning](#agile-and-planning)
+  * [Wireframes](#wireframes)
   * [User stories](#user-stories)
   * [Design choices](#design-choices)
     * [Colors](#colors)
@@ -103,6 +104,25 @@ The project was illustrated by 13 initial Milestone entitled<br>
 providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline set to June. The Milestones were broken according to their components name main functions.
 
 Throughout the development process, new milestones were added, where tasks started from "Todo," progressing to "In Progress," and finally "Done". The issues were assigned to the sole developer and labeled as "could-have," "should-have,", "must-have", "wont-have" and later on labels like "has been implemented" and "future implementation" was also added.
+
+### Wireframes:
+Home page:<br>
+![Home](docs/images/wireframes/Home.png)<br>
+
+Liked page:<br>
+![Liked](docs/images/wireframes/Liked.png)<br>
+
+Login page:<br>
+![Login](docs/images/wireframes/Login.png)<br>
+
+Profile page:<br>
+![Profile](docs/images/wireframes/Profile.png)<br>
+
+Saved posts page:<br>
+![Saved](docs/images/wireframes/Saved.png)<br>
+
+Sign up page:<br>
+![Signup](docs/images/wireframes/Singup.png)<br>
 
 &ensp;
 ### User Stories:
