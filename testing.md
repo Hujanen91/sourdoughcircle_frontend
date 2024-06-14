@@ -134,6 +134,8 @@ The Failed testcases is documented [here](README.md#known-bugs)
 
 The website has been validated and the scores and results have been well documented.
 
+The performance score in lighthouse could be improved by adding Cloudinary image handler to resize and compress images that is being uploaded.<br>
+
 Logged in Lighthouse report:<br>
 ![Lighthouse report logged in](docs/validation/lighthouse.png)
 
@@ -143,10 +145,14 @@ Logged out Lighthouse report:<br>
 All CSS files was validated and no errors or warnings was found.<br>
 ![CSS Validation](docs/validation/CSS.png)
 
+Wave gave no errors and only a few alerts:<br>
+![Wave](docs/validation/WAVE.png)
+
 
 Eslinter was used to validate the react files.
 At first I got around 89 Errors. They turned out to be easy fixes like empty fields and having to add propTypes code to several files.
-After doing this all errors was cleared in the validation:<br> 
+After doing this all errors was cleared in the validation:<br>
+ 
 ![Eslint validation](docs/validation/Eslint%20validation.png)
 
 # Responsiveness
