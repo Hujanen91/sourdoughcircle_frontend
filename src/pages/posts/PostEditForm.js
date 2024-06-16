@@ -1,13 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Alert from "react-bootstrap/Alert";
-import Image from "react-bootstrap/Image";
-// Remove static import of Categories
-// import Categories from "../../constants/Categories"
+import { Form, Button, Row, Col, Container, Alert, Image } from "react-bootstrap";
 
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
@@ -54,12 +46,10 @@ function PostEditForm() {
         const response = await fetch('https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/category/');
         const data = await response.json();
         if (Array.isArray(data.results)) {
-          setCategories(data.results); // Adjust based on the actual structure
-        } else {
-          console.error('Fetched data.results is not an array:', data.results);
+          setCategories(data.results);
         }
-      } catch (error) {
-        console.error('Error fetching categories:', error);
+      } catch (err) {
+        // Console.log(error);
       }
     };
 

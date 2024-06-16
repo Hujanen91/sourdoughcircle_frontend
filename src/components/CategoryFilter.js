@@ -15,7 +15,7 @@ const CategoryFilter = ({ setFilter, mobile }) => {
                 const data = await response.json();
                 setCategories(data.results);
             } catch (err) {
-                // console.log(err);
+                // Console.log(err);
             }
         };
 

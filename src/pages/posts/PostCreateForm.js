@@ -1,11 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Alert from "react-bootstrap/Alert";
-import Image from "react-bootstrap/Image";
+import { Form, Button, Row, Col, Container, Alert, Image } from "react-bootstrap";
 
 import Asset from "../../components/Asset";
 import Upload from "../../assets/images/upload (6).png";
@@ -24,7 +18,7 @@ function PostCreateForm() {
     title: "",
     content: "",
     image: "",
-    category: "", // Add category to state
+    category: "",
   });
   const { title, content, image, category } = postData;
 
@@ -40,12 +34,10 @@ function PostCreateForm() {
         const response = await fetch('https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/category/');
         const data = await response.json();
         if (Array.isArray(data.results)) {
-          setCategories(data.results); // Adjust based on the actual structure
-        } else {
-          console.error('Fetched data.results is not an array:', data.results);
+          setCategories(data.results);
         }
-      } catch (error) {
-        console.error('Error fetching categories:', error);
+      } catch (err) {
+        // Console.log(error);
       }
     };
 

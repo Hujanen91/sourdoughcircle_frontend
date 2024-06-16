@@ -1,13 +1,6 @@
 import React, {useState, useEffect, useRef} from "react";
 import {useHistory, useParams} from "react-router-dom";
-
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Image from "react-bootstrap/Image";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Alert from "react-bootstrap/Alert";
+import { Form, Button, Image, Row, Col, Container, Alert } from "react-bootstrap";
 
 import {axiosReq} from "../../api/axiosDefaults";
 import {useCurrentUser, useSetCurrentUser} from "../../contexts/CurrentUserContext";
@@ -124,7 +117,6 @@ const ProfileEditForm = () => {
                     rows={7}/>
             </Form.Group>
 
-            {/* Social Media Fields */}
             <Form.Group>
                 <Form.Label>Facebook Link</Form.Label>
                 <Form.Control type="text" placeholder="Enter Facebook link" name="facebook_link"
