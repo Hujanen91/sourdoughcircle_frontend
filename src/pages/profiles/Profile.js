@@ -22,16 +22,17 @@ const Profile = (props) => {
 
     const {handleFollow, handleUnfollow} = useSetProfileData();
 
-Profile.propTypes = {
-    profile: PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      following_id: PropTypes.string,
-      image: PropTypes.string.isRequired,
-      owner: PropTypes.string.isRequired,
-    }).isRequired,
-    mobile: PropTypes.bool,
-    imageSize: PropTypes.number,
-  };
+    Profile.propTypes = {
+        profile: PropTypes.shape({
+            id: PropTypes.number.isRequired, // Changed to number
+            following_id: PropTypes.number,
+            image: PropTypes.string.isRequired,
+            owner: PropTypes.string.isRequired,
+        }).isRequired,
+        mobile: PropTypes.bool,
+        imageSize: PropTypes.number,
+    };
+    
   
     return (
         <div className={
@@ -40,13 +41,11 @@ Profile.propTypes = {
             }`
         }>
             <div>
-                <Link className="align-self-center"
-                    to={
-                        `/profiles/${id}`
-                }>
-                    <Avatar src={image}
-                        height={imageSize}/>
+            {image && (
+                <Link className="align-self-center" to={`/profiles/${id}`}>
+                    <Avatar src={image} height={imageSize} />
                 </Link>
+                )}
             </div>
             <div className={
                 `mx-2 ${

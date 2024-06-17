@@ -783,6 +783,15 @@ A websocket warning is happening in the console in devtools. After searching in 
 Different solutions was tested withouth any success.<br>
 ![Websocket warning](docs/images/Websocket_error.png)<br>
 
+<b><i>Devtools warnings:</i></b>
+After I needed to add PropTypes in to my code to remove errors in Eslint I realized this caused errors in devtools.
+This issue was discovered the day of my deadline and I managed to resolve a few of them but the following errors did not get resolved due to the time limit.
+This is an issue I need to work on and get rid of in the future and I hope this wont cause major problems with my grades of this project because I did try my best at getting rid of them before my deadline but the time was not enough:
+![Devtools warning](docs/devtoolswarning%20supportprops.png)<br>
+![Devtools warning](docs/devtoolswarning.png)<br>
+![Devtools warning](docs/findDOMdevtoolswarning.png)<br>
+![Devtools warning](docs/Warning%20devtools%20propstring.png)<br>
+
 # Deployment
 
 ## Heroku

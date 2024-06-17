@@ -87,5 +87,5 @@ export function ProfileEditDropdown({ id }) {
   }
 
   ProfileEditDropdown.propTypes = {
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
   };

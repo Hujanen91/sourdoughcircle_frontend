@@ -23,12 +23,12 @@ const Comment = (props) => {
 
   // Comment propTypes added to remove prop-types errors in Eslint.
   Comment.propTypes = {
-    profile_id: PropTypes.string.isRequired,
+    profile_id: PropTypes.number.isRequired,
     profile_image: PropTypes.string.isRequired,
     owner: PropTypes.string.isRequired,
     updated_at: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     setPost: PropTypes.func,
     setComments: PropTypes.func,
   };
@@ -63,9 +63,11 @@ const Comment = (props) => {
     <>
       <hr />
       <Media>
+      {profile_image && (
         <Link to={`/profiles/${profile_id}`}>
           <Avatar src={profile_image} />
         </Link>
+      )}
         <Media.Body className="align-self-center ml-2">
           <span className={styles.Owner}>{owner}</span>
           <span className={styles.Date}>{updated_at}</span>

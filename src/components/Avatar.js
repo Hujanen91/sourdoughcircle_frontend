@@ -7,7 +7,7 @@ const Avatar = ({ src, height = 45, text }) => {
     <span>
       <img
         className={styles.Avatar}
-        src={src}
+        src={src || "src/assets/images/user (6).png"}
         height={height}
         width={height}
         alt="avatar profilepicture"

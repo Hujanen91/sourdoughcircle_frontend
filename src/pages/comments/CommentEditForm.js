@@ -10,7 +10,7 @@ function CommentEditForm(props) {
   const [formContent, setFormContent] = useState(content);
 
   CommentEditForm.propTypes = {
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     content: PropTypes.string.isRequired,
     setShowEditForm: PropTypes.func.isRequired,
     setComments: PropTypes.func.isRequired,

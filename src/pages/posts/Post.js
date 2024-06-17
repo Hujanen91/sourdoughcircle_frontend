@@ -26,26 +26,26 @@ const Post = (props) => {
     setPosts,
   } = props;
 
-  Post.propTypes = {
-    id: PropTypes.string.isRequired,
-    owner: PropTypes.string.isRequired,
-    profile_id: PropTypes.string.isRequired,
-    profile_image: PropTypes.string.isRequired,
-    comments_count: PropTypes.number.isRequired,
-    likes_count: PropTypes.number.isRequired,
-    like_id: PropTypes.string,
-    title: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
-    image: PropTypes.string,
-    updated_at: PropTypes.string.isRequired,
-    category_name: PropTypes.string.isRequired,
-    postPage: PropTypes.bool.isRequired,
-    setPosts: PropTypes.func.isRequired,
-  };
-
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
+  
+  Post.propTypes = {
+    id: PropTypes.number,
+    owner: PropTypes.string,
+    profile_id: PropTypes.number,
+    profile_image: PropTypes.string,
+    comments_count: PropTypes.number,
+    likes_count: PropTypes.number,
+    like_id: PropTypes.number,
+    title: PropTypes.string,
+    content: PropTypes.string,
+    image: PropTypes.string,
+    updated_at: PropTypes.string,
+    category_name: PropTypes.string,
+    postPage: PropTypes.bool,
+    setPosts: PropTypes.func.isRequired,
+  };
 
   const handleEdit = () => {
     history.push(`/posts/${id}/edit`);
@@ -97,10 +97,12 @@ const Post = (props) => {
     <Card className={styles.Post}>
       <Card.Body>
         <Media className="align-items-center justify-content-between">
+          {profile_image && (
           <Link to={`/profiles/${profile_id}`}>
             <Avatar src={profile_image} height={55} />
             {owner}
           </Link>
+        )}
           
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>

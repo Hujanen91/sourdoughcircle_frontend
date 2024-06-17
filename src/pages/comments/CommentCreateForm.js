@@ -11,14 +11,6 @@ function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
 
-  CommentCreateForm.propTypes = {
-    post: PropTypes.object.isRequired,
-    setPost: PropTypes.func.isRequired,
-    setComments: PropTypes.func.isRequired,
-    profileImage: PropTypes.string.isRequired,
-    profile_id: PropTypes.string.isRequired,
-  };
-
   const handleChange = (event) => {
     setContent(event.target.value);
   };
@@ -52,9 +44,11 @@ function CommentCreateForm(props) {
     <Form className="mt-2" onSubmit={handleSubmit}>
       <Form.Group>
         <InputGroup>
+        {profileImage && (
           <Link to={`/profiles/${profile_id}`}>
             <Avatar src={profileImage} />
           </Link>
+        )}
           <Form.Control
             className={styles.Form}
             placeholder="my comment..."
@@ -75,5 +69,13 @@ function CommentCreateForm(props) {
     </Form>
   );
 }
+
+CommentCreateForm.propTypes = {
+  post: PropTypes.object.isRequired,
+  setPost: PropTypes.func.isRequired,
+  setComments: PropTypes.func.isRequired,
+  profileImage: PropTypes.string.isRequired,
+  profile_id: PropTypes.number.isRequired,
+};
 
 export default CommentCreateForm;
